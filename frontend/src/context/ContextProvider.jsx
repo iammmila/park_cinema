@@ -3,7 +3,7 @@ import { createContext } from 'react'
 
 export const MainContext = createContext(null)
 function ContextProvider({ children }) {
-    const [mode, setMode] = useState("light");
+    const [mode, setMode] = useState("dark");
 
     const values = {
         mode, setMode

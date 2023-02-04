@@ -1,102 +1,12 @@
-$color-gray: #666;
-$color-black: #000;
-$stripe-height: 7px;
-$btn-color: $color-gray;
-$btn-background: #fff;
-$btn-color-hover: #fff;
-$btn-background-hover: $color-gray;
-$border-color: $color-gray;
-$border-color-hover: $color-black;
-@mixin reset-button {
-  overflow: visible;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  font: inherit;
-  line-height: normal;
-  cursor: pointer;
-  -moz-user-select: text;
-
-  &:-moz-focus-inner {
-    padding: 0;
-    border: 0;
-  }
-}
-@keyframes stripe-slide {
-  0% {
-    background-position: 0% 0;
-  }
-  100% {
-    background-position: 100% 0;
-  }
-}
-.btn {
-  @include reset-button;
-  display: block;
-  text-decoration: none;
-  text-transform: uppercase;
-  padding: 10px 17px 14px;
-  background-color: $btn-background;
-  color: $btn-color;
-  border: 2px solid $border-color;
-  border-radius: 6px;
-  margin-bottom: 16px;
-  transition: all 0.5s ease;
-
-  &--stripe {
-    overflow: hidden;
-    position: relative;
-
-    &:after {
-      content: "";
-      display: block;
-      height: $stripe-height;
-      width: 100%;
-      background-image: repeating-linear-gradient(
-        45deg,
-        $border-color,
-        $border-color 1px,
-        transparent 2px,
-        transparent 5px
-      );
-      -webkit-backface-visibility: hidden;
-      backface-visibility: hidden;
-      border-top: 1px solid $border-color;
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      background-size: $stripe-height $stripe-height;
-    }
-
-    &:hover {
-      background-color: $btn-background-hover;
-      color: $btn-color-hover;
-      border-color: $border-color-hover;
-
-      &:after {
-        background-image: repeating-linear-gradient(
-          45deg,
-          $btn-color-hover,
-          $btn-color-hover 1px,
-          transparent 2px,
-          transparent 5px
-        );
-        border-top: 1px solid $border-color-hover;
-        animation: stripe-slide 12s infinite linear forwards;
-      }
-    }
-  }
-
-  &--large {
-    width: 50%;
-  }
-
-  &--radius {
-    border-radius: 36px;
-  }
-}
 nav {
+  width: 100%;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(108, 108, 108, 0) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+
   position: fixed;
   top: 0;
   width: 100%;
@@ -109,8 +19,9 @@ nav {
 
     ul {
       display: flex;
-      gap: 30px;
+      gap: 20px;
       font-weight: 500;
+      position: relative;
       a {
         display: block;
         height: 100%;
@@ -121,7 +32,7 @@ nav {
         justify-content: center;
         color: white;
         text-transform: uppercase;
-        text-shadow: 0 0 15px #8e54e9;
+        text-shadow: 0 0 15px #e95454;
         transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
         text-align: center;
         padding: 10px;
@@ -158,8 +69,38 @@ nav {
           width: 120%;
         }
       }
+      .dropdown,
+      .dropdown-1,
+      .dropdown-2 {
+        opacity: 0;
+        width: 150px;
+        position: absolute;
+        background-color: lightgray;
+        border-radius: 15px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        z-index: 2;
+        align-items: center;
+        justify-content: center;
+        display: none;
+        transform: translateX(-40%);
+        transition: opacity 0.15s ease-out;
+      }
+      .dropdown-1 {
+        right: 40px;
+      }
+      .dropdown-2 {
+        right: -140px;
+      }
     }
   }
+}
+
+.has-dropdown:focus-within .dropdown {
+  opacity: 1;
+  display: block;
+  pointer-events: auto;
 }
 
 .btn-3 {
@@ -182,17 +123,43 @@ nav {
 }
 
 .logo {
+  width: 250px;
+  color: red;
   filter: invert(18%) sepia(88%) saturate(6137%) hue-rotate(348deg)
     brightness(92%) contrast(138%);
 }
-.dark {
-  background-color: #333;
-  color: #fff;
-  a {
-    color: white;
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  nav {
+    background: red;
   }
 }
-.light {
-  background-color: #fff;
-  color: #333;
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  nav {
+    background: green;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  nav {
+    background: blue;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  nav {
+    background: orange;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  nav {
+    background: pink;
+  }
 }
