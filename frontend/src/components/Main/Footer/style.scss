@@ -1,0 +1,17 @@
+footer {
+  background-image: url(../../../assets/images/solid-concrete-wall-textured-backdrop.jpg);
+
+  .footer {
+    padding: 80px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    .navlist {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

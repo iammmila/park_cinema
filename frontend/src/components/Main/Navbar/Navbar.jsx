@@ -2,9 +2,9 @@ import React, { useContext } from 'react'
 import "./style.scss"
 import { Link, NavLink } from "react-router-dom"
 import { MainContext } from "../../../context/ContextProvider"
-import logo from "../../../assets/download.svg"
+import logo from "../../../assets/logo/download.svg"
 import { MdModeNight, MdLightMode } from "react-icons/md"
-import { CgArrowDownO } from "react-icons/cg"
+import { RiArrowDropDownLine } from "react-icons/ri"
 import ThreePoints from './ThreePoints'
 function Navbar() {
 
@@ -69,7 +69,7 @@ function Navbar() {
                 style={({ isActive }) => (isActive ? activeStyle : null)}
               >
                 Technologies
-                <CgArrowDownO style={{ fontSize: "20px" }} />
+                <RiArrowDropDownLine style={{ fontSize: "25px" }} />
               </NavLink>
 
               {/*//! DROPDOWN MENU 1 */}

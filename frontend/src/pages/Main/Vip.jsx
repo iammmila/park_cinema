@@ -8,7 +8,7 @@ function Vip() {
                 <title>Vip | Park Cinema</title>
                 <meta name='description' content='Beginner friendly page for learning React Helmet.' />
             </Helmet>
-            Vip</>
+            </>
     )
 }
 

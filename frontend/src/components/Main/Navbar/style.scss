@@ -75,7 +75,13 @@ nav {
         opacity: 0;
         width: 150px;
         position: absolute;
-        background-color: lightgray;
+        background: rgb(0, 0, 0);
+        background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.7707457983193278) 50%,
+          rgba(0, 0, 0, 1) 100%
+        );
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         border-radius: 15px;
         padding: 20px;
         display: flex;
@@ -131,35 +137,35 @@ nav {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  nav {
-    background: red;
-  }
+  // nav {
+  // background: red;
+  // }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-  nav {
-    background: green;
-  }
+  // nav {
+  // background: green;
+  // }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  nav {
-    background: blue;
-  }
+  // nav {
+  // background: blue;
+  // }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-  nav {
-    background: orange;
-  }
+  // nav {
+  //   background: orange;
+  // }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-  nav {
-    background: pink;
-  }
+  // nav {
+  //   background: pink;
+  // }
 }
