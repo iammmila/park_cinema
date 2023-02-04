@@ -21,3 +21,28 @@ code {
 body {
   font-family: "Poppins", sans-serif;
 }
+
+.container {
+  width: 1140px;
+  margin: 0 auto;
+}
+
+a {
+  color: black;
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 1px solid red;
+  background-color: gray;
+  font-size: 20px;
+  color: white;
+  text-transform: capitalize;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+button:hover{
+
+}
