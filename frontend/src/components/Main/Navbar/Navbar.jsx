@@ -105,35 +105,31 @@ function Navbar() {
 
               <ul className="dropdown dropdown-2">
                 <li className="dropdown-item">
-                  <NavLink
+                  <Link
                     to="/about"
-                    style={({ isActive }) => (isActive ? activeStyle : null)}
                   >About
-                  </NavLink>
+                  </Link>
                 </li>
                 <li className="dropdown-item">
-                  <NavLink
+                  <Link
                     to="/about/privacy"
-                    style={({ isActive }) => (isActive ? activeStyle : null)}
                   >
                     Privacy
-                  </NavLink>
+                  </Link>
                 </li>
                 <li className="dropdown-item">
-                  <NavLink
+                  <Link
                     to="/about/contact"
-                    style={({ isActive }) => (isActive ? activeStyle : null)}
                   >
                     Contact
-                  </NavLink>
+                  </Link>
                 </li>
                 <li className="dropdown-item">
-                  <NavLink
+                  <Link
                     to="/about/cookies"
-                    style={({ isActive }) => (isActive ? activeStyle : null)}
                   >
                     Cookies
-                  </NavLink>
+                  </Link>
                 </li>
               </ul>
             </li>

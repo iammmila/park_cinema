@@ -103,7 +103,7 @@ nav {
   }
 }
 
-.has-dropdown:focus-within .dropdown {
+.has-dropdown:hover .dropdown {
   opacity: 1;
   display: block;
   pointer-events: auto;
