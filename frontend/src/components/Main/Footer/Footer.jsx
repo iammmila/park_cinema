@@ -2,114 +2,121 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import "./style.scss"
 import logo from "../../../assets/logo/download.svg"
-
+import { BsFacebook, BsInstagram, BsTwitter, BsYoutube } from "react-icons/bs"
 function Footer() {
   return (
     <footer>
       <div className="container">
-        <ul className="footer">
-          <li >
-            <ul className='navlist'>
-              <li>
-                <Link
+        <div className="footer_top">
+          <ul className='navlist'>
+            <ul>
+              <h2>Content</h2>
+                <li className='content__item'>
+                <Link className='link link--dia'
                   to="/"
                 >
                   Home
                 </Link>
               </li>
-              <li>
-                <Link
+                <li className='content__item'>
+                <Link className='link link--dia'
                   to="/programs"
                 >
                   Schedule
                 </Link>
               </li>
-              <li>
-                <Link
+                <li className='content__item'>
+                <Link className='link link--dia'
                   to="/cinemas"
                 >
                   Cinemas
                 </Link>
               </li>
-              <li>
-                <Link
+                 <li className='content__item'>
+                <Link className='link link--dia'
                   to="/campaign"
                 >
                   Campaigns
                 </Link>
               </li>
-              <li>
-                <Link
+                 <li className='content__item'>
+                <Link className='link link--dia'
                   to="/vip"
                 >
                   VIP
                 </Link>
               </li>
-              <li>
-                <Link
-                  to="/technologies
-                "
-                >
-                  Technologies
-                </Link>
-                <li className="dropdown-item">
-                  <Link
-                    to="/technologies/imax"
-
-                  >IMAX
-                  </Link>
-                </li>
-                <li className="dropdown-item">
-                  <Link
-                    to="/technologies/laser"
-                  >
-                    LASER
-                  </Link>
-                </li>
-              </li>
+            </ul>
+            <ul>
+              <h2>Technologies</h2>
               <li >
-                <Link
+                <Link className='link link--dia'
+                  to="/technologies/imax"
+
+                >IMAX
+                </Link>
+              </li>
+                <li className='content__item'>
+                <Link className='link link--dia'
+                  to="/technologies/laser"
+                >
+                  LASER
+                </Link>
+              </li>
+            </ul>
+            <ul>
+              <h2>Information</h2>
+              <li >
+                <Link className='link link--dia'
                   to="/"
                   style={{ letterSpacing: "10px" }}
                 >
                 </Link>
               </li>
-              <li>
-                <Link
+                <li className='content__item'>
+                <Link className='link link--dia'
                   to="/about"
                 >About
                 </Link>
               </li>
-              <li>
-                <Link
+                <li className='content__item'>
+                <Link className='link link--dia'
                   to="/about/privacy"
                 >
                   Privacy
                 </Link>
               </li>
-              <li>
-                <Link
+                <li className='content__item'>
+                <Link className='link link--dia'
                   to="/about/contact"
                 >
                   Contact
                 </Link>
               </li>
-              <li>
-                <Link
+                <li className='content__item'>
+                <Link className='link link--dia'
                   to="/about/cookies"
                 >
                   Cookies
                 </Link>
               </li>
             </ul>
-          </li>
-          <li>
-          <Link to="/"><img className='logo' src={logo} alt="logo" /></Link>
-          </li>
-          <li>
 
-          </li>
-        </ul>
+          </ul>
+          <Link to="/"><img className='logo' style={{ width: "300px" }} src={logo} alt="logo" /></Link>
+          <div className='social-medias'>
+            <BsFacebook className='icon' />
+            <BsYoutube className='icon' />
+            <BsTwitter className='icon' />
+            <BsInstagram className='icon' />
+          </div>
+        </div>
+        <hr />
+        <div className='footer_bottom'>
+          <p style={{ color: "white" }}>
+            Copyright ©  2023 Park Cinema
+          </p>
+        </div>
       </div >
     </footer >
   )
