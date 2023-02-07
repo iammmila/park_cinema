@@ -5,7 +5,7 @@ import { MainContext } from "../../../context/ContextProvider"
 import logo from "../../../assets/logo/download.svg"
 import { MdModeNight, MdLightMode } from "react-icons/md"
 import { RiArrowDropDownLine } from "react-icons/ri"
-import ThreePoints from './ThreePoints'
+
 function Navbar() {
 
   const activeStyle = {
@@ -93,13 +93,13 @@ function Navbar() {
               </ul>
             </li>
             <li className="nav-item has-dropdown">
-              <NavLink
+              <Link
                 to="/"
-                style={{ letterSpacing: "10px" }}
-
               >
-                <ThreePoints />
-              </NavLink>
+                More
+                <RiArrowDropDownLine style={{ fontSize: "25px" }} />
+
+              </Link>
 
               {/*//! DROPDOWN MENU 2 */}
 
@@ -135,7 +135,7 @@ function Navbar() {
             </li>
           </ul>
           <ul>
-            {mode === "light" ? <MdModeNight onClick={changeTheme} style={{ cursor:"pointer", fontSize: "30px" }} /> : <MdLightMode onClick={changeTheme} style={{ fontSize: "30px", cursor:"pointer" }} />}
+            {mode === "light" ? <MdModeNight onClick={changeTheme} style={{ cursor: "pointer", fontSize: "30px" }} /> : <MdLightMode onClick={changeTheme} style={{ fontSize: "30px", cursor: "pointer" }} />}
           </ul>
         </div>
       </div>

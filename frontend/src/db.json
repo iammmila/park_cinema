@@ -1,0 +1,60 @@
+[
+    {
+        "films": [
+            {
+                "id": "59761c23b30d971669fb42ff",
+                "name": "pandas",
+                "country": "almanya",
+                "director": "mlht brhm",
+                "ageLimit": 18,
+                "duration": 120,
+                "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia numquam qui corporis illo voluptates voluptate quaerat sint asperiores ad deleniti deserunt nam esse ratione molestias, porro unde corrupti illum voluptas?",
+                "trailer": "-- video link--",
+                "poster": "--img link--",
+                "vision_date": 2031,
+                "actors": "mlht, mlht, mlht, mlht",
+                "isNew": false,
+                "genres": [
+                    {
+                        "_id": "1231231321ff",
+                        "genre": "drama"
+                    },
+                    {
+                        "_id": "1231231321ff",
+                        "genre": "comedy"
+                    }
+                ],
+                "formats": [
+                    {
+                        "_id": "s32342b",
+                        "format": "4d"
+                    },
+                    {
+                        "_id": "s32342b",
+                        "format": "3d"
+                    }
+                ],
+                "subtitles": [
+                    {
+                        "_id": "s32342b",
+                        "subtitle": "az"
+                    },
+                    {
+                        "_id": "s322342342b",
+                        "subtitle": "tr"
+                    }
+                ],
+                "languages": [
+                    {
+                        "_id": "s32342b",
+                        "language": "az"
+                    },
+                    {
+                        "_id": "s322342342b",
+                        "language": "tr"
+                    }
+                ]
+            }
+        ]
+    }
+]

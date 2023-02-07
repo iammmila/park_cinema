@@ -14,11 +14,11 @@ function Home() {
         <meta name='description' content='Beginner friendly page for learning React Helmet.' />
       </Helmet>
       <Slider />
-      <BuyTicket/>
+      <BuyTicket />
       <Soon />
-<Campaigns/>
+      <Campaigns />
       <Subscribe />
-      
+
     </>
 
   )

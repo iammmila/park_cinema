@@ -1,0 +1,83 @@
+.hero_section {
+    padding: 120px 0;
+    height: 100vh;
+    position: relative;
+
+    .hero {
+        height: 100%;
+    }
+}
+
+
+
+.swiper {
+    padding: 50px 0 !important;
+
+}
+
+.films {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 10px;
+    :
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    // border: 3px solid red;
+    padding: 40px 50px;
+    color: red !important;
+    transition: all .2s ease-in-out;
+    background-color: transparent;
+    background-color: rgba(74, 74, 74, .5);
+    opacity: .4;
+
+    &:active,
+    &:hover {
+        background: #000;
+        opacity: .4;
+    }
+
+    &:after {
+        font-weight: 900;
+    }
+}
+
+.swiper-button-next {
+    right: -25px !important;
+    border-radius: 40px 0 0 40px;
+
+    &:hover {
+        padding: 40px 55px;
+    }
+}
+
+.swiper-button-prev {
+    left: -25px !important;
+    border-radius: 0 40px 40px 0;
+
+    &:hover {
+        padding: 40px 55px;
+    }
+}
+
+.swiper-pagination-bullet-active {
+    background: red !important;
+}
+
+.bg {
+    background-image: url("../../../../assets/films_images/Avatar.jpg");
+    /* Add the blur effect */
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+    width: 100%;
+    height: 90%;
+}
