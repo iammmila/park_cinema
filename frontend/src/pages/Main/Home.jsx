@@ -10,7 +10,7 @@ function Home() {
   return (
     <>
       <Helmet>
-        <title>Ana Səhifə | Park Cinema</title>
+        <title>Home | Park Cinema</title>
         <meta name='description' content='Beginner friendly page for learning React Helmet.' />
       </Helmet>
       <Slider />
