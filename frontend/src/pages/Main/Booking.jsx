@@ -1,15 +1,15 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 
-function Privacy() {
+function Booking() {
     return (
         <>
             <Helmet>
-                <title>Privacy | Park Cinema</title>
+                <title>Booking | Park Cinema</title>
                 <meta name='description' content='Beginner friendly page for learning React Helmet.' />
             </Helmet>
-            Privacy</>
+            Booking</>
     )
 }
 
-export default Privacy
+export default Booking
