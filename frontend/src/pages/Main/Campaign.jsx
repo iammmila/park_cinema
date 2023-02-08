@@ -5,7 +5,7 @@ function Campaign() {
   return (
     <>
     <Helmet>
-        <title>Aksiyalar | Park Cinema</title>
+        <title>Campaigns | Park Cinema</title>
         <meta name='description' content='Beginner friendly page for learning React Helmet.' />
       </Helmet>
     Campaign</>
