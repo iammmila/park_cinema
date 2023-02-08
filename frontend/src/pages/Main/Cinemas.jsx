@@ -5,7 +5,7 @@ function Cinemas() {
   return (
     <>
       <Helmet>
-        <title>Ana Səhifə | Park Cinema</title>
+        <title>Cinemas | Park Cinema</title>
         <meta name='description' content='Beginner friendly page for learning React Helmet.' />
       </Helmet>
       Cinemas</>
