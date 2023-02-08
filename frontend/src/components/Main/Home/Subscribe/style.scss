@@ -1,6 +1,7 @@
 .subscribe {
     padding: 100px 0;
     border-top: 1px solid black;
+
     .container {
         display: flex;
         justify-content: center;
@@ -33,7 +34,7 @@
                 font-size: 20px;
                 text-transform: lowercase;
                 color: gray;
-                
+
             }
 
             button {
@@ -43,12 +44,14 @@
                 padding: 24px;
                 font-size: 30px;
                 background-color: white;
-                &:hover{
+
+                &:hover {
                     color: red;
                 }
             }
         }
-        span{
+
+        span {
             font-size: 25px;
         }
 

@@ -1,5 +1,4 @@
 footer {
-  margin-top: 100vh;
   background-image: url(../../../assets/images/solid-concrete-wall-textured-backdrop.jpg);
 
   .footer_top {
@@ -8,19 +7,23 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
     .navlist {
       display: flex;
       flex-direction: row;
       width: 100%;
       justify-content: space-evenly;
       gap: 100px;
+
       ul {
         display: flex;
         flex-direction: column;
         gap: 20px;
-        h2{
+
+        h2 {
           color: white !important;
         }
+
         a {
           color: white !important;
           font-weight: 500;
@@ -28,22 +31,27 @@ footer {
         }
       }
     }
-    .social-medias{
+
+    .social-medias {
       display: flex;
       gap: 50px;
     }
   }
+
   .footer_bottom {
     padding: 30px 0;
   }
 }
-.icon{
+
+.icon {
   font-size: 30px;
-  color: white ;
-  &:hover{
+  color: white;
+
+  &:hover {
     color: red;
   }
 }
+
 .link {
   cursor: pointer;
   font-size: 20px;
