@@ -41,8 +41,13 @@ a {
   color: black;
 }
 
+.line {
+  background-color: red;
+  height: 5px;
+}
+
 .dark {
-  background-color: #333;
+  background-color: #121212;
   color: #fff;
 
   a {

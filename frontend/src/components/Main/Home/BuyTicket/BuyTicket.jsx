@@ -11,6 +11,7 @@ function BuyTicket() {
       <div className='container'>
         <div className="buy_ticket_section_wrapper">
           <div className='info_of_ticket'>
+            <div className='line' style={{width:"50%"}} ></div>
             <h1>Fast booking</h1>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt harum quaerat cumque ipsum pariatur vitae adipisci fugiat maxime eveniet corporis incidunt, suscipit quisquam vero illum esse voluptas molestiae dolores beatae!</p>
             {/* <button>Buy Ticket</button> */}
