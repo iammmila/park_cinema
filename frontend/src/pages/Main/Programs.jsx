@@ -5,7 +5,7 @@ function Programs() {
     return (
         <>
             <Helmet>
-                <title>Cədvəl | Park Cinema</title>
+                <title>Programs | Park Cinema</title>
                 <meta name='description' content='Beginner friendly page for learning React Helmet.' />
             </Helmet>
             Programs</>
