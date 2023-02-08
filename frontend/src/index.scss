@@ -11,12 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-p{
+
+p {
   font-size: 18px;
 }
-h2{
+
+h2 {
   font-size: 30px;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -24,6 +27,7 @@ h2{
   list-style-type: none;
   text-decoration: none;
 }
+
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -40,16 +44,31 @@ a {
 .dark {
   background-color: #333;
   color: #fff;
+
   a {
     color: white;
   }
 }
+
 .light {
   background-color: #fff;
   color: #333;
+
   a {
     color: black;
   }
+}
+
+//select text
+::-moz-selection {
+  /* Code for Firefox */
+  color: black;
+  background: red;
+}
+
+::selection {
+  color: white;
+  background: red;
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -86,6 +105,7 @@ a {
     width: 1140px;
   }
 }
+
 @media only screen and (min-width: 1400px) {
   .container {
     width: 1320px;
