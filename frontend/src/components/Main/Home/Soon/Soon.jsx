@@ -1,7 +1,12 @@
 import React from 'react'
 import "./style.scss"
 // import { Link } from 'react-router-dom';
-import img1 from "../../../../assets/films_images/Avatar.jpg"
+import film1 from "../../../../assets/films_images/Avatar.jpg"
+import film2 from "../../../../assets/films_images/_ыфнееее_resized.jpg"
+import film3 from "../../../../assets/films_images/kutsal-1_resized.png"
+import film4 from "../../../../assets/films_images/megan_saytt_resized.jpg"
+import film5 from "../../../../assets/films_images/my_shitdifejuheolndf_resized.jpg"
+
 import soon from "../../../../assets/images/soon2.png"
 
 function Soon() {
@@ -12,88 +17,138 @@ function Soon() {
           <div style={{ width: "18%" }} className='line' ></div>
           <h1>Soon Movies</h1>
           <ul className='cards'>
-            <li class="card">
+            <li className="card">
               <img className='soon-poster' src={soon} alt="soon" />
-              <div class="card-img">
-                <img src={img1} alt="Product" class="img-responsive" />
+              <div className="card-img">
+                <img src={film1} alt="Product" className="img-responsive" />
               </div>
-              <div class="card-text">
-                <div class="category">
+              <div className="card-text">
+                <div className="category">
                   {/* <span>Ethnic</span> */}
                 </div>
-                <div class="title-film">
+                <div className="title-film">
                   <h3>Avatar: Suyun yolu</h3>
-                  <span> Jan 20, 2021</span>
+                  <span> Feb 20, 2023</span>
                 </div>
-                <div class="description-film">
+                <div className="description-film">
                   {/* <p>Description Product tell me how to change playlist height size like 600px in html5 player. player good work now check this link</p> */}
                 </div>
-                {/* <div class="card-footer">
-                  <div class="card-left"><span class="price">Rp500.000</span></div>
-                  <div class="card-right"> </div>
+                {/* <div className="card-footer">
+                  <div className="card-left"><span className="price">Rp500.000</span></div>
+                  <div className="card-right"> </div>
                 </div> */}
               </div>
             </li>
-            {/* <li class="card">
-              <div class="card-img">
-                <img src="https://3.bp.blogspot.com/-eDeTttUjHxI/WVSvmI-552I/AAAAAAAAAKw/0T3LN6jABKMyEkTRUUQMFxpe6PLvtcMMwCPcBGAYYCw/s1600/001-culture-clash-matthew-gianoulis.jpg" alt="Product" class="img-responsive" />
+            <li className="card">
+              <img className='soon-poster' src={soon} alt="soon" />
+              <div className="card-img">
+                <img src={film2} alt="Product" className="img-responsive" />
               </div>
-              <div class="card-text">
-                <div class="category">
-                  <span>Ethnic</span>
+              <div className="card-text">
+                <div className="category">
+                  {/* <span>Ethnic</span> */}
                 </div>
-                <div class="title-film">
-                  <h3>My face not my heart</h3>
+                <div className="title-film">
+                  <h3>Avatar: Suyun yolu</h3>
+                  <span> Feb 20, 2023</span>
                 </div>
-                <div class="description-film">
-                  <p>Description Product tell me how to change playlist height size like 600px in html5 player. player good work now check this link</p>
+                <div className="description-film">
+                  {/* <p>Description Product tell me how to change playlist height size like 600px in html5 player. player good work now check this link</p> */}
                 </div>
-                <div class="card-footer">
-                  <div class="card-left"><span class="price">Rp500.000</span></div>
-                  <div class="card-right"> </div>
-                </div>
-              </div>
-            </li>
-            <li class="card">
-              <div class="card-img">
-                <img src="https://3.bp.blogspot.com/-eDeTttUjHxI/WVSvmI-552I/AAAAAAAAAKw/0T3LN6jABKMyEkTRUUQMFxpe6PLvtcMMwCPcBGAYYCw/s1600/001-culture-clash-matthew-gianoulis.jpg" alt="Product" class="img-responsive" />
-              </div>
-              <div class="card-text">
-                <div class="category">
-                  <span>Ethnic</span>
-                </div>
-                <div class="title-film">
-                  <h3>My face not my heart</h3>
-                </div>
-                <div class="description-film">
-                  <p>Description Product tell me how to change playlist height size like 600px in html5 player. player good work now check this link</p>
-                </div>
-                <div class="card-footer">
-                  <div class="card-left"><span class="price">Rp500.000</span></div>
-                  <div class="card-right"> </div>
-                </div>
+                {/* <div className="card-footer">
+                  <div className="card-left"><span className="price">Rp500.000</span></div>
+                  <div className="card-right"> </div>
+                </div> */}
               </div>
             </li>
-            <li class="card">
-              <div class="card-img">
-                <img src="https://3.bp.blogspot.com/-eDeTttUjHxI/WVSvmI-552I/AAAAAAAAAKw/0T3LN6jABKMyEkTRUUQMFxpe6PLvtcMMwCPcBGAYYCw/s1600/001-culture-clash-matthew-gianoulis.jpg" alt="Product" class="img-responsive" />
+            <li className="card">
+              <img className='soon-poster' src={soon} alt="soon" />
+              <div className="card-img">
+                <img src={film3} alt="Product" className="img-responsive" />
               </div>
-              <div class="card-text">
-                <div class="category">
-                  <span>Ethnic</span>
+              <div className="card-text">
+                <div className="category">
+                  {/* <span>Ethnic</span> */}
                 </div>
-                <div class="title-film">
-                  <h3>My face not my heart</h3>
+                <div className="title-film">
+                  <h3>Avatar: Suyun yolu</h3>
+                  <span> Feb 20, 2023</span>
                 </div>
-                <div class="description-film">
-                  <p>Description Product tell me how to change playlist height size like 600px in html5 player. player good work now check this link</p>
+                <div className="description-film">
+                  {/* <p>Description Product tell me how to change playlist height size like 600px in html5 player. player good work now check this link</p> */}
                 </div>
-                <div class="card-footer">
-                  <div class="card-left"><span class="price">Rp500.000</span></div>
-                  <div class="card-right"> </div>
-                </div>
+                {/* <div className="card-footer">
+                  <div className="card-left"><span className="price">Rp500.000</span></div>
+                  <div className="card-right"> </div>
+                </div> */}
               </div>
-            </li> */}
+            </li>
+            <li className="card">
+              <img className='soon-poster' src={soon} alt="soon" />
+              <div className="card-img">
+                <img src={film4} alt="Product" className="img-responsive" />
+              </div>
+              <div className="card-text">
+                <div className="category">
+                  {/* <span>Ethnic</span> */}
+                </div>
+                <div className="title-film">
+                  <h3>Avatar: Suyun yolu</h3>
+                  <span> Feb 20, 2023</span>
+                </div>
+                <div className="description-film">
+                  {/* <p>Description Product tell me how to change playlist height size like 600px in html5 player. player good work now check this link</p> */}
+                </div>
+                {/* <div className="card-footer">
+                  <div className="card-left"><span className="price">Rp500.000</span></div>
+                  <div className="card-right"> </div>
+                </div> */}
+              </div>
+            </li>
+            <li className="card">
+              <img className='soon-poster' src={soon} alt="soon" />
+              <div className="card-img">
+                <img src={film5} alt="Product" className="img-responsive" />
+              </div>
+              <div className="card-text">
+                <div className="category">
+                  {/* <span>Ethnic</span> */}
+                </div>
+                <div className="title-film">
+                  <h3>Avatar: Suyun yolu</h3>
+                  <span> Feb 20, 2023</span>
+                </div>
+                <div className="description-film">
+                  {/* <p>Description Product tell me how to change playlist height size like 600px in html5 player. player good work now check this link</p> */}
+                </div>
+                {/* <div className="card-footer">
+                  <div className="card-left"><span className="price">Rp500.000</span></div>
+                  <div className="card-right"> </div>
+                </div> */}
+              </div>
+            </li>
+            <li className="card">
+              <img className='soon-poster' src={soon} alt="soon" />
+              <div className="card-img">
+                <img src={film1} alt="Product" className="img-responsive" />
+              </div>
+              <div className="card-text">
+                <div className="category">
+                  {/* <span>Ethnic</span> */}
+                </div>
+                <div className="title-film">
+                  <h3>Avatar: Suyun yolu</h3>
+                  <span> Feb 20, 2023</span>
+                </div>
+                <div className="description-film">
+                  {/* <p>Description Product tell me how to change playlist height size like 600px in html5 player. player good work now check this link</p> */}
+                </div>
+                {/* <div className="card-footer">
+                  <div className="card-left"><span className="price">Rp500.000</span></div>
+                  <div className="card-right"> </div>
+                </div> */}
+              </div>
+            </li>
           </ul>
         </div>
       </div >
