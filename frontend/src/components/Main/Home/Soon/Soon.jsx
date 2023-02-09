@@ -1,7 +1,9 @@
 import React from 'react'
 import "./style.scss"
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import img1 from "../../../../assets/films_images/Avatar.jpg"
+import soon from "../../../../assets/images/soon2.png"
+
 function Soon() {
   return (
     <section className='soon-films'>
@@ -11,23 +13,25 @@ function Soon() {
           <h1>Soon Movies</h1>
           <ul className='cards'>
             <li class="card">
+              <img className='soon-poster' src={soon} alt="soon" />
               <div class="card-img">
                 <img src={img1} alt="Product" class="img-responsive" />
               </div>
               <div class="card-text">
                 <div class="category">
-                  <span>Ethnic</span>
+                  {/* <span>Ethnic</span> */}
                 </div>
                 <div class="title-film">
-                  <h3>My face not my heart</h3>
+                  <h3>Avatar: Suyun yolu</h3>
+                  <span> Jan 20, 2021</span>
                 </div>
                 <div class="description-film">
-                  <p>Description Product tell me how to change playlist height size like 600px in html5 player. player good work now check this link</p>
+                  {/* <p>Description Product tell me how to change playlist height size like 600px in html5 player. player good work now check this link</p> */}
                 </div>
-                <div class="card-footer">
+                {/* <div class="card-footer">
                   <div class="card-left"><span class="price">Rp500.000</span></div>
                   <div class="card-right"> </div>
-                </div>
+                </div> */}
               </div>
             </li>
             {/* <li class="card">
