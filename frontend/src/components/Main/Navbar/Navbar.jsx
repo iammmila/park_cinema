@@ -135,7 +135,7 @@ function Navbar() {
             </li>
           </ul>
           <ul>
-            {mode === "light" ? <MdModeNight onClick={changeTheme} style={{ cursor: "pointer", fontSize: "30px" }} /> : <MdLightMode onClick={changeTheme} style={{ fontSize: "30px", cursor: "pointer" }} />}
+            {mode === "light" ? <MdModeNight className='theme-button' onClick={changeTheme} /> : <MdLightMode className='theme-button' onClick={changeTheme} />}
           </ul>
         </div>
       </div>
