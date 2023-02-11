@@ -1,0 +1,43 @@
+.home-campaigns {
+    padding: 50px 0;
+
+    .campaigns-section {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        .cards {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 50px;
+
+            .card {
+                width: 25%;
+                background: #fff;
+                padding: 15px;
+                border-radius: 15px;
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+                position: relative;
+                margin: 20px auto;
+
+
+                .card-img {
+                    border-radius: 15px;
+                    width: 100%;
+                    padding: 15px;
+                    transition: all 0.2s ease-in-out;
+
+                    img {
+                        border-radius: 15px;
+                        width: 100%;
+                        transition: all 0.2s ease-in-out;
+                        border-radius: 6px;
+                        box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+
+                    }
+                }
+            }
+        }
+    }
+}
