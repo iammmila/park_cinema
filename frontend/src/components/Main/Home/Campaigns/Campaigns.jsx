@@ -10,7 +10,7 @@ function Campaigns() {
       <div className="container">
         <div className="campaigns-section">
           <div style={{ width: "18%" }} className='line' ></div>
-          <h1>Soon Movies</h1>
+          <h1>Recent Campaigns</h1>
           <ul className='cards'>
             <li className="card">
               <div className="card-img">
