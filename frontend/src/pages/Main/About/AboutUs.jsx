@@ -2,6 +2,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Information from "../../../components/Main/About/AboutUs/Information"
 import CinemasInfo from "../../../components/Main/About/CinemasInfo/CinemasInfo"
+import HeroSection from '../../../components/Main/About/HeroSection/HeroSection'
 
 function AboutUs() {
   return (
@@ -10,9 +11,9 @@ function AboutUs() {
         <title>About Us | Park Cinema</title>
         <meta name='description' content='Beginner friendly page for learning React Helmet.' />
       </Helmet>
-      About Us
-      <Information />
-      <CinemasInfo/>
+      <HeroSection />
+      {/* <Information /> */}
+      <CinemasInfo />
     </>
   )
 }

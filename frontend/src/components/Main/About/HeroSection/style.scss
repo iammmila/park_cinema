@@ -1,0 +1,40 @@
+.hero-about {
+    padding: 100px 0 0 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background-image: url("../../../../assets/about-image/about.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .wrapper-blur-section {
+        .content {
+            border-radius: 23px;
+            text-align: center;
+            padding: 0 100px;
+            position: relative;
+            overflow: hidden;
+            z-index: 2;
+
+            .blur-bg {
+                width: 100%;
+                height: 100%;
+                background: url("../../../../assets/about-image/about.jpg") no-repeat center center fixed;
+                background-size: cover;
+                filter: blur(8px) brightness(80%);
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: 1;
+            }
+        }
+    }
+
+}
