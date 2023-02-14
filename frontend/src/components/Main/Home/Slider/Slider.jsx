@@ -15,6 +15,8 @@ import film5 from "../../../../assets/films_images/my_shitdifejuheolndf_resized.
 
 // import required modules
 import { FreeMode, Navigation, Pagination } from "swiper";
+import CheckBox from './CheckBoxSlider/CheckBox';
+
 function Slider() {
 
   return (
@@ -25,9 +27,9 @@ function Slider() {
           slidesPerView={4}
           centeredSlides={true}
           freeMode={true}
-          pagination={{
-            clickable: true,
-          }}
+          // pagination={{
+          //   clickable: true,
+          // }}
           navigation={true}
           modules={[Pagination, FreeMode, Navigation]}
           className=" main-slider "
@@ -60,9 +62,10 @@ function Slider() {
             <img className='films' width={"400px"} height={"600px"} src={film2} alt="film1" />
             <span>Avatar Movie</span>
           </SwiperSlide>
+          <CheckBox />
         </Swiper>
       </div>
-    </section>
+    </section >
   )
 }
 
