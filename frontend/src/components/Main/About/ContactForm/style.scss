@@ -1,0 +1,34 @@
+.contact-section {
+    padding: 100px 0;
+
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        // justify-content: center;
+
+        .form-list {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        input,
+        textarea {
+            padding: 20px 10px;
+            border-radius: 10px;
+            font-size: 20px;
+            width: 100%;
+        }
+
+        .btn-contact {
+            padding: 10px 20px;
+            border-radius: 20px;
+            color: red;
+            font-weight: 500;
+            font-size: 20px;
+            border: 1px solif lightgray;
+        }
+    }
+}
