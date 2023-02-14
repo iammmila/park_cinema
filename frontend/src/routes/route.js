@@ -19,6 +19,7 @@ import Zaqulba from "../pages/Main/Cinemas/Zaqulba"
 
 //! TECHNOLOGIES PART
 import TechRoot from "../pages/Main/Technologies/TechRoot";
+import Technologies from "../pages/Main/Technologies/Technologies";
 import Imax from "../pages/Main/Technologies/Imax";
 import LaseR from "../pages/Main/Technologies/LaseR";
 
@@ -95,6 +96,10 @@ export const ROUTES = [
         path: "technologies/",
         element: <TechRoot />,
         children: [
+          {
+            path: "",
+            element: <Technologies />
+          },
           {
             path: "imax",
             element: <Imax />,
