@@ -87,7 +87,7 @@ function PrivacyRules() {
                         <p style={{ marginleft: "18pt" }}>
                             &nbsp;</p>
                         <p>
-                            5.1. &ldquo;Park Cinema&rdquo;nın <Link to="//parkcinema.az/">//parkcinema.az/</Link> veb-saytına daxil olan hər bir kəs saytın İstifadə&ccedil;isi ola bilər və Saytın təqdim olunan interaktiv xidmətlərindən qeydiyyatsız istifadə edə bilər.</p>
+                            5.1. &ldquo;Park Cinema&rdquo;nın <Link to="//parkcinema.az/">parkcinema.az</Link> veb-saytına daxil olan hər bir kəs saytın İstifadə&ccedil;isi ola bilər və Saytın təqdim olunan interaktiv xidmətlərindən qeydiyyatsız istifadə edə bilər.</p>
                         <p>
                             5.2 Təqdim olunan xidmətlər və interaktiv xidmətlərdən b&uuml;t&ouml;vl&uuml;kə istifadə etmək &uuml;&ccedil;&uuml;n İstifadə&ccedil;i qeydiyyatdan ke&ccedil;ə bilər. Bu tədqirdə İstifadə&ccedil;i:</p>
                         <p>
@@ -185,7 +185,7 @@ function PrivacyRules() {
                         <p style={{ marginLeft: "18pt" }}>
                             4.2.2 M&uuml;diriyyət xəbərdarlıq etmədən Qaydaları birtərəfli qaydada dayişmək və/və ya onlara əlavə etmək və saytda yerləşdirmək h&uuml;ququnu &ouml;z&uuml;ndə saxlayır.</p>
                         <p style={{ marginLeft: "18pt" }}>
-                            Hazırkı Qaydalar a&ccedil;ıqdır və ictimaiyyətə təqdim olunmuş sənəd xarakteri daşıyır. Hazırkı Qaydalar İnternet şəbəkəsində: <Link to="//www.parkcinema.az/bilet-alinmasi-sertleri-ve-qaydalari">//www.parkcinema.az/bilet-alinmasi-sertleri-ve-qaydalari</Link>&uuml;nvanında yerləşdirilib.</p>
+                            Hazırkı Qaydalar a&ccedil;ıqdır və ictimaiyyətə təqdim olunmuş sənəd xarakteri daşıyır. Hazırkı Qaydalar İnternet şəbəkəsində: <Link to="//www.parkcinema.az/bilet-alinmasi-sertleri-ve-qaydalari">www.parkcinema.az/bilet-alinmasi-sertleri-ve-qaydalari</Link>&uuml;nvanında yerləşdirilib.</p>
                         <p style={{ marginLeft: "18pt" }}>
                             M&uuml;diriyyət dəyişikliklərdən xəbərdar olmaq &uuml;&ccedil;&uuml;n bilet almazdan &ouml;ncə m&uuml;təmadi olaraq həmin Qaydaları təkrar oxumağa təkidlə t&ouml;vsiyə edir. Hazırkı qaydalarla razılaşıb onlayn &uuml;sulu ilə bilet alışının n&ouml;vbəti səhifəsinə ke&ccedil;ərək Alıcı b&uuml;t&uuml;n edilmiş d&uuml;zəliş və/və ya dəyişiklik/əlavələrlə birlikdə həmin Qaydalara riayət etmək &ouml;hdəliyini g&ouml;t&uuml;rm&uuml;ş kimi hesab olunur.</p>
                         <h2>
