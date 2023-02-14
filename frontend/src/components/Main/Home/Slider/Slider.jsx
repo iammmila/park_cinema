@@ -25,35 +25,40 @@ function Slider() {
           slidesPerView={4}
           centeredSlides={true}
           freeMode={true}
-          // spaceBetween={10}
-          // autoplay={false}
           pagination={{
             clickable: true,
           }}
           navigation={true}
           modules={[Pagination, FreeMode, Navigation]}
-          className="mySwiper"
+          className=" main-slider "
         >
-          <SwiperSlide>
+          <SwiperSlide className='slide'>
             <img className='films' width={"400px"} height={"600px"} src={film1} alt="film1" />
+            <span>Avatar Movie</span>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className='slide'>
             <img className='films' width={"400px"} height={"600px"} src={film2} alt="film1" />
+            <span>Avatar Movie</span>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className='slide'>
             <img className='films' width={"400px"} height={"600px"} src={film3} alt="film1" />
+            <span>Avatar Movie</span>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className='slide'>
             <img className='films' width={"400px"} height={"600px"} src={film4} alt="film1" />
+            <span>Avatar Movie</span>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className='slide'>
             <img className='films' width={"400px"} height={"600px"} src={film5} alt="film1" />
+            <span>Avatar Movie</span>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className='slide'>
             <img className='films' width={"400px"} height={"600px"} src={film1} alt="film1" />
+            <span>Avatar Movie</span>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className='slide'>
             <img className='films' width={"400px"} height={"600px"} src={film2} alt="film1" />
+            <span>Avatar Movie</span>
           </SwiperSlide>
         </Swiper>
       </div>

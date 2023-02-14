@@ -24,11 +24,11 @@ function BackgroundSlider() {
                 slidesPerView={1}
                 centeredSlides={true}
                 autoplay={{
-                    delay: 3000,
+                    delay: 4000,
                     disableOnInteraction: false,
                 }}
                 modules={[Autoplay, Pagination, Navigation]}
-                className="bg bcg-slider"
+                className="mySwiper bg bcg-slider"
             >
                 <SwiperSlide
                     style={{ backgroundImage: `url(${film1} )` }} className="bg bcg-slide">
