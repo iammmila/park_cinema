@@ -13,11 +13,9 @@
         "date": "2023-01-01T00:00:00",
         "genres": [
             {
-                "genreId": 2,
                 "name": "Romantic"
             },
             {
-                "genreId": 3,
                 "name": "Action"
             }
         ],

@@ -164,3 +164,33 @@ app.post("/films", async (req, res) => {
         console.log(error)
     }
 })
+
+//! put element 
+app.put("/films", async (req, res) => {
+    const data = req.body;
+    try {
+        await Films.findByIdAndUpdate(data._id, {
+            name: data.name,
+            ageLimit: data.ageLimit,
+            durationMinute: data.durationMinute,
+            country: data.country,
+            director: data.director,
+            actors: data.actors,
+            description: data.description,
+            trailer: data.trailer,
+            poster: data.poster,
+            date: data.date,
+            genres: data.genres.name,
+            languages: data.languages.name,
+            formats: data.formats.name,
+            subtitles: data.subtitles.name,
+        });
+        res.status(200).json({
+            message: "film is updated",
+        });
+    } catch (err) {
+        res.status(500).json({
+            message: "film can't updated",
+        });
+    }
+});
