@@ -20,45 +20,10 @@ function Slider() {
   return (
     <section className='hero_section'>
       <div className="hero">
-        {/* //! BACKGROUND SLIDER */}
-        
-        {/* <Swiper
-          spaceBetween={30}
-          slidesPerView={1}
-          centeredSlides={true}
-          autoplay={{
-            delay: 4000,
-            disableOnInteraction: false,
-          }}
-          // pagination={{
-          //   clickable: true,
-          // }}
-          // navigation={true}
-          modules={[Autoplay, Pagination, Navigation]}
-          className="bg bcg-slider"
-        >
-          <SwiperSlide
-            style={{ backgroundImage: `url(${film1} )` }} className="bg bcg-slide">
-          </SwiperSlide>
-          <SwiperSlide
-            style={{ backgroundImage: `url(${film2} )` }} className="bg bcg-slide">
-          </SwiperSlide>
-          <SwiperSlide
-            style={{ backgroundImage: `url(${film3} )` }} className="bg bcg-slide">
-          </SwiperSlide>
-          <SwiperSlide
-            style={{ backgroundImage: `url(${film4} )` }} className="bg bcg-slide">
-          </SwiperSlide>
-          <SwiperSlide
-            style={{ backgroundImage: `url(${film5} )` }} className="bg bcg-slide">
-          </SwiperSlide>
-        </Swiper> */}
-
-
-<div className="bg"></div>
+        <div className="bg"></div>
         <Swiper
           slidesPerView={4}
-          centeredSlides={true} 
+          centeredSlides={true}
           freeMode={true}
           // spaceBetween={10}
           // autoplay={false}

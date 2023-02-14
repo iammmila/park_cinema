@@ -1,84 +1,84 @@
-.hero_section {
-    padding: 120px 0;
-    // height: 90vh;
-    position: relative;
+// .hero_section {
+//     padding: 120px 0;
+//     // height: 90vh;
+//     position: relative;
 
-    .hero {
-        height: 100%;
-        // position: relative;
-    }
-}
-.bcg-slider{
-    position: static;
-}
-.mySwiper {
-    padding: 50px 0 !important;
-    // position: absolute !important;
-    // z-index: 999 !important;
-    // top: 0;
-    // left: 0;
+//     .hero {
+//         height: 100%;
+//         // position: relative;
+//     }
+// }
+// .bcg-slider{
+//     position: static;
+// }
+// .mySwiper {
+//     padding: 50px 0 !important;
+//     // position: absolute !important;
+//     // z-index: 999 !important;
+//     // top: 0;
+//     // left: 0;
 
-}
+// }
 
-.films {
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    border-radius: 10px;
-}
+// .films {
+//     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+//     border-radius: 10px;
+// }
 
-.swiper-button-next,
-.swiper-button-prev {
-    // border: 3px solid red;
-    padding: 40px 50px;
-    color: red !important;
-    transition: all .2s ease-in-out;
-    background-color: transparent;
-    background-color: rgba(74, 74, 74, .5);
-    opacity: .4;
+// .swiper-button-next,
+// .swiper-button-prev {
+//     // border: 3px solid red;
+//     padding: 40px 50px;
+//     color: red !important;
+//     transition: all .2s ease-in-out;
+//     background-color: transparent;
+//     background-color: rgba(74, 74, 74, .5);
+//     opacity: .4;
 
-    &:active,
-    &:hover {
-        background: #000;
-        opacity: .4;
-    }
+//     &:active,
+//     &:hover {
+//         background: #000;
+//         opacity: .4;
+//     }
 
-    &:after {
-        font-weight: 900;
-    }
-}
+//     &:after {
+//         font-weight: 900;
+//     }
+// }
 
-.swiper-button-next {
-    right: -25px !important;
-    border-radius: 40px 0 0 40px;
+// .swiper-button-next {
+//     right: -25px !important;
+//     border-radius: 40px 0 0 40px;
 
-    &:hover {
-        padding: 40px 55px;
-    }
-}
+//     &:hover {
+//         padding: 40px 55px;
+//     }
+// }
 
-.swiper-button-prev {
-    left: -25px !important;
-    border-radius: 0 40px 40px 0;
+// .swiper-button-prev {
+//     left: -25px !important;
+//     border-radius: 0 40px 40px 0;
 
-    &:hover {
-        padding: 40px 55px;
-    }
-}
+//     &:hover {
+//         padding: 40px 55px;
+//     }
+// }
 
-.swiper-pagination-bullet-active {
-    background: red !important;
-}
+// .swiper-pagination-bullet-active {
+//     background: red !important;
+// }
 
-.bg {
-    background-image: url(../../../../assets/films_images/images.jpg);
-    filter: blur(8px);
-    -webkit-filter: blur(8px);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-}
+// // .bg {
+// //     // background-image: url(../../../../assets/films_images/images.jpg);
+// //     // filter: blur(8px);
+// //     // -webkit-filter: blur(8px);
+// //     // background-position: center;
+// //     // background-repeat: no-repeat;
+// //     // background-size: cover;
+// //     position: absolute;
+// //     left: 0px;
+// //     top: 0px;
+// //     z-index: -1;
+// //     width: 100%;
+// //     height: 100%;
+// // }

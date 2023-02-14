@@ -1,0 +1,16 @@
+.hero-background {
+    position: relative;
+    height: 80vh;
+
+    .bcg-slider {
+        width: 100%;
+        height: 100%;
+
+        .bcg-slide {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+
+}
