@@ -2,12 +2,22 @@
 import MainRoot from "../pages/Main/MainRoot";
 import NotFoundMain from "../pages/Main/NotFound";
 import Home from "../pages/Main/Home";
-import Cinemas from "../pages/Main/Cinemas";
 import Programs from "../pages/Main/Programs";
 import Campaign from "../pages/Main/Campaign";
 import Vip from "../pages/Main/Vip";
 
-//! Technologies PART
+//! CINEMAS PART
+import CinemasRoot from "../pages/Main/Cinemas/CinemasRoot"
+import Cinemas from "../pages/Main/Cinemas/Cinemas"
+import AygunMall from "../pages/Main/Cinemas/AygunMall"
+import FlameTowers from "../pages/Main/Cinemas/FlameTowers"
+import ParkBulvar from "../pages/Main/Cinemas/ParkBulvar"
+import MetroPark from "../pages/Main/Cinemas/MetroPark"
+import Shahdag from "../pages/Main/Cinemas/Shahdag"
+import Zaqulba from "../pages/Main/Cinemas/Zaqulba"
+
+
+//! TECHNOLOGIES PART
 import TechRoot from "../pages/Main/Technologies/TechRoot";
 import Imax from "../pages/Main/Technologies/Imax";
 import LaseR from "../pages/Main/Technologies/LaseR";
@@ -18,11 +28,13 @@ import AboutUs from "../pages/Main/About/AboutUs";
 import Privacy from "../pages/Main/About/Privacy";
 import Contact from "../pages/Main/About/Contact";
 import Cookies from "../pages/Main/About/Cookies";
+
 //!ADMIN PART
 import AdminRoot from "../pages/Admin/AdminRoot";
 import NotFoundAdmin from "../pages/Admin/NotFound";
 import Dashboard from "../pages/Admin/Dashboard";
 import Login from "../components/Admin/Login/Login";
+
 
 export const ROUTES = [
   {
@@ -34,8 +46,38 @@ export const ROUTES = [
         element: <Home />,
       },
       {
-        path: "cinemas",
-        element: <Cinemas />,
+        path: "cinemas/",
+        element: <CinemasRoot />,
+        children: [
+          {
+            path: "",
+            element: <Cinemas />
+          },
+          {
+            path: "aygunmall",
+            element: <AygunMall />
+          },
+          {
+            path: "flametowers",
+            element: <FlameTowers />
+          },
+          {
+            path: "parkbulvar",
+            element: <ParkBulvar />
+          },
+          {
+            path: "metropark",
+            element: <MetroPark />
+          },
+          {
+            path: "shahdag",
+            element: <Shahdag />
+          },
+          {
+            path: "zaqulba",
+            element: <Zaqulba />
+          }
+        ]
       },
       {
         path: "programs",

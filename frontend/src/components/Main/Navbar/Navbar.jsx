@@ -38,13 +38,57 @@ function Navbar() {
                 Schedule
               </NavLink>
             </li>
-            <li>
+            <li className="has-dropdown">
               <NavLink
                 to="/cinemas"
                 style={({ isActive }) => (isActive ? activeStyle : null)}
               >
                 Cinemas
+                <RiArrowDropDownLine style={{ fontSize: "25px" }} />
               </NavLink>
+              <ul className="dropdown dropdown-1">
+                <li className="dropdown-item">
+                  <Link
+                    to="/cinemas/parkbulvar"
+                  >Park Bulvar
+                  </Link>
+                </li>
+                <li className="dropdown-item">
+                  <Link
+                    to="/cinemas/metropark"
+                  >
+                    Metro Park
+                  </Link>
+                </li>
+                <li className="dropdown-item">
+                  <Link
+                    to="/cinemas/flametowers"
+                  >
+                    Flame Towers
+                  </Link>
+                </li>
+                <li className="dropdown-item">
+                  <Link
+                    to="/cinemas/zaqulba"
+                  >
+                    Zaqulba
+                  </Link>
+                </li>
+                <li className="dropdown-item">
+                  <Link
+                    to="/cinemas/shahdag"
+                  >
+                    ShahDag
+                  </Link>
+                </li>
+                <li className="dropdown-item">
+                  <Link
+                    to="/cinemas/aygunmall"
+                  >
+                    Aygun Mall
+                  </Link>
+                </li>
+              </ul>
             </li>
             <li>
               <NavLink
@@ -62,7 +106,7 @@ function Navbar() {
                 VIP
               </NavLink>
             </li>
-            <li className="nav-item has-dropdown">
+            <li className="has-dropdown">
               <NavLink
                 to="/technologies
                 "
@@ -72,9 +116,9 @@ function Navbar() {
                 <RiArrowDropDownLine style={{ fontSize: "25px" }} />
               </NavLink>
 
-              {/*//! DROPDOWN MENU 1 */}
+              {/*//! DROPDOWN MENU technologies */}
 
-              <ul className="dropdown dropdown-1">
+              <ul className="dropdown dropdown-2">
                 <li className="dropdown-item">
                   <NavLink
                     to="/technologies/imax"
@@ -92,7 +136,7 @@ function Navbar() {
                 </li>
               </ul>
             </li>
-            <li className="nav-item has-dropdown">
+            <li className="has-dropdown">
               <Link
                 to="/"
               >
@@ -101,9 +145,9 @@ function Navbar() {
 
               </Link>
 
-              {/*//! DROPDOWN MENU 2 */}
+              {/*//! DROPDOWN MENU about */}
 
-              <ul className="dropdown dropdown-2">
+              <ul className="dropdown dropdown-3">
                 <li className="dropdown-item">
                   <Link
                     to="/about"

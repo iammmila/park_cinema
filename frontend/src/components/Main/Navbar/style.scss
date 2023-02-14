@@ -2,11 +2,9 @@ nav {
   z-index: 999;
   width: 100%;
   background: rgb(0, 0, 0);
-  background: linear-gradient(
-    0deg,
-    rgba(108, 108, 108, 0) 0%,
-    rgba(0, 0, 0, 1) 100%
-  );
+  background: linear-gradient(0deg,
+      rgba(108, 108, 108, 0) 0%,
+      rgba(0, 0, 0, 1) 100%);
 
   position: fixed;
   top: 0;
@@ -23,6 +21,7 @@ nav {
       gap: 20px;
       font-weight: 500;
       position: relative;
+
       a {
         display: block;
         height: 100%;
@@ -70,18 +69,18 @@ nav {
           width: 120%;
         }
       }
+
       .dropdown,
       .dropdown-1,
-      .dropdown-2 {
+      .dropdown-2,
+      .dropdown-3 {
         opacity: 0;
         width: 150px;
         position: absolute;
         background: rgb(0, 0, 0);
-        background: linear-gradient(
-          0deg,
-          rgba(0, 0, 0, 0.7707457983193278) 50%,
-          rgba(0, 0, 0, 1) 100%
-        );
+        background: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.7707457983193278) 50%,
+            rgba(0, 0, 0, 1) 100%);
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         border-radius: 15px;
         padding: 20px;
@@ -94,11 +93,17 @@ nav {
         transform: translateX(-40%);
         transition: opacity 0.15s ease-out;
       }
+
       .dropdown-1 {
-        right: 40px;
+        left: 270px;
       }
+
       .dropdown-2 {
-        right: -140px;
+        right: 70px;
+      }
+
+      .dropdown-3 {
+        right: -90px;
       }
     }
   }
@@ -132,8 +137,7 @@ nav {
 .logo {
   width: 250px;
   color: red;
-  filter: invert(18%) sepia(88%) saturate(6137%) hue-rotate(348deg)
-    brightness(92%) contrast(138%);
+  filter: invert(18%) sepia(88%) saturate(6137%) hue-rotate(348deg) brightness(92%) contrast(138%);
 }
 
 /* Extra small devices (phones, 600px and down) */
