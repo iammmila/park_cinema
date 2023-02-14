@@ -10,90 +10,45 @@
         "description": "Avatar serries is last advanture of blue creations",
         "trailer": "trailer",
         "poster": "poster",
-        "isNew": false,
         "date": "2023-01-01T00:00:00",
-        
-        "film_Genres": [
+        "genres": [
             {
-                "film_Id": 1,
-                "genre_Id": 2,
-                "genre": {
-                    "id": 2,
-                    "name": "Romantic",
-                    "film_Genres": []
-                }
+                "genreId": 2,
+                "name": "Romantic"
             },
             {
-                "film_Id": 1,
-                "genre_Id": 3,
-                "genre": {
-                    "id": 3,
-                    "name": "Action",
-                    "film_Genres": []
-                }
+                "genreId": 3,
+                "name": "Action"
             }
         ],
-
-        "film_Languages": [
+        "languages": [
             {
-                "film_Id": 1,
-                "language_Id": 2,
-                "language": {
-                    "id": 2,
-                    "name": "English",
-                    "film_Languages": []
-                }
+                "id": 2,
+                "name": "English"
             },
             {
-                "film_Id": 1,
-                "language_Id": 3,
-                "language": {
-                    "id": 3,
-                    "name": "Turkish",
-                    "film_Languages": []
-                }
+                "id": 3,
+                "name": "Turkish"
             }
         ],
-
-        "film_Formats": [
+        "formats": [
             {
-                "film_Id": 1,
-                "format_Id": 1,
-                "format": {
-                    "id": 1,
-                    "name": "3D",
-                    "film_Formats": []
-                }
+                "id": 1,
+                "name": "3D"
             },
             {
-                "film_Id": 1,
-                "format_Id": 2,
-                "format": {
-                    "id": 2,
-                    "name": "2D",
-                    "film_Formats": []
-                }
+                "id": 2,
+                "name": "2D"
             }
         ],
-
-        "film_Subtitles": [
+        "subtitles": [
             {
-                "film_Id": 1,
-                "subtitle_Id": 1,
-                "subtitle": {
-                    "id": 1,
-                    "name": "Az",
-                    "film_Subtitles": []
-                }
+                "id": 1,
+                "name": "Az"
             },
             {
-                "film_Id": 1,
-                "subtitle_Id": 2,
-                "subtitle": {
-                    "id": 2,
-                    "name": "Eng",
-                    "film_Subtitles": []
-                }
+                "id": 2,
+                "name": "Eng"
             }
         ]
     }

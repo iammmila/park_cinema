@@ -11,28 +11,91 @@ app.use(bodyParser.json())
 
 const { Schema } = mongoose
 
-const exampleScheme = new Schema(
+const filmScheme = new Schema(
     {
         name: {
             type: String,
             required: true
         },
-        image: {
+        ageLimit: {
+            type: Number,
+            required: true
+        },
+        durationMinute: {
+            type: Number,
+            required: true
+        },
+        country: {
             type: String,
             required: true
         },
-        information: {
+        director: {
             type: String,
             required: true
-        }
+        },
+        actors: {
+            type: String,
+            required: true
+        },
+        description: {
+            type: String,
+            required: true
+        },
+        trailer: {
+            type: String,
+            required: true
+        },
+        poster: {
+            type: String,
+            required: true
+        },
+        date: {
+            type: Date,
+            required: true
+        },
+        genres: [
+            {
+                name: {
+                    type: String,
+                    required: true
+                }
+            }
+        ],
+        languages: [
+            {
+                name: {
+                    type: String,
+                    required: true
+                }
+            }
+        ],
+        formats: [
+            {
+                name: {
+                    type: String,
+                    required: true
+                }
+            }
+        ],
+        subtitles: [
+            {
+                name: {
+                    type: String,
+                    required: true
+                }
+            }
+        ],
+
     }
     , { timestamps: true })
 
 mongoose.set("strictQuery", false)
 
-const Example = mongoose.model("example", exampleScheme)
+const Films = mongoose.model("films", filmScheme)
 const PORT = process.env.PORT
 const DB = process.env.DB_URL.replace("<password>", process.env.DB_PASSWORD)
+
+//!connection
 
 mongoose.connect(DB, (err) => {
     if (!err) {
@@ -45,8 +108,9 @@ mongoose.connect(DB, (err) => {
         console.log(err)
     }
 })
-app.get("/examples", (req, res) => {
-    Example.find({}, (err, docs) => {
+//! get element
+app.get("/films", (req, res) => {
+    Films.find({}, (err, docs) => {
         if (!err) {
             res.send(docs)
         }
@@ -55,9 +119,12 @@ app.get("/examples", (req, res) => {
         }
     })
 })
-app.get("/examples/:id", (req, res) => {
+
+//! get element by id
+
+app.get("/films/:id", (req, res) => {
     const { id } = req.params;
-    Example.findById(id, (err, docs) => {
+    Films.findById(id, (err, docs) => {
         if (!err) {
             if (docs) {
                 res.send(docs)
@@ -72,11 +139,27 @@ app.get("/examples/:id", (req, res) => {
     })
 })
 
-app.post("/examples", async (req, res) => {
-    const service = req.body
+//! delete element by id
+
+app.delete("/films/:id", (req, res) => {
+    const { id } = req.params;
+    Films.findByIdAndDelete(id, (err) => {
+        if (!err) {
+            res.json({ message: "film is deleted" })
+        }
+        else {
+            res.status(500).json({ message: err })
+        }
+    })
+})
+
+//! post element 
+
+app.post("/films", async (req, res) => {
+    const film = req.body
     try {
-        await Example.create(service)
-        res.status(200).json({ message: "jsdvsv" })
+        await Films.create(film)
+        res.status(200).json({ message: "films is posted" })
     } catch (error) {
         console.log(error)
     }
