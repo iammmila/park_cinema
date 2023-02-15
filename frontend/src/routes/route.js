@@ -5,6 +5,7 @@ import Home from "../pages/Main/Home";
 import Programs from "../pages/Main/Programs";
 import Campaign from "../pages/Main/Campaign";
 import Vip from "../pages/Main/Vip";
+import Booking from './../pages/Main/Booking';
 
 //! CINEMAS PART
 import CinemasRoot from "../pages/Main/Cinemas/CinemasRoot"
@@ -91,6 +92,10 @@ export const ROUTES = [
       {
         path: "campaign",
         element: <Campaign />,
+      },
+      {
+        path: "booking",
+        element: <Booking />
       },
       {
         path: "technologies/",
