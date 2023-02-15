@@ -69,6 +69,7 @@ $shadow-b: 1.5rem;
                 clip-path: polygon(3% 21%, 95% 26%, 79% 93%, 14% 87%);
             }
         }
+
     }
 
     &:last-child {
@@ -78,6 +79,10 @@ $shadow-b: 1.5rem;
         color: black;
         font-weight: 700;
         // filter: drop-shadow(3px 0px #313132);
+    }
+
+    a {
+        color: #000 !important;
     }
 }
 

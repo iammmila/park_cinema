@@ -93,10 +93,10 @@ export const ROUTES = [
         path: "campaign",
         element: <Campaign />,
       },
-      {
-        path: "booking",
-        element: <Booking />
-      },
+      // {
+      //   path: "booking",
+      //   element: <Booking />
+      // },
       {
         path: "technologies/",
         element: <TechRoot />,
@@ -142,6 +142,10 @@ export const ROUTES = [
         element: <NotFoundMain />,
       },
     ],
+  },
+  {
+    path: "/booking",
+    element: <Booking />
   },
   {
     path: "/admin/",

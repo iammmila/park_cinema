@@ -1,7 +1,6 @@
 import React from 'react'
 import "./style.scss"
 import { Swiper, SwiperSlide } from "swiper/react";
-
 // Import Swiper styles
 import "swiper/css";
 import 'swiper/css/navigation';
@@ -46,7 +45,7 @@ function BackgroundSlider() {
                     style={{ backgroundImage: `url(${film5} )` }} className="bg bcg-slide">
                 </SwiperSlide>
             </Swiper>
-        </section>
+        </section >
     )
 }
 
