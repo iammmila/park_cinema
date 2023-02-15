@@ -93,10 +93,6 @@ export const ROUTES = [
         path: "campaign",
         element: <Campaign />,
       },
-      // {
-      //   path: "booking",
-      //   element: <Booking />
-      // },
       {
         path: "technologies/",
         element: <TechRoot />,
