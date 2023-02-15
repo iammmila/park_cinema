@@ -1,5 +1,5 @@
 import React from 'react'
-import imaxHall from "../../../../../assets/images/imax/imax3.jpg"
+import imaxHall from "../../../../../assets/images/formats/imax/imax3.jpg"
 import "./style.scss"
 
 function Information() {
