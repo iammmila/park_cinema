@@ -2,7 +2,7 @@
 import MainRoot from "../pages/Main/MainRoot";
 import NotFoundMain from "../pages/Main/NotFound";
 import Home from "../pages/Main/Home";
-import Programs from "../pages/Main/Programs";
+import Schedule from "../pages/Main/Schedule";
 import Campaign from "../pages/Main/Campaign";
 import Vip from "../pages/Main/Vip";
 import Booking from './../pages/Main/Booking';
@@ -82,8 +82,8 @@ export const ROUTES = [
         ]
       },
       {
-        path: "programs",
-        element: <Programs />,
+        path: "schedule",
+        element: <Schedule />,
       },
       {
         path: "vip",

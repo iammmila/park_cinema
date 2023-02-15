@@ -1,6 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import HeroSection from "../../../components/Main/Technologies/IMAX/HeroSection/HeroSection"
+
 function Imax() {
   return (
     <>

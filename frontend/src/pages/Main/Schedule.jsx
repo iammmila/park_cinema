@@ -1,16 +1,16 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async';
 
-function Programs() {
+function Schedule() {
     return (
         <>
             <Helmet>
-                <title>Programs | Park Cinema</title>
+                <title>Schedule | Park Cinema</title>
                 <meta name='description' content='Beginner friendly page for learning React Helmet.' />
             </Helmet>
-            Programs
+            Schedule
         </>
     )
 }
 
-export default Programs
+export default Schedule
