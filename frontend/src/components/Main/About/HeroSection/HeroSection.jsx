@@ -10,10 +10,8 @@ function HeroSection() {
                     <div className='content'>
                         <div className="blur-bg"></div>
                         <Information />
-
                     </div>
                 </div>
-
             </div>
         </section>
     )

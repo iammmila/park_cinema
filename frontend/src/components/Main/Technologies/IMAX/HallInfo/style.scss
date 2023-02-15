@@ -1,4 +1,4 @@
-.information-imax-section {
+.information-hall-section {
     z-index: 2;
     padding: 50px 0;
     color: white !important;
@@ -18,10 +18,17 @@
         display: flex;
         flex-direction: row;
         align-items: center;
+        justify-content: center;
         gap: 30px;
 
-        p{
+        .hall_imax {
             width: 50%;
+            // height: 100%;
+            border-radius: 20px;
+        }
+
+        p {
+            margin-bottom: 10px;
             position: relative;
             z-index: 2;
         }

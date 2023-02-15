@@ -1,5 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
+import Features from '../../../components/Main/Technologies/IMAX/FeaturesImax/Features'
+import HallImax from '../../../components/Main/Technologies/IMAX/HallImax/HallImax'
 import HeroSection from "../../../components/Main/Technologies/IMAX/HeroSection/HeroSection"
 
 function Imax() {
@@ -10,6 +12,8 @@ function Imax() {
         <meta name='description' content='Beginner friendly page for learning React Helmet.' />
       </Helmet>
       <HeroSection />
+      <Features />
+      <HallImax />
     </>
   )
 }
