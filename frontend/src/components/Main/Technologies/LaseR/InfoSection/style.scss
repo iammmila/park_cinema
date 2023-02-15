@@ -1,0 +1,27 @@
+.laser-features-section {
+    padding-bottom: 50px ;
+    // height: 50vh;
+
+    .wrapper-cards {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .laser-info {
+        padding-top: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+
+        p {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+    }
+}

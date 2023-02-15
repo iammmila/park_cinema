@@ -1,6 +1,6 @@
 import React from 'react'
 import "./style.scss"
-import imaxImg from "../../../../../assets//images/imax/imax2.jpg"
+import imaxImg from "../../../../../assets/images/formats/imax/imax2.jpg"
 function Features() {
     return (
         <section className='features_imax'>

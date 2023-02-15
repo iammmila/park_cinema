@@ -1,18 +1,15 @@
 import React from 'react'
 import "./style.scss"
-import InformationImax from './../../IMAX/InformationImax/InformationImax';
 
 function HeroSection() {
     return (
-        <section className='imax-hero'>
+        <section className='laser-hero'>
             <div className='bcgImage'>
                 <div className="container">
-                    <div className='wrapper-blur-section'>
+                    <div className='wrapper-laser-section'>
                         <div className='content'>
-                            <div className="blur-bg"></div>
-                            <div style={{ display: "flex", }}>
-                                <InformationImax />
-                            </div>
+                            <h2>Laser solutions from Park Cinema</h2>
+                            {/* <p>learn how you can benefit from leading laser projection technology</p> */}
                         </div>
                     </div>
                 </div>
