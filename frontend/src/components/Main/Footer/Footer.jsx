@@ -48,6 +48,56 @@ function Footer() {
               </li>
             </ul>
             <ul>
+              <h2>Cinemas</h2>
+              <li className='content__item'>
+                <Link
+                  className='link link--dia'
+                  to="/cinemas/parkbulvar"
+                >Park Bulvar
+                </Link>
+              </li>
+              <li className='content__item'>
+                <Link
+                  className='link link--dia'
+                  to="/cinemas/metropark"
+                >
+                  Metro Park
+                </Link>
+              </li>
+              <li className='content__item'>
+                <Link
+                  className='link link--dia'
+                  to="/cinemas/flametowers"
+                >
+                  Flame Towers
+                </Link>
+              </li>
+              <li className='content__item'>
+                <Link
+                  className='link link--dia'
+                  to="/cinemas/zaqulba"
+                >
+                  Zaqulba
+                </Link>
+              </li>
+              <li className='content__item'>
+                <Link
+                  className='link link--dia'
+                  to="/cinemas/shahdag"
+                >
+                  ShahDag
+                </Link>
+              </li>
+              <li className='content__item'>
+                <Link
+                  className='link link--dia'
+                  to="/cinemas/aygunmall"
+                >
+                  Aygun Mall
+                </Link>
+              </li>
+            </ul>
+            <ul>
               <h2>Technologies</h2>
               <li >
                 <Link className='link link--dia'
@@ -103,7 +153,6 @@ function Footer() {
             </ul>
           </ul>
           <Link to="/"><img className='logo' style={{ width: "300px" }} src={logo} alt="logo" /></Link>
-
         </div>
         <hr />
         <div className='footer_bottom'>
