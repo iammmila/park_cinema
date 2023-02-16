@@ -1,13 +1,19 @@
-.hero-schedule {
-    .container {
-        padding: 200px 0;
+:root {
+    --glow-color: hsl(0, 97%, 62%);
+}
 
+.hero-schedule {
+    padding: 200px 0;
+
+    .container {
         .wrapper-schedule {
             padding: 50px;
-            border: 1px solid gray;
             display: flex;
             flex-direction: column;
             gap: 100px;
+            border-radius: 20px;
+            border: 0.15em solid var(--glow-color);
+            box-shadow: inset 0px 0px 0.5em 0px var(--glow-color), 0px 0px 0.5em 0px var(--glow-color);
 
             .main_part {
                 display: flex;
@@ -16,15 +22,27 @@
                 justify-content: center;
                 gap: 30px;
             }
-            .movies{
-                padding: 200px;
-                border-radius: 20px;
-                border: 1px solid gray;
-            }
 
+            .movies {
+                border-radius: 20px;
+                border: 0.15em solid var(--glow-color);
+                box-shadow: inset 0px 0px 0.5em 0px var(--glow-color), 0px 0px 0.5em 0px var(--glow-color);
+            }
         }
     }
 }
-.d-none{
-    display: none;
+
+.light {
+    .hero-schedule {
+        .wrapper-schedule {
+            border: 0.2em solid black;
+            box-shadow: inset 0px 0px 0.5em 0px black, 0px 0px 0.5em 0px black;
+           
+            .movies {
+                border-radius: 20px;
+                border: 0.2em solid black;
+                box-shadow: inset 0px 0px 0.5em 0px black, 0px 0px 0.5em 0px black;
+            }
+        }
+    }
 }

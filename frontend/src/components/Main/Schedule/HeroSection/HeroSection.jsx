@@ -1,9 +1,7 @@
 import React, { useContext } from 'react'
+
 //context
 import { MainContext } from '../../../../context/ContextProvider';
-
-// background side
-import Video from '../../Video/Video'
 
 //buttons
 import ButtonToday from '../ButtonToday/ButtonToday'
@@ -11,7 +9,7 @@ import ButtonSoon from './../ButtonSoon/ButtonSoon';
 import ButtonSchedule from './../ButtonSchedule/ButtonSchedule';
 
 //General schedules
-import Cards from './../CardsToday/Cards';
+import CardsToday from '../CardsToday/CardsToday';
 import CardsSoon from './../CardsSoon/CardsSoon';
 import TableSchedule from './../Table/TableSchedule';
 
@@ -23,17 +21,28 @@ function HeroSection() {
 
     return (
         <section className='hero-schedule'>
-            <Video />
+            {/* <Video /> */}
             <div className="container">
                 <div className='wrapper-schedule'>
                     <div className='main_part'>
+                        {/* today button */}
                         <ButtonToday />
+
+                        {/* soon button */}
                         <ButtonSoon />
+
+                        {/* schedule button */}
                         <ButtonSchedule />
                     </div>
                     <div className='movies'>
-                        {isActive.id === 'today' && (<Cards />)}
+                        {/* //! today cards component */}
+                        {isActive.id === 'today' && (<CardsToday />)}
+                        
+                        {/* //! soon cards component */}
+
                         {isActive.id === "soon" && (<CardsSoon />)}
+                        
+                        {/* //! tabel component  */}
                         {isActive.id === "schedule" && (<TableSchedule />)}
                     </div>
                 </div>

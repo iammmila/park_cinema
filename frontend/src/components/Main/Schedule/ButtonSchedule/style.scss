@@ -11,7 +11,6 @@
     border-radius: 0.45em;
     background: none;
     perspective: 2em;
-    font-family: "Raleway", sans-serif;
     font-size: 2em;
     font-weight: 900;
     letter-spacing: 1em;
@@ -96,6 +95,26 @@
 
     &:hover:after {
         opacity: 1;
+    }
+}
+
+.light {
+    .glowing-btn3 {
+        border: 0.2em solid black;
+        box-shadow: inset 0px 0px 0.5em 0px black,
+            0px 0px 0.5em 0px black;
+
+        .glowing-txt {
+            text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em black;
+        }
+
+        &::after {
+            box-shadow: 0 0 2em 0.2em black;
+        }
+
+        &:focus-within {
+            color: rgba(0, 0, 0, 0.8);
+        }
     }
 }
 
