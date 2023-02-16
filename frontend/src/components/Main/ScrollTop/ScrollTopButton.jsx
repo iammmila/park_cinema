@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import "./style.scss"
 import { IoIosArrowUp } from "react-icons/io"
+
 function ScrollTopButton() {
     const [showTopBtn, setShowTopBtn] = useState(false);
+
     useEffect(() => {
         window.addEventListener("scroll", () => {
             if (window.scrollY > 400) {
@@ -12,6 +14,7 @@ function ScrollTopButton() {
             }
         });
     }, []);
+
     const goToTop = () => {
         window.scrollTo({
             top: 0,
@@ -21,15 +24,13 @@ function ScrollTopButton() {
 
     return (
         <div className="top-to-btm">
-            {" "}
             {showTopBtn && (
                 <IoIosArrowUp
                     className="icon-position icon-style"
                     onClick={goToTop}
                 />
-            )}{" "}
+            )}
         </div>
-        // </button>
     )
 }
 
