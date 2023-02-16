@@ -33,7 +33,8 @@ $shadow-b: 1.5rem;
         filter: none
     }
 
-    &:active {
+    &:active,
+    &:hover {
         transform: translateY(.25rem);
 
         [aria-hidden='true'] {
