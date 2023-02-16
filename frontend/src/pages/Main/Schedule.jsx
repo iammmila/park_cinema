@@ -1,5 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async';
+import HeroSection from '../../components/Main/Schedule/HeroSection/HeroSection';
 
 function Schedule() {
     return (
@@ -8,7 +9,7 @@ function Schedule() {
                 <title>Schedule | Park Cinema</title>
                 <meta name='description' content='Beginner friendly page for learning React Helmet.' />
             </Helmet>
-            Schedule
+            <HeroSection />
         </>
     )
 }

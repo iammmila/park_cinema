@@ -32,7 +32,7 @@ function Navbar() {
             </li>
             <li>
               <NavLink
-                to="/programs"
+                to="/schedule"
                 style={({ isActive }) => (isActive ? activeStyle : null)}
               >
                 Schedule

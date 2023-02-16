@@ -1,0 +1,30 @@
+.hero-schedule {
+    .container {
+        padding: 200px 0;
+
+        .wrapper-schedule {
+            padding: 50px;
+            border: 1px solid gray;
+            display: flex;
+            flex-direction: column;
+            gap: 100px;
+
+            .main_part {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                gap: 30px;
+            }
+            .movies{
+                padding: 200px;
+                border-radius: 20px;
+                border: 1px solid gray;
+            }
+
+        }
+    }
+}
+.d-none{
+    display: none;
+}
