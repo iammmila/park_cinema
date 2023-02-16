@@ -1,0 +1,37 @@
+.mySwiper2 {
+    height: 80%;
+    width: 100%;
+
+    .swiper-slide {
+        img {
+            width: 100% !important;
+            height: 100%;
+            border-radius: 20px;
+
+        }
+    }
+}
+
+.mySwiper3 {
+    height: 20%;
+    box-sizing: border-box;
+    padding: 10px 0;
+
+    .swiper-slide {
+        width: 20% !important;
+        height: 100%;
+        opacity: 0.4;
+
+        img {
+            border-radius: 20px;
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .swiper-slide-thumb-active {
+        opacity: 1;
+    }
+}
