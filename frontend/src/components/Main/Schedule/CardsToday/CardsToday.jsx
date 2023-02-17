@@ -15,7 +15,7 @@ import "./style.scss"
 function CardsToday() {
   return (
     <div className='today_cards_wrapper'>
-      <ul className='cards'>
+      <ul className='cards_today'>
         <li className="card_today">
           <span></span>
           <span></span>

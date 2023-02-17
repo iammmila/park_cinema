@@ -4,7 +4,7 @@ $hue-adjust: 360deg;
 $hue-contrast: color.hue(color.adjust(hsl($hue, 100%, 50%), $hue: $hue-adjust));
 
 .btn_buy {
-    padding: 0 7em;
+    padding: 0 6em;
     position: relative;
     z-index: 1;
 

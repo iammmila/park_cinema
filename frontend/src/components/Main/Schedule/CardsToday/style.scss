@@ -19,7 +19,7 @@
     align-items: center;
     justify-content: center;
 
-    .cards {
+    .cards_today {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
@@ -31,10 +31,11 @@
         .card_today {
             background-color: white;
             width: 30%;
-            padding: 10px;
+            padding: 20px;
             border-radius: 15px;
             position: relative;
             margin: 20px auto;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 
             .cardLink {
                 list-style: none;
@@ -170,6 +171,15 @@
     }
 }
 
+.light {
+    .cards_today {
+        .card_today {
+            background-color: #121212;
+        }
+    }
+
+}
+
 @keyframes animate1 {
     0% {
         left: -100%;
@@ -215,13 +225,13 @@
 }
 
 @media(min-width: 540px) {
-    .card-grid {
+    .cards_today {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media(min-width: 960px) {
-    .card-grid {
+    .cards_today {
         grid-template-columns: repeat(4, 1fr);
     }
 }
