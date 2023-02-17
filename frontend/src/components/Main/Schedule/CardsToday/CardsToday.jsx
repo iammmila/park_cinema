@@ -16,7 +16,7 @@ function CardsToday() {
   return (
     <div className='today_cards_wrapper'>
       <ul className='cards'>
-        <li className="card">
+        <li className="card_today">
           <span></span>
           <span></span>
           <span></span>
@@ -29,7 +29,7 @@ function CardsToday() {
           </Link>
           <ButtonBuy />
         </li>
-        <li className="card">
+        <li className="card_today">
           <span></span>
           <span></span>
           <span></span>
@@ -42,7 +42,7 @@ function CardsToday() {
           </Link>
           <ButtonBuy />
         </li>
-        <li className="card">
+        <li className="card_today">
           <span></span>
           <span></span>
           <span></span>
@@ -55,7 +55,7 @@ function CardsToday() {
           </Link>
           <ButtonBuy />
         </li>
-        <li className="card">
+        <li className="card_today">
           <span></span>
           <span></span>
           <span></span>
@@ -68,7 +68,7 @@ function CardsToday() {
           </Link>
           <ButtonBuy />
         </li>
-        <li className="card">
+        <li className="card_today">
           <span></span>
           <span></span>
           <span></span>
@@ -81,7 +81,7 @@ function CardsToday() {
           </Link>
           <ButtonBuy />
         </li>
-        <li className="card">
+        <li className="card_today">
           <span></span>
           <span></span>
           <span></span>
@@ -94,7 +94,7 @@ function CardsToday() {
           </Link>
           <ButtonBuy />
         </li>
-        <li className="card">
+        <li className="card_today">
           <span></span>
           <span></span>
           <span></span>
@@ -107,7 +107,7 @@ function CardsToday() {
           </Link>
           <ButtonBuy />
         </li>
-        <li className="card">
+        <li className="card_today">
           <span></span>
           <span></span>
           <span></span>
@@ -120,7 +120,7 @@ function CardsToday() {
           </Link>
           <ButtonBuy />
         </li>
-        <li className="card">
+        <li className="card_today">
           <span></span>
           <span></span>
           <span></span>

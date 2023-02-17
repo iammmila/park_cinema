@@ -28,9 +28,10 @@
         justify-content: center;
         gap: 50px;
 
-        .card {
+        .card_today {
+            background-color: white;
             width: 30%;
-            padding: 3px;
+            padding: 10px;
             border-radius: 15px;
             position: relative;
             margin: 20px auto;
@@ -38,7 +39,6 @@
             .cardLink {
                 list-style: none;
                 position: relative;
-
 
                 .card__background {
                     background-size: cover;
@@ -101,13 +101,13 @@
             }
         }
 
-        &:hover>.card:not(:hover) .card__background {
+        &:hover>.card_today:not(:hover) .card__background {
             filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
         }
     }
 }
 
-.card {
+.card_today {
     position: relative;
     display: inline-block;
     margin: 40px 0;
