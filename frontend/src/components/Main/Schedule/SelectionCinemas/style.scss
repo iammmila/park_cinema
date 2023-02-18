@@ -1,0 +1,123 @@
+.select-box {
+	position: relative;
+	display: block;
+	width: 50%;
+	margin: 0 auto;
+	font-size: 20px;
+	color: gray;
+	z-index: 100;
+
+	&__current {
+		position: relative;
+		box-shadow: 0 15px 30px -10px transparentize(#000, 0.9);
+		cursor: pointer;
+		outline: none;
+
+		&:focus {
+			&+.select-box__list {
+				opacity: 1;
+				animation-name: none;
+
+				.select-box__option {
+					cursor: pointer;
+				}
+			}
+
+			.select-box__icon {
+				transform: translateY(-50%) rotate(180deg);
+			}
+		}
+	}
+
+	&__icon {
+		position: absolute;
+		top: 50%;
+		right: 15px;
+		transform: translateY(-50%);
+		filter: contrast(0);
+		width: 20px;
+		opacity: 0.3;
+		transition: 0.2s ease;
+	}
+
+	&__value {
+		display: flex;
+		border-radius: 20px;
+	}
+
+	&__input {
+		display: none;
+
+		&:checked+.select-box__input-text {
+			display: block;
+		}
+	}
+
+	&__input-text {
+		display: none;
+		width: 100%;
+		margin: 0;
+		padding: 15px;
+		border: 2px solid black;
+		border-radius: 20px;
+		background-color: #121212;
+	}
+
+	&__list {
+		position: absolute;
+		border: 2px solid black;
+		width: 100%;
+		padding: 0;
+		list-style: none;
+		opacity: 0;
+
+		animation-name: HideList;
+		animation-duration: 0.5s;
+		animation-delay: 0.5s;
+		animation-fill-mode: forwards;
+		animation-timing-function: step-start;
+		box-shadow: 0 15px 30px -10px transparentize(#000, 0.9);
+	}
+
+	&__option {
+		display: block;
+		padding: 15px;
+		background-color: #121212;
+
+		&:hover,
+		&:focus {
+			color: #546c84;
+			background-color: #fbfbfb;
+		}
+	}
+}
+
+@keyframes HideList {
+	from {
+		transform: scaleY(1);
+	}
+
+	to {
+		transform: scaleY(0);
+	}
+}
+
+.light {
+	.select-box {
+		&__input-text {
+			border: 2px solid black;
+			background-color: white;
+		}
+		&__option {
+
+			background-color: white;
+	
+			&:hover,
+			&:focus {
+				color: #546c84;
+				background-color: black;
+			}
+		}
+	}
+	
+}

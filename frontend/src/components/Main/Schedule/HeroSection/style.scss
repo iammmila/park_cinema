@@ -10,7 +10,7 @@
             padding: 50px;
             display: flex;
             flex-direction: column;
-            gap: 100px;
+            gap: 30px;
             border-radius: 20px;
             border: 0.15em solid var(--glow-color);
             box-shadow: inset 0px 0px 0.5em 0px var(--glow-color), 0px 0px 0.5em 0px var(--glow-color);
@@ -21,6 +21,14 @@
                 align-items: center;
                 justify-content: center;
                 gap: 30px;
+            }
+
+            .filter_part {
+                margin-top: 80px;
+                padding: 20px;
+                border-radius: 20px;
+                border: 0.15em solid var(--glow-color);
+                box-shadow: inset 0px 0px 0.5em 0px var(--glow-color), 0px 0px 0.5em 0px var(--glow-color);
             }
 
             .movies {
@@ -37,7 +45,11 @@
         .wrapper-schedule {
             border: 0.2em solid black;
             box-shadow: inset 0px 0px 0.5em 0px black, 0px 0px 0.5em 0px black;
-           
+
+            .filter_part {
+                border: 0.15em solid black;
+                box-shadow: inset 0px 0px 0.5em 0px black, 0px 0px 0.5em 0px black;
+            }
             .movies {
                 border-radius: 20px;
                 border: 0.2em solid black;

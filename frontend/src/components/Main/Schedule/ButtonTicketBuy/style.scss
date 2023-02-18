@@ -1,0 +1,129 @@
+@use 'sass:color';
+
+$hue: 0deg;
+$hue-adjust: 360deg;
+$hue-contrast: color.hue(color.adjust(hsl($hue, 100%, 50%), $hue: $hue-adjust));
+
+.btn_ticket {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+
+    button {
+        --text-base: #{$hue},
+        55%,
+        40%;
+        --text-hover: #{$hue + 30},
+        72%,
+        86%;
+
+        --shadow-start: #{$hue-contrast},
+        100%,
+        72%;
+        --shadow-end: #{$hue + 5},
+        90%,
+        50%;
+
+        --shadow-inner: #{$hue},
+        90%,
+        62%;
+
+        color: hsla(var(--text-base), 1);
+        font-weight: 700;
+        font-size: 20px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        text-align: center;
+
+        // Button sizing
+        padding: 10px 20px;
+        max-width: 100%;
+        width: 4em;
+
+        // Button styling
+        background: inherit;
+        background-clip: padding-box;
+        // border: 5px solid hsla(var(--text-base), 1);
+        border: 0.15em solid hsl(0, 97%, 62%);
+        box-shadow: inset 0px 0px 0.5em 0px hsl(0, 97%, 62%), 0px 0px 0.5em 0px hsl(0, 97%, 62%);
+        border-radius: 2em;
+        cursor: pointer;
+
+
+        // Effects
+        position: relative;
+        transition: 0.25s ease-out;
+
+        &::before,
+        &::after {
+            content: "";
+            border-radius: inherit;
+            transition: inherit;
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+        }
+
+        // Gradient shadow
+        &::before {
+            // Position
+            inset: -0.2em;
+            z-index: -1;
+
+            // Effect
+            background: linear-gradient(hsla(var(--shadow-start), 1), hsla(var(--shadow-end), 1));
+            filter: blur(1.2em) saturate(1.2);
+
+            // Animation
+            transform-origin: bottom;
+            transform: scaleY(0.5);
+            opacity: 0;
+        }
+
+        // Semi-transparent blended box-shadow brightens up the border
+        &::after {
+            // Effect
+            box-shadow: inset 0 0 0 1px #fff, // inner pixel
+                0 0 0 4px hsla(0deg, 0%, 100%, 0.7), // ligthened border
+                1px 1px 0 4px #fff; // outer pixel
+            mix-blend-mode: overlay;
+
+            // Animation
+            opacity: 0;
+        }
+
+        &:hover,
+        &:focus {
+            color: hsla(var(--text-hover), 1);
+
+            // Lighten border
+            border-color: transparent;
+
+            // Inner shadow
+            box-shadow:
+                inset 0 1.4em 0 hsla(var(--shadow-inner), 0.1), // gloss
+                inset 0 0 1.4em hsla(var(--shadow-inner), 0.32), // inner glow
+                0 1px 1px hsla(var(--shadow-inner), 0.32); // bottom line
+
+            // Show effects
+            &::before,
+            &::after {
+                transform: none;
+                opacity: 1;
+            }
+        }
+
+        .ticket-icon {
+            filter: invert(1);
+
+        }
+    }
+}
+
+.light {
+    .btn_ticket {
+        .ticket-icon {
+            filter: brightness(0);
+        }
+    }
+}

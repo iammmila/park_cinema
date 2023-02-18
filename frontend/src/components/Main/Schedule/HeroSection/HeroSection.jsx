@@ -8,6 +8,9 @@ import ButtonToday from '../ButtonToday/ButtonToday'
 import ButtonSoon from './../ButtonSoon/ButtonSoon';
 import ButtonSchedule from './../ButtonSchedule/ButtonSchedule';
 
+//filtering part 
+import FilterFilms from '../FilterFilms/FilterFilms';
+
 //General schedules
 import CardsToday from '../CardsToday/CardsToday';
 import CardsSoon from './../CardsSoon/CardsSoon';
@@ -34,14 +37,16 @@ function HeroSection() {
                         {/* schedule button */}
                         <ButtonSchedule />
                     </div>
+                    <div className='filter_part'>
+                        <FilterFilms /> 
+                    </div>
                     <div className='movies'>
                         {/* //! today cards component */}
                         {isActive.id === 'today' && (<CardsToday />)}
-                        
-                        {/* //! soon cards component */}
 
+                        {/* //! soon cards component */}
                         {isActive.id === "soon" && (<CardsSoon />)}
-                        
+
                         {/* //! tabel component  */}
                         {isActive.id === "schedule" && (<TableSchedule />)}
                     </div>

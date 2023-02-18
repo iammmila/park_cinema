@@ -1,0 +1,72 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+
+    thead {
+        width: 100%;
+        border: none;
+
+        tr {
+            padding: 10px;
+            font-size: 25px;
+            font-weight: 600;
+            border: none;
+            border-radius: 20px 20px 0 0;
+            text-transform: uppercase;
+            border-bottom: 1pt solid hsl(0, 97%, 62%);
+            box-shadow: inset 0px 0px 0.5em 0px hsl(0, 97%, 62%), 0px 0px 0.5em 0px hsl(0, 97%, 62%);
+
+            td {
+                padding: 10px;
+                border: none;
+            }
+        }
+    }
+
+    tbody {
+        tr {
+            border: none;
+            padding: 20px;
+            font-size: 20px;
+
+            td {
+                padding: 15px;
+                border: none;
+                border-spacing: 0;
+
+                .wrapper_format {
+                    border: 1px solid hsl(0, 97%, 62%);
+                    box-shadow: inset 0px 0px 0.5em 0px hsl(0, 97%, 62%), 0px 0px 0.5em 0px hsl(0, 97%, 62%);
+                    display: inline-block;
+                    color: red;
+                    text-transform: uppercase;
+                    border-radius: 4px;
+                    padding: 0 5px;
+                    margin: 0 2px;
+
+                }
+
+                button {
+                    padding: 10px;
+                    border-radius: 50%;
+
+                    .ticket-icon {
+                        color: red !important;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+.light {
+    table {
+        thead {
+            tr {
+                border-bottom: 1pt solid black;
+                box-shadow: inset 0px 0px 0.5em 0px black, 0px 0px 0.5em 0px black;
+            }
+        }
+    }
+}

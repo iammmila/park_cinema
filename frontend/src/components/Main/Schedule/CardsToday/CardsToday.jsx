@@ -7,7 +7,7 @@ import film2 from "../../../../assets/films_images/_ыфнееее_resized.jpg"
 import film3 from "../../../../assets/films_images/kutsal-1_resized.png"
 
 //button for buy
-import ButtonBuy from '../ButtonTicket/ButtonBuy'
+import ButtonBuy from './../ButtonBuy/ButtonBuy';
 
 //general component's scss
 import "./style.scss"
