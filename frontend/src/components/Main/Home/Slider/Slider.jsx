@@ -1,12 +1,16 @@
 import React from 'react'
+
+//general scss
 import "./style.scss"
-import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import 'swiper/css/navigation';
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
+
+//film images
 import film1 from "../../../../assets/films_images/Avatar.jpg"
 import film2 from "../../../../assets/films_images/_ыфнееее_resized.jpg"
 import film3 from "../../../../assets/films_images/kutsal-1_resized.png"
