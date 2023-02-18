@@ -1,12 +1,16 @@
 import React from 'react'
+
+//general scss
 import "./style.scss"
-// import { Link } from 'react-router-dom';
+
+//films' images
 import film1 from "../../../../assets/films_images/Avatar.jpg"
 import film2 from "../../../../assets/films_images/_ыфнееее_resized.jpg"
 import film3 from "../../../../assets/films_images/kutsal-1_resized.png"
 import film4 from "../../../../assets/films_images/megan_saytt_resized.jpg"
 import film5 from "../../../../assets/films_images/my_shitdifejuheolndf_resized.jpg"
 
+//soon poster
 import soon from "../../../../assets/images/soon2.png"
 
 function Soon() {
