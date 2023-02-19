@@ -19,7 +19,7 @@ function Campaigns() {
 
   useEffect(() => {
     getData();
-  }, [getData])
+  }, [])
 
   return (
     <section className='home-campaigns'>

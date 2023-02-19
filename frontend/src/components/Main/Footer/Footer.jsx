@@ -1,9 +1,33 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import axios from 'axios'
+
+//general scss
 import "./style.scss"
+
+//logo
 import logo from "../../../assets/logo/download.svg"
+
+//social medias icons
 import { BsFacebook, BsInstagram, BsTwitter, BsYoutube } from "react-icons/bs"
+
+//context
+import { MainContext } from '../../../context/ContextProvider'
+
 function Footer() {
+
+  const { cinemas, setCinemas } = useContext(MainContext)
+  const URL = 'http://localhost:8080/cinemas';
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const getData = async () => {
+    await axios.get(URL).then((res) => setCinemas(res.data));
+  }
+
+  useEffect(() => {
+    getData();
+  }, [])
+
   return (
     <footer>
       <div className="container">
@@ -49,53 +73,18 @@ function Footer() {
             </ul>
             <ul>
               <h2>Cinemas</h2>
-              <li className='content__item'>
-                <Link
-                  className='link link--dia'
-                  to="/cinemas/parkbulvar"
-                >Park Bulvar
-                </Link>
-              </li>
-              <li className='content__item'>
-                <Link
-                  className='link link--dia'
-                  to="/cinemas/metropark"
-                >
-                  Metro Park
-                </Link>
-              </li>
-              <li className='content__item'>
-                <Link
-                  className='link link--dia'
-                  to="/cinemas/flametowers"
-                >
-                  Flame Towers
-                </Link>
-              </li>
-              <li className='content__item'>
-                <Link
-                  className='link link--dia'
-                  to="/cinemas/zaqulba"
-                >
-                  Zaqulba
-                </Link>
-              </li>
-              <li className='content__item'>
-                <Link
-                  className='link link--dia'
-                  to="/cinemas/shahdag"
-                >
-                  ShahDag
-                </Link>
-              </li>
-              <li className='content__item'>
-                <Link
-                  className='link link--dia'
-                  to="/cinemas/aygunmall"
-                >
-                  Aygun Mall
-                </Link>
-              </li>
+              {/* //!Cinemas*/}
+              {
+                cinemas?.map((data) => (
+                  <li className='content__item' key={data._id}>
+                    <Link
+                      className='link link--dia'
+                      to={`/cinemas/${data._id}`}
+                    >{data.name}
+                    </Link>
+                  </li>
+                ))
+              }
             </ul>
             <ul>
               <h2>Technologies</h2>
