@@ -76,7 +76,6 @@ const filmScheme = new Schema(
                 }
             }
         ],
-
     }
     , { timestamps: true }
 )
