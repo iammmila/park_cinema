@@ -1,6 +1,7 @@
 const Cinemas = require("../models/cinemasModel")
 
 //! get element
+
 exports.cinemas_getAll = (req, res) => {
     Cinemas.find({}, (err, docs) => {
         if (!err) {
@@ -59,23 +60,18 @@ exports.cinemas_post = async (req, res) => {
 }
 
 //! put element
+
 exports.cinemas_put = async (req, res) => {
-    const data = req.body;
+    const { id } = req.params
+    const data = req.body
     try {
-        await Cinemas.findByIdAndUpdate(data._id, {
-            name: data.name,
-            phoneNumber: data.phoneNumber,
-            workHour: data.workHour,
-            addressLine: data.addressLine,
-            addressPath: data.addressPath,
-            images: data.images
-        });
-        res.status(200).json({
-            message: "cinema is updated",
-        });
+        await Cinemas.findByIdAndUpdate( id, data, { new: true });
+        if (!data) {
+            return res.status(404).json({ message: 'Cinema is not found' });
+        }
+
+        res.status(200).json(data);
     } catch (err) {
-        res.status(500).json({
-            message: "cinema can't updated",
-        });
+        res.status(500).json({ message: err.message });
     }
 }
