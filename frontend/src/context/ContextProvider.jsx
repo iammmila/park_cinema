@@ -9,11 +9,21 @@ function ContextProvider({ children }) {
     const [isActive, setIsActive] = useState({
         id: 'today',
     })
+    const [cinemas, setCinemas] = useState([])
+    const [cinemaDetail, setCinemaDetail] = useState({})
+    const [loading, setLoading] = useState(true);
 
+    //!schedule part
+    const showComponent = (e) => {
+        setIsActive({
+            id: e.target.id,
+        })
+    }
     useEffect(() => {
         console.log(isActive)
     }, [isActive])
 
+    //!scrolltop
     useEffect(() => {
         window.addEventListener("scroll", () => {
             if (window.scrollY > 400) {
@@ -29,19 +39,20 @@ function ContextProvider({ children }) {
             behavior: "smooth",
         });
     };
-    const showComponent = (e) => {
-        setIsActive({
-            id: e.target.id,
-        })
-    }
+
+    //?VALUES
     const values = {
         mode, setMode,
         isOpen, setIsOpen,
         showTopBtn, setShowTopBtn,
         goToTop,
         isActive, setIsActive,
-        showComponent
+        showComponent,
+        cinemas, setCinemas,
+        cinemaDetail, setCinemaDetail,
+        loading, setLoading
     }
+    //! DARK AND LIGHT MODE
     useEffect(() => {
         document.body.className = mode
     }, [mode])

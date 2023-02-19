@@ -11,7 +11,7 @@ import FilmDetail from "../pages/Main/FilmDetail";
 //! CINEMAS PART
 import CinemasRoot from "../pages/Main/Cinemas/CinemasRoot"
 import Cinemas from "../pages/Main/Cinemas/Cinemas"
-import AygunMall from "../pages/Main/Cinemas/AygunMall"
+import CinemaDetail from "../pages/Main/Cinemas/CinemaDetail"
 
 //! TECHNOLOGIES PART
 import TechRoot from "../pages/Main/Technologies/TechRoot";
@@ -51,8 +51,8 @@ export const ROUTES = [
             element: <Cinemas />
           },
           {
-            path: ":name",
-            element: <AygunMall />
+            path: ":_id",
+            element: <CinemaDetail />
           }
         ]
       },
