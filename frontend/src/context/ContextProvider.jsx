@@ -11,6 +11,7 @@ function ContextProvider({ children }) {
     })
     const [films, setFilms] = useState([])
     const [cinemas, setCinemas] = useState([])
+    const [campaings, setCampaigns] = useState([])
     const [soonFilms, setSoonFilms] = useState([])
     const [cinemaDetail, setCinemaDetail] = useState({})
     const [loading, setLoading] = useState(true);
@@ -52,6 +53,7 @@ function ContextProvider({ children }) {
         showComponent,
         films, setFilms,
         cinemas, setCinemas,
+        campaings, setCampaigns,
         soonFilms, setSoonFilms,
         cinemaDetail, setCinemaDetail,
         loading, setLoading
