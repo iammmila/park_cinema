@@ -6,17 +6,12 @@ import Schedule from "../pages/Main/Schedule";
 import Campaign from "../pages/Main/Campaign";
 import Vip from "../pages/Main/Vip";
 import Booking from './../pages/Main/Booking';
+import FilmDetail from "../pages/Main/FilmDetail";
 
 //! CINEMAS PART
 import CinemasRoot from "../pages/Main/Cinemas/CinemasRoot"
 import Cinemas from "../pages/Main/Cinemas/Cinemas"
 import AygunMall from "../pages/Main/Cinemas/AygunMall"
-import FlameTowers from "../pages/Main/Cinemas/FlameTowers"
-import ParkBulvar from "../pages/Main/Cinemas/ParkBulvar"
-import MetroPark from "../pages/Main/Cinemas/MetroPark"
-import Shahdag from "../pages/Main/Cinemas/Shahdag"
-import Zaqulba from "../pages/Main/Cinemas/Zaqulba"
-
 
 //! TECHNOLOGIES PART
 import TechRoot from "../pages/Main/Technologies/TechRoot";
@@ -56,34 +51,18 @@ export const ROUTES = [
             element: <Cinemas />
           },
           {
-            path: "aygunmall",
+            path: ":name",
             element: <AygunMall />
-          },
-          {
-            path: "flametowers",
-            element: <FlameTowers />
-          },
-          {
-            path: "parkbulvar",
-            element: <ParkBulvar />
-          },
-          {
-            path: "metropark",
-            element: <MetroPark />
-          },
-          {
-            path: "shahdag",
-            element: <Shahdag />
-          },
-          {
-            path: "zaqulba",
-            element: <Zaqulba />
           }
         ]
       },
       {
         path: "schedule",
         element: <Schedule />,
+      },
+      {
+        path: "film/:id",
+        element: <FilmDetail />
       },
       {
         path: "vip",
@@ -108,7 +87,7 @@ export const ROUTES = [
           {
             path: "laser",
             element: <LaseR />,
-          },
+          }
         ],
       },
       {
