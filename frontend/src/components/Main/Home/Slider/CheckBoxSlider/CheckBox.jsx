@@ -87,21 +87,21 @@ function CheckBox() {
     return (
         <>
             <div className='filtering'>
-                <label htmlFor="english">
+                <label htmlFor="2D">
                     <input
                         type="checkbox"
                         onChange={filterHandler}
                         value="english"
-                        id="english"
+                        id="2D"
                     />
                     <span>2D</span>
                 </label>
-                <label htmlFor="french">
+                <label htmlFor="3D">
                     <input
                         type="checkbox"
                         onChange={filterHandler}
-                        value="french"
-                        id="french"
+                        value="3D"
+                        id="3D"
                     />
                     <span>3D</span>
                 </label>

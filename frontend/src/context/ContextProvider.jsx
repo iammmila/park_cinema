@@ -9,6 +9,7 @@ function ContextProvider({ children }) {
     const [isActive, setIsActive] = useState({
         id: 'today',
     })
+    const [films, setFilms] = useState([])
     const [cinemas, setCinemas] = useState([])
     const [soonFilms, setSoonFilms] = useState([])
     const [cinemaDetail, setCinemaDetail] = useState({})
@@ -49,6 +50,7 @@ function ContextProvider({ children }) {
         goToTop,
         isActive, setIsActive,
         showComponent,
+        films, setFilms,
         cinemas, setCinemas,
         soonFilms, setSoonFilms,
         cinemaDetail, setCinemaDetail,

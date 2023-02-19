@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 
 //general scss
 import "./style.scss"
@@ -10,18 +10,26 @@ import 'swiper/css/navigation';
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 
-//film images
-import film1 from "../../../../assets/films_images/Avatar.jpg"
-import film2 from "../../../../assets/films_images/_ыфнееее_resized.jpg"
-import film3 from "../../../../assets/films_images/kutsal-1_resized.png"
-import film4 from "../../../../assets/films_images/megan_saytt_resized.jpg"
-import film5 from "../../../../assets/films_images/my_shitdifejuheolndf_resized.jpg"
-
 // import required modules
 import { FreeMode, Navigation, Pagination } from "swiper";
 import CheckBox from './CheckBoxSlider/CheckBox';
+import { MainContext } from '../../../../context/ContextProvider';
+import axios from 'axios';
+import LoadingCard from '../../Cinemas/LoadingCard/LoadingCard';
 
 function Slider() {
+  const { films, setFilms, setLoading, loading } = useContext(MainContext)
+
+  const URL = 'http://localhost:8080/films';
+
+  const getData = async () => {
+    await axios.get(URL).then((res) => setFilms(res.data));
+    setLoading(false);
+  }
+
+  useEffect(() => {
+    getData();
+  }, [])
 
   return (
     <section className='hero_section'>
@@ -31,41 +39,21 @@ function Slider() {
           slidesPerView={4}
           centeredSlides={true}
           freeMode={true}
-          // pagination={{
-          //   clickable: true,
-          // }}
           navigation={true}
           modules={[Pagination, FreeMode, Navigation]}
           className=" main-slider "
         >
-          <SwiperSlide className='slide'>
-            <img className='films' width={"400px"} height={"600px"} src={film1} alt="film1" />
-            <span>Avatar Movie</span>
-          </SwiperSlide>
-          <SwiperSlide className='slide'>
-            <img className='films' width={"400px"} height={"600px"} src={film2} alt="film1" />
-            <span>Avatar Movie</span>
-          </SwiperSlide>
-          <SwiperSlide className='slide'>
-            <img className='films' width={"400px"} height={"600px"} src={film3} alt="film1" />
-            <span>Avatar Movie</span>
-          </SwiperSlide>
-          <SwiperSlide className='slide'>
-            <img className='films' width={"400px"} height={"600px"} src={film4} alt="film1" />
-            <span>Avatar Movie</span>
-          </SwiperSlide>
-          <SwiperSlide className='slide'>
-            <img className='films' width={"400px"} height={"600px"} src={film5} alt="film1" />
-            <span>Avatar Movie</span>
-          </SwiperSlide>
-          <SwiperSlide className='slide'>
-            <img className='films' width={"400px"} height={"600px"} src={film1} alt="film1" />
-            <span>Avatar Movie</span>
-          </SwiperSlide>
-          <SwiperSlide className='slide'>
-            <img className='films' width={"400px"} height={"600px"} src={film2} alt="film1" />
-            <span>Avatar Movie</span>
-          </SwiperSlide>
+          {/* //!cards of Films */}
+          {
+            loading ? (<><LoadingCard /> <LoadingCard /> <LoadingCard />
+            </>) :
+              films?.map((data) => (
+                <SwiperSlide className='slide' key={data._id}>
+                  <img className='films' width={"400px"} height={"600px"} src={data.poster} alt="film1" />
+                  <span>{data.name}</span>
+                </SwiperSlide>
+              ))
+          }
           <CheckBox />
         </Swiper>
       </div>
