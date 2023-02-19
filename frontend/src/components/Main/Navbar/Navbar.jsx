@@ -1,20 +1,30 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import "./style.scss"
 import { Link, NavLink } from "react-router-dom"
 import { MainContext } from "../../../context/ContextProvider"
 import logo from "../../../assets/logo/download.svg"
 import { MdModeNight, MdLightMode } from "react-icons/md"
 import { RiArrowDropDownLine } from "react-icons/ri"
+import axios from 'axios';
 
 function Navbar() {
 
   const activeStyle = {
     color: "red"
   }
-  const { mode, setMode } = useContext(MainContext)
+  const { mode, setMode, cinemas, setCinemas } = useContext(MainContext)
   const changeTheme = () => {
     setMode(mode === "dark" ? "light" : "dark")
   }
+  const URL = 'http://localhost:8080/cinemas';
+
+  const getData = async () => {
+    await axios.get(URL).then((res) => setCinemas(res.data));
+  }
+
+  useEffect(() => {
+    getData();
+  }, [])
 
   return (
     <nav>
@@ -47,47 +57,17 @@ function Navbar() {
                 <RiArrowDropDownLine style={{ fontSize: "25px" }} />
               </NavLink>
               <ul className="dropdown dropdown-1">
-                <li className="dropdown-item">
-                  <Link
-                    to="/cinemas/parkbulvar"
-                  >Park Bulvar
-                  </Link>
-                </li>
-                <li className="dropdown-item">
-                  <Link
-                    to="/cinemas/metropark"
-                  >
-                    Metro Park
-                  </Link>
-                </li>
-                <li className="dropdown-item">
-                  <Link
-                    to="/cinemas/flametowers"
-                  >
-                    Flame Towers
-                  </Link>
-                </li>
-                <li className="dropdown-item">
-                  <Link
-                    to="/cinemas/zaqulba"
-                  >
-                    Zaqulba
-                  </Link>
-                </li>
-                <li className="dropdown-item">
-                  <Link
-                    to="/cinemas/shahdag"
-                  >
-                    ShahDag
-                  </Link>
-                </li>
-                <li className="dropdown-item">
-                  <Link
-                    to="/cinemas/aygunmall"
-                  >
-                    Aygun Mall
-                  </Link>
-                </li>
+                {cinemas?.map((data) => {
+                  return (
+                    <li className="dropdown-item" key={data._id}>
+                      <Link
+                        to={`/cinemas/${data._id}`} target="_blank"
+                      >
+                        {data.name}
+                      </Link>
+                    </li>
+                  )
+                })}
               </ul>
             </li>
             <li>

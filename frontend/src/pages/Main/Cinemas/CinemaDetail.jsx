@@ -21,7 +21,7 @@ function CinemaDetail() {
     return (
         <>
             <Helmet>
-                <title>Cinema | Park Cinema</title>
+                <title> Cinema | Park Cinema</title>
                 <meta name='description' content='Beginner friendly page for learning React Helmet.' />
             </Helmet>
             <ul>
