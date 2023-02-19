@@ -1,53 +1,32 @@
 [
     {
-        "id": 1,
-        "name": "Avatar",
-        "ageLimit": 18,
-        "durationMinute": 180,
-        "country": "USA",
-        "director": "A.Morgan",
-        "actors": "B.Adam,F.Jackman",
-        "description": "Avatar serries is last advanture of blue creations",
-        "trailer": "trailer",
-        "poster": "poster",
-        "date": "2023-01-01T00:00:00",
-        "genres": [
-            {
-                "name": "Romantic"
-            },
-            {
-                "name": "Action"
-            }
-        ],
-        "languages": [
-            {
-                "id": 2,
-                "name": "English"
-            },
-            {
-                "id": 3,
-                "name": "Turkish"
-            }
-        ],
-        "formats": [
-            {
-                "id": 1,
-                "name": "3D"
-            },
-            {
-                "id": 2,
-                "name": "2D"
-            }
-        ],
-        "subtitles": [
-            {
-                "id": 1,
-                "name": "Az"
-            },
-            {
-                "id": 2,
-                "name": "Eng"
-            }
-        ]
+        "description":"Happy Birthday, dear friend!  How about spending this special day with us?  On behalf of our cinema we present you a ticket which you can get from any of our branches just by coming up with you ID card. We wish you to spend many wonderful years with us. Sincerely, Park Cinema.",
+        "image":"https://parkcinema.az/uploads/default/files/birthdayENG1.jpg",
+        "discount": 50
+    },
+    {
+        "description":"This tariff is actual in Park Cinema Metropark, Flame Towers, Park Cinema Park Bulvar, Park Cinema Aygun Mall and Park Cinema Zagulba Mall.This tariff is not eligible on non-working days. Note: these prices could not be available for some movies",
+        "image":"https://parkcinema.az/uploads/default/files/en-in-super-day.png",
+        "discount": 50
+    },
+    {
+        "description":"*Offer is valid on every Tuesday from 8:00 to 23:59. * This price is eligible only for 2D movies *You can buy IMAX glasses for 3 AZN at cinema ticket office *The campaign is not valid on holidays and non-working days.",
+        "image":"https://parkcinema.az/uploads/default/files/imax-en-in1.png",
+        "discount": 50
+    },
+    {
+        "description":"Don't miss the chance to purchase tickets with discount! This campaign is actual everyday till 17:00 in Park Cinema Metropark, Park Cinema Park Bulvar, Park Cinema Aygun Mall and Park Cinema Zagulba Mall.",
+        "image":"https://parkcinema.az/uploads/default/files/imax-en-in1.png",
+        "discount": 10
+    },
+    {
+        "description":"You can use “Family Tariff” during the whole week in our cinemas.",
+        "image":"https://parkcinema.az/uploads/default/files/imax-en-in1.png",
+        "discount": 50
+    },
+    {
+        "description":"Every second visitor of Park Cinema network enjoyes our bonus cards, so we decided to expand the possibilities of using them! Accumulated bonuses can be used to purchase tickets at the box office. Please note that 7.5% of the ticket price is credited to the Silver Bonus Card, 10% to the Gold Card, and 12.5% to the Platinum Card.",
+        "image":"https://parkcinema.az/uploads/default/files/bonus-en1.png",
+        "discount": 7.5
     }
 ]
