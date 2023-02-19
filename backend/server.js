@@ -12,8 +12,10 @@ app.use(bodyParser.json())
 app.use(express.urlencoded({ extended: false }))
 
 const filmsRoute = require("./routes/filmsRoute")
+const cinemasRoute = require("./routes/cinemasRoute")
 
 app.use("/films", filmsRoute)
+app.use("/cinemas", filmsRoute)
 
 const PORT = process.env.PORT
 const DB = process.env.DB_URL.replace("<password>", process.env.DB_PASSWORD)
