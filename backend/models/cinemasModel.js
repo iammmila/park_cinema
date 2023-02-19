@@ -9,18 +9,14 @@ const cinemaScheme = new Schema(
             required: true
         },
         phoneNumber: {
-            type: Number,
-            required: true
-        },
-        workHour: {
-            type: Number,
-            required: true
-        },
-        addressLine: {
             type: String,
             required: true
         },
-        addressPath: {
+        workHour: {
+            type: String,
+            required: true
+        },
+        addressLine: {
             type: String,
             required: true
         },
@@ -31,7 +27,6 @@ const cinemaScheme = new Schema(
     }
     , { timestamps: true }
 )
-
 
 const Cinemas = mongoose.model("cinemas", cinemaScheme)
 module.exports = (Cinemas)
