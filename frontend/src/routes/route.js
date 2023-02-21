@@ -111,12 +111,12 @@ export const ROUTES = [
             element: <Cookies />,
           },
         ],
-      },
-      {
-        path: "*",
-        element: <NotFoundMain />,
-      },
+      }
     ],
+  },
+  {
+    path: "*",
+    element: <NotFoundMain />,
   },
   {
     path: "/booking",
