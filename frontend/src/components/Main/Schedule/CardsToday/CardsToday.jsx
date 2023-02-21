@@ -13,17 +13,17 @@ import "./style.scss"
 import LoadingCard from '../LoadingCard/LoadingCard';
 
 function CardsToday() {
-  const { films, setFilms, setLoading, loading } = useContext(MainContext)
+  const { films, setFilms, setLoading, filterTags, loading, FilmsURL } = useContext(MainContext)
 
-  const URL = 'http://localhost:8080/films';
 
   const getData = async () => {
-    await axios.get(URL).then((res) => setFilms(res.data));
+    await axios.get(FilmsURL).then((res) => setFilms(res.data));
     setLoading(false);
   }
 
   useEffect(() => {
     getData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (
@@ -33,21 +33,24 @@ function CardsToday() {
         {
           loading ? (<><LoadingCard /> <LoadingCard /> <LoadingCard />
           </>) :
-            films?.map((data) => (
-              <li className="card_today" key={data._id}>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <Link className="cardLink" to={`/film/${data._id}`}>
-                  <div className="card__background" style={{ backgroundImage: `url(${data.poster})` }}></div>
-                  <div className="card__content">
-                    <h3 className="card__heading">{data.name}</h3>
-                  </div>
-                </Link>
-                <ButtonBuy />
-              </li>
-            ))
+            films?.filter((film) => filterTags.length > 0 ? filterTags.every((filterTag) =>
+              film.formats.map((format) => format.name).includes(filterTag) || film.languages.map((language) => language.name).includes(filterTag)
+            ) : films)
+              .map((data) => (
+                <li className="card_today" key={data._id}>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <Link className="cardLink" to={`/film/${data._id}`}>
+                    <div className="card__background" style={{ backgroundImage: `url(${data.poster})` }}></div>
+                    <div className="card__content">
+                      <h3 className="card__heading">{data.name}</h3>
+                    </div>
+                  </Link>
+                  <ButtonBuy />
+                </li>
+              ))
         }
 
         {/* <li className="card_today">

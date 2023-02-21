@@ -5,19 +5,46 @@
     align-items: center;
     justify-content: center;
     gap: 30px;
+}
+.checkbox-wrapper-3 input[type="checkbox"] {
+    visibility: hidden;
+    display: none;
+}
 
-    label {
-        display: flex;
-        align-items: center;
-        padding: 10px;
-        gap: 5px;
-        font-weight: 600;
+.checkbox-wrapper-3 *,
+.checkbox-wrapper-3 ::after,
+.checkbox-wrapper-3 ::before {
+    box-sizing: border-box;
+}
 
-        input[type="checkbox"] {
-            background-color: red;
-            color: #fff;
-            opacity: .5;
+.checkbox-wrapper-3 {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
 
-        }
-    }
+.checkbox-wrapper-3 .check {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    opacity: 0;
+}
+
+.checkbox-wrapper-3 .label svg {
+    vertical-align: middle;
+}
+
+.checkbox-wrapper-3 .label span {
+    font-size: 20px;
+}
+.checkbox-wrapper-3 .path1 {
+    stroke-dasharray: 400;
+    stroke-dashoffset: 400;
+    transition: .5s stroke-dashoffset;
+    opacity: 0;
+}
+
+.checkbox-wrapper-3 .check:checked+label svg g path {
+    stroke-dashoffset: 0;
+    opacity: 1;
 }

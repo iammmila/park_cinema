@@ -44,13 +44,7 @@ function ContextProvider({ children }) {
             )
         }
     }
-    const filteredFILMS = films.filter((film) =>
-        filterTags.length > 0
-            ? filterTags.every((filterTag) =>
-                film.formats.map((format) => format.name).includes(filterTag)
-            )
-            : films
-    )
+
     //!scrolltop
     useEffect(() => {
         window.addEventListener("scroll", () => {
@@ -84,7 +78,6 @@ function ContextProvider({ children }) {
         loading, setLoading, filterHandler,
         filterTags, setFilterTags,
         filterName, setFilterName,
-        filteredFILMS,
         FilmsURL, CampaignsURL, CinemasURL,
     }
     //! DARK AND LIGHT MODE
