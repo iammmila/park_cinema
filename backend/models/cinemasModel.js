@@ -4,7 +4,7 @@ const { Schema } = mongoose
 
 const cinemaScheme = new Schema(
     {
-        name: {
+        cinemaName: {
             type: String,
             required: true
         },
@@ -20,7 +20,7 @@ const cinemaScheme = new Schema(
             type: String,
             required: true
         },
-        images: {
+        cinemaImages: {
             type: String,
             required: true
         },

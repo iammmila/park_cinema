@@ -16,12 +16,20 @@ app.use(express.urlencoded({ extended: false }))
 const filmsRoute = require("./routes/filmsRoute")
 const cinemasRoute = require("./routes/cinemasRoute")
 const campaignsRoute = require("./routes/campaignsRoute")
+const genresRoute = require("./routes/genresRoute")
+const subtitlesRoute = require("./routes/subtitlesRoute")
+const formatsRoute = require("./routes/formatsRoute")
 
 //!endpoints
 
 app.use("/films", filmsRoute)
 app.use("/cinemas", cinemasRoute)
 app.use("/campaigns", campaignsRoute)
+app.use("/genres", genresRoute)
+app.use("/subtitles", subtitlesRoute)
+app.use("/formats", formatsRoute)
+
+
 
 const PORT = process.env.PORT
 const DB = process.env.DB_URL.replace("<password>", process.env.DB_PASSWORD)

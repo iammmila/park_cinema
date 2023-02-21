@@ -4,11 +4,11 @@ const { Schema } = mongoose
 
 const campaignScheme = new Schema(
     {
-        description: {
+        campaignDescription: {
             type: String,
             required: true
         },
-        image: {
+        campaignImage: {
             type: String,
             required: true
         },
