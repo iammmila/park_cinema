@@ -39,22 +39,3 @@
         }
     }
 }
-
-.light {
-    .hero-schedule {
-        .wrapper-schedule {
-            border: 0.2em solid black;
-            box-shadow: inset 0px 0px 0.5em 0px black, 0px 0px 0.5em 0px black;
-
-            .filter_part {
-                border: 0.15em solid black;
-                box-shadow: inset 0px 0px 0.5em 0px black, 0px 0px 0.5em 0px black;
-            }
-            .movies {
-                border-radius: 20px;
-                border: 0.2em solid black;
-                box-shadow: inset 0px 0px 0.5em 0px black, 0px 0px 0.5em 0px black;
-            }
-        }
-    }
-}

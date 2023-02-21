@@ -17,7 +17,7 @@ import CardsSoon from './../CardsSoon/CardsSoon';
 import TableSchedule from './../Table/TableSchedule';
 
 //general component's scss
-import "./style.scss"
+import "./HeroSection.scss"
 
 function HeroSection() {
     const { isActive } = useContext(MainContext)

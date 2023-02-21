@@ -10,13 +10,14 @@
         align-items: center;
         gap: 50px;
 
-        label {
-            input {
-                margin-right: 10px;
-            }
-        }
+        // label {
+        //     input {
+        //         margin-right: 10px;
+        //     }
+        // }
     }
-    .filtering_cinemas{
+
+    .filtering_cinemas {
         width: 100%;
     }
 
@@ -58,6 +59,7 @@
 .checkbox-wrapper-3 .label span {
     font-size: 20px;
 }
+
 .checkbox-wrapper-3 .path1 {
     stroke-dasharray: 400;
     stroke-dashoffset: 400;
@@ -68,4 +70,8 @@
 .checkbox-wrapper-3 .check:checked+label svg g path {
     stroke-dashoffset: 0;
     opacity: 1;
+}
+
+.checkbox-wrapper-3 g,path {
+    box-shadow: inset 0px 0px 0.5em 0px  hsl(0, 97%, 62%), 0px 0px 0.5em 0px  hsl(0, 97%, 62%)
 }

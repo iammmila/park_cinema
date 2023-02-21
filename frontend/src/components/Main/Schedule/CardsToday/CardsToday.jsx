@@ -19,6 +19,7 @@ function CardsToday() {
   const getData = async () => {
     await axios.get(FilmsURL).then((res) => setFilms(res.data));
     setLoading(false);
+
   }
 
   useEffect(() => {
@@ -33,8 +34,8 @@ function CardsToday() {
         {
           loading ? (<><LoadingCard /> <LoadingCard /> <LoadingCard />
           </>) :
-            films?.filter((film) => filterTags.length > 0 ? filterTags.every((filterTag) =>
-              film.formats.map((format) => format.name).includes(filterTag) || film.languages.map((language) => language.name).includes(filterTag)
+            // eslint-disable-next-line array-callback-return
+            films?.filter((film) => filterTags.length > 0 ? filterTags.every((filterTag) => film.formats.map((format) => format.name).includes(filterTag) || film.languages.map((language) => language.name).includes(filterTag)
             ) : films)
               .map((data) => (
                 <li className="card_today" key={data._id}>
