@@ -4,12 +4,6 @@ import "./IsNotFound.scss"
 function IsNotFound() {
   return (
     <div className='notfound'>
-      {/* <div class="copy-container center-xy">
-        <p>
-          404, page not found.
-        </p>
-        <Link to="/">Go to Home...</Link>
-      </div> */}
       <div className='notfound_part'></div>
       <svg id="svgWrap_2" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 700 250">
         <g>
@@ -37,7 +31,6 @@ function IsNotFound() {
           </filter>
         </defs>
       </svg>
-
       <h2>Page Not Found</h2>
       <Link to="/">Home</Link>
     </div>
