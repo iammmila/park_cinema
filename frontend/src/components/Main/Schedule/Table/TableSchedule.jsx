@@ -15,10 +15,10 @@ function TableSchedule() {
     const FilmsURL = 'http://localhost:8080/films';
     const [general, setGeneral] = useState([])
     const getFilmData = async () => {
-        await axios.get(FilmsURL).then((res) => setGeneral(res.data));
+        await axios.get(FilmsURL).then((res) => setFilms(res.data));
     }
     const getCinemaData = async () => {
-        await axios.get(CinemasURL).then((res) => setGeneral(res.data));
+        await axios.get(CinemasURL).then((res) => setCinemas(res.data));
     }
 
     useEffect(() => {
@@ -61,16 +61,16 @@ function TableSchedule() {
                 {/* )) */}
                 {/* } */}
                 <tr>
-                    <td>Ant-Man and the Wasp: Quantumania</td>
-                    <td>14:50</td>
-                    <td>Aygun Mall</td>
-                    <td>Zal 3</td>
+                    <td>film name</td>
+                    <td>time</td>
+                    <td>cinema</td>
+                    <td>cinema hall</td>
                     <td>
                         <div className='wrapper_format'>
-                            3d
+                            film format
                         </div>
                         <div className='wrapper_format'>
-                            tr
+                            film format
                         </div>
                     </td>
                     <td>

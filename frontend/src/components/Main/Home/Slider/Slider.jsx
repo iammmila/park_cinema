@@ -18,12 +18,10 @@ import axios from 'axios';
 import LoadingCard from '../../Cinemas/LoadingCard/LoadingCard';
 
 function Slider() {
-  const { films, setFilms, setLoading, loading } = useContext(MainContext)
-
-  const URL = 'http://localhost:8080/films';
+  const { films, setFilms, setLoading, loading, filterTags, FilmsURL } = useContext(MainContext)
 
   const getData = async () => {
-    await axios.get(URL).then((res) => setFilms(res.data));
+    await axios.get(FilmsURL).then((res) => setFilms(res.data));
     setLoading(false);
   }
 
@@ -47,12 +45,16 @@ function Slider() {
           {
             loading ? (<><LoadingCard /> <LoadingCard /> <LoadingCard />
             </>) :
-              films?.map((data) => (
-                <SwiperSlide className='slide' key={data._id}>
-                  <img className='films' width={"400px"} height={"600px"} src={data.poster} alt="film1" />
-                  <span>{data.name}</span>
-                </SwiperSlide>
-              ))
+              films?.filter((film) => filterTags.length > 0 ? filterTags.every((filterTag) =>
+                film.formats.map((format) => format.name).includes(filterTag)
+              )
+                : films)
+                .map((film) => (
+                  <SwiperSlide className='slide' key={film._id}>
+                    <img className='films' width={"400px"} height={"600px"} src={film.poster} alt="film1" />
+                    <span>{film.name}</span>
+                  </SwiperSlide>
+                ))
           }
           <CheckBox />
         </Swiper>

@@ -16,12 +16,11 @@ import { MainContext } from '../../../context/ContextProvider'
 
 function Footer() {
 
-  const { cinemas, setCinemas } = useContext(MainContext)
-  const URL = 'http://localhost:8080/cinemas';
+  const { cinemas, setCinemas, CinemasURL } = useContext(MainContext)
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const getData = async () => {
-    await axios.get(URL).then((res) => setCinemas(res.data));
+    await axios.get(CinemasURL).then((res) => setCinemas(res.data));
   }
 
   useEffect(() => {

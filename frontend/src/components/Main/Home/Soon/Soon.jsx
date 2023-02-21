@@ -14,12 +14,11 @@ import { MainContext } from './../../../../context/ContextProvider';
 import LoadingCard from './../../Cinemas/LoadingCard/LoadingCard';
 
 function Soon() {
-  const { soonFilms, setSoonFilms, loading, setLoading } = useContext(MainContext)
+  const { soonFilms, setSoonFilms, loading, setLoading, FilmsURL} = useContext(MainContext)
 
-  const URL = 'http://localhost:8080/films';
 
   const getData = async () => {
-    await axios.get(URL).then((res) => setSoonFilms(res.data));
+    await axios.get(FilmsURL).then((res) => setSoonFilms(res.data));
     setLoading(false);
   }
 

@@ -3,6 +3,7 @@ import { createContext } from 'react'
 
 export const MainContext = createContext(null)
 function ContextProvider({ children }) {
+    //! USESTATES
     const [mode, setMode] = useState("dark");
     const [isOpen, setIsOpen] = useState(false);
     const [showTopBtn, setShowTopBtn] = useState(false);
@@ -15,6 +16,13 @@ function ContextProvider({ children }) {
     const [soonFilms, setSoonFilms] = useState([])
     const [cinemaDetail, setCinemaDetail] = useState({})
     const [loading, setLoading] = useState(true);
+    const [filterName, setFilterName] = useState("");
+    const [filterTags, setFilterTags] = useState([])
+
+    //URL
+    const FilmsURL = 'http://localhost:8080/films';
+    const CinemasURL = 'http://localhost:8080/cinemas';
+    const CampaignsURL = 'http://localhost:8080/campaigns';
 
     //!schedule part
     const showComponent = (e) => {
@@ -26,6 +34,23 @@ function ContextProvider({ children }) {
         console.log(isActive)
     }, [isActive])
 
+    //! filter checkbox
+    const filterHandler = (e) => {
+        if (e.target.checked) {
+            setFilterTags([...filterTags, e.target.value])
+        } else {
+            setFilterTags(
+                filterTags.filter((filterTag) => filterTag !== e.target.value)
+            )
+        }
+    }
+    const filteredFILMS = films.filter((film) =>
+        filterTags.length > 0
+            ? filterTags.every((filterTag) =>
+                film.formats.map((format) => format.name).includes(filterTag)
+            )
+            : films
+    )
     //!scrolltop
     useEffect(() => {
         window.addEventListener("scroll", () => {
@@ -56,7 +81,11 @@ function ContextProvider({ children }) {
         campaings, setCampaigns,
         soonFilms, setSoonFilms,
         cinemaDetail, setCinemaDetail,
-        loading, setLoading
+        loading, setLoading, filterHandler,
+        filterTags, setFilterTags,
+        filterName, setFilterName,
+        filteredFILMS,
+        FilmsURL, CampaignsURL, CinemasURL,
     }
     //! DARK AND LIGHT MODE
     useEffect(() => {
