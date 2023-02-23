@@ -3,9 +3,7 @@
 
     .wrapper_booking {
         width: 100%;
-        height: 800px;
-
-        padding: 20px;
+        padding: 50px;
 
         border: 1px solid hsl(0, 97%, 62%);
         box-shadow: inset 0px 0px 0.5em 0px hsl(0, 97%, 62%), 0px 0px 0.5em 0px hsl(0, 97%, 62%);
@@ -16,8 +14,14 @@
         gap: 30px;
 
         .booking_section {
+            width: 40%;
+            padding: 20px;
+            border: 1px solid hsl(0, 97%, 62%);
+            box-shadow: inset 0px 0px 0.5em 0px hsl(0, 97%, 62%), 0px 0px 0.5em 0px hsl(0, 97%, 62%);
+            border-radius: 20px;
             display: flex;
             flex-direction: column;
+            justify-content: space-between;
             gap: 30px;
         }
     }

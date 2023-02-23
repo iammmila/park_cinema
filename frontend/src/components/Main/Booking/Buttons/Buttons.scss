@@ -1,0 +1,10 @@
+.buttons_wrapper {
+    width: 100%;
+    padding: 50px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
