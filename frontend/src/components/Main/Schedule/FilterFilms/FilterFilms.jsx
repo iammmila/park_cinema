@@ -1,5 +1,7 @@
 import React, { useContext } from 'react'
 import { MainContext } from '../../../../context/ContextProvider'
+
+//components
 import SelectionCinemas from '../SelectionCinemas/SelectionCinemas'
 
 //general scss

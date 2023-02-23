@@ -1,5 +1,7 @@
 import React from 'react'
-import "./style.scss"
+
+//general scss
+import "./InfoTechnologies.scss"
 
 function InfoTechnologies() {
   return (

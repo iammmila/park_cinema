@@ -1,6 +1,10 @@
 import React from 'react'
-import "./style.scss"
+
+//general scss
+import "./HeroSection.scss"
+
 // import bcgImage from "./../../../../assets/about-image/image.jpg"
+
 import Information from '../AboutUs/Information'
 function HeroSection() {
     return (

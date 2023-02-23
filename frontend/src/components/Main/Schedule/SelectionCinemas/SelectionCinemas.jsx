@@ -1,4 +1,6 @@
 import React from 'react'
+
+//general scss
 import "./SelectionCinemas.scss"
 
 function SelectionCinemas() {
@@ -6,8 +8,6 @@ function SelectionCinemas() {
         <>
             <div className="select-box">
                 <div className="select-box__current" tabIndex="1">
-                    
-                    
                     {/* <div className="select-box__value">
                         <input className="select-box__input" type="radio" id="0" value="1" name="Ben" defaultChecked="checked" />
                         <p className="select-box__input-text">Park Cinema</p>

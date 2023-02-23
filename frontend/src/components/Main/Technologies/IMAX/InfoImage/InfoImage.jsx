@@ -1,4 +1,6 @@
 import React from 'react'
+
+// images
 import imaxProject from "../../../../../assets/images/formats/imax/IMAX1.jpg";
 
 function InfoImage() {

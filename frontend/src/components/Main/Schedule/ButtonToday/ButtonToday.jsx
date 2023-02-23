@@ -1,10 +1,8 @@
 import React, { useContext } from 'react'
-
-//context
 import { MainContext } from '../../../../context/ContextProvider'
 
 //button's scss
-import "./style.scss"
+import "./ButtonToday.scss"
 
 function ButtonToday() {
     const { showComponent } = useContext(MainContext)

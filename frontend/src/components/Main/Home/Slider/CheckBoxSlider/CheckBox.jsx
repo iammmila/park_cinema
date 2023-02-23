@@ -1,6 +1,9 @@
 import React, { useContext } from 'react'
 import { MainContext } from '../../../../../context/ContextProvider'
-import "./style.scss"
+
+//general scss
+import "./CheckBox.scss"
+
 function CheckBox() {
     const { filterHandler } = useContext(MainContext)
 

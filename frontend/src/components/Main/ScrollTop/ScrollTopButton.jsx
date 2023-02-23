@@ -1,7 +1,11 @@
 import React, { useContext } from 'react'
-import "./style.scss"
-import { IoIosArrowUp } from "react-icons/io"
 import { MainContext } from '../../../context/ContextProvider';
+
+//general scss
+import "./ScrollTopButton.scss"
+
+//icons
+import { IoIosArrowUp } from "react-icons/io"
 
 function ScrollTopButton() {
     const { showTopBtn, goToTop } = useContext(MainContext)

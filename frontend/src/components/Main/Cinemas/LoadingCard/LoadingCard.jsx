@@ -1,9 +1,8 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 //general scss
-import "./style.scss"
-
-import { Link } from 'react-router-dom';
+import "./LoadingCard.scss"
 
 function LoadingCard() {
     return (

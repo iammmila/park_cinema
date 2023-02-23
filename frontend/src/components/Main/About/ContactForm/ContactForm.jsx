@@ -1,13 +1,16 @@
 import React from 'react'
-import "./style.scss"
+
+//general scss
+import "./ContactForm.scss"
 
 function ContactForm() {
     const [formStatus, setFormStatus] = React.useState('Send')
+
     const onSubmit = (e) => {
         e.preventDefault()
         setFormStatus('Submitting...')
         const { name, email, message } = e.target.elements
-        let conFom = {
+        const conFom = {
             name: name.value,
             email: email.value,
             message: message.value,

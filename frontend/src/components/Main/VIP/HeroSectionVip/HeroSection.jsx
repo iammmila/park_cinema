@@ -1,5 +1,8 @@
 import React from 'react'
-import "./style.scss"
+
+//general scss
+import "./HeroSection.scss"
+
 function HeroSection() {
     return (
         <section className='vip_hero_section'>

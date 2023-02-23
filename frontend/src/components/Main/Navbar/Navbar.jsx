@@ -1,29 +1,31 @@
 import React, { useContext, useEffect } from 'react'
-import "./style.scss"
 import { Link, NavLink } from "react-router-dom"
 import { MainContext } from "../../../context/ContextProvider"
-import logo from "../../../assets/logo/download.svg"
-import { MdModeNight, MdLightMode } from "react-icons/md"
-import { RiArrowDropDownLine } from "react-icons/ri"
 import axios from 'axios';
 
-function Navbar() {
+//general scss
+import "./Navbar.scss"
 
+//icons
+import { MdModeNight, MdLightMode } from "react-icons/md"
+import { RiArrowDropDownLine } from "react-icons/ri"
+
+//logo
+import logo from "../../../assets/logo/download.svg"
+
+function Navbar() {
   const activeStyle = {
     color: "red"
   }
-  const { mode, setMode, cinemas, setCinemas } = useContext(MainContext)
-  const changeTheme = () => {
-    setMode(mode === "dark" ? "light" : "dark")
-  }
-  const URL = 'http://localhost:8080/cinemas';
+  const { mode, cinemas, setCinemas, CinemasURL, changeTheme } = useContext(MainContext)
 
   const getData = async () => {
-    await axios.get(URL).then((res) => setCinemas(res.data));
+    await axios.get(CinemasURL).then((res) => setCinemas(res.data));
   }
 
   useEffect(() => {
     getData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (
@@ -72,7 +74,7 @@ function Navbar() {
             </li>
             <li>
               <NavLink
-                to="/campaign"
+                to="/campaigns"
                 style={({ isActive }) => (isActive ? activeStyle : null)}
               >
                 Campaigns

@@ -1,6 +1,10 @@
 import React from 'react'
+
+//components
 import InformationImax from '../InformationImax/InformationImax'
-import "./style.scss"
+
+//general scss
+import "./HeroSection.scss"
 
 function HeroSection() {
     return (
@@ -10,7 +14,7 @@ function HeroSection() {
                     <div className='wrapper-blur-section'>
                         <div className='content'>
                             <div className="blur-bg"></div>
-                            <div style={{display:"flex",}}>
+                            <div style={{ display: "flex", }}>
                                 <InformationImax />
                             </div>
                         </div>

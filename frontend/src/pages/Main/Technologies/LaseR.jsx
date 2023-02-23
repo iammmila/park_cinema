@@ -1,5 +1,9 @@
 import React from 'react'
+
+// helmet
 import { Helmet } from 'react-helmet-async'
+
+//components
 import HeroSection from './../../../components/Main/Technologies/LaseR/HeroSection/HeroSection';
 import InfoSection from './../../../components/Main/Technologies/LaseR/InfoSection/InfoSection';
 

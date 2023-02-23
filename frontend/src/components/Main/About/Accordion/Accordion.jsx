@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
-import "./style.scss"
+
+//general scss
+import "./Accordion.scss"
 
 function Accordion() {
     const [toggleState, setToggleState] = useState(1);

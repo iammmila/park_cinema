@@ -1,7 +1,7 @@
 import React from 'react'
 
 //general scss
-import "./style.scss"
+import "./LoadingSoonCard.scss"
 
 function LoadingSoonCard() {
     return (

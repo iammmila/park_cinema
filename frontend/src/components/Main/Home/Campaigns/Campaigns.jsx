@@ -1,14 +1,15 @@
-import axios from 'axios';
 import React, { useContext, useEffect } from 'react'
+import axios from 'axios';
 import { MainContext } from '../../../../context/ContextProvider';
+
+//components
 import LoadingSoonCard from '../Soon/LoadingSoonCard/LoadingSoonCard';
 
 //general scss
-import "./style.scss"
+import "./Campaigns.scss"
 
 function Campaigns() {
-  const { campaings, setCampaigns, loading, setLoading,CampaignsURL } = useContext(MainContext)
-
+  const { campaings, setCampaigns, loading, setLoading, CampaignsURL } = useContext(MainContext)
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const getData = async () => {
@@ -18,6 +19,7 @@ function Campaigns() {
 
   useEffect(() => {
     getData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (

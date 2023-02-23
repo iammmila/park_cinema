@@ -1,6 +1,9 @@
 import React from 'react'
-import "./style.scss"
 
+//general scss
+import "./Cards.scss"
+
+//icons
 import { FaEye } from "react-icons/fa";
 import { Gi3DGlasses } from "react-icons/gi"
 import { GiSmokingFinger } from "react-icons/gi"

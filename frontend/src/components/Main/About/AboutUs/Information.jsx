@@ -1,5 +1,8 @@
 import React from 'react'
-import "./style.scss"
+
+//general scss
+import "./Information.scss"
+
 function Information() {
   return (
     <div className='information-section' style={{ zIndex: 2 }}>

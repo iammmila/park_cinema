@@ -1,26 +1,25 @@
 import React, { useEffect, useContext } from 'react'
 import { Link } from 'react-router-dom';
 import axios from "axios"
-
-//context
 import { MainContext } from '../../../../context/ContextProvider';
 
-//general scss
-import "./style.scss"
+//components
 import LoadingCard from '../LoadingCard/LoadingCard';
 
-function CinemasInfo() {
-  const { cinemas, setCinemas, loading, setLoading } = useContext(MainContext)
+//general scss
+import "./CinemasInfo.scss"
 
-  const URL = 'http://localhost:8080/cinemas';
+function CinemasInfo() {
+  const { cinemas, setCinemas, loading, setLoading, CinemasURL } = useContext(MainContext)
 
   const getData = async () => {
-    await axios.get(URL).then((res) => setCinemas(res.data));
+    await axios.get(CinemasURL).then((res) => setCinemas(res.data));
     setLoading(false);
   }
 
   useEffect(() => {
     getData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (

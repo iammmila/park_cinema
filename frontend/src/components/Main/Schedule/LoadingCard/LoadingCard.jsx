@@ -1,12 +1,14 @@
 import React from 'react'
 
 //general scss
-import "./style.scss"
+import "./LoadingCard.scss"
 
 function LoadingCard() {
   return (
-    <div>LoadingCard</div>
-  )
+    <li className="card is-loading" >
+      <div className="card-img">
+      </div>
+    </li>)
 }
 
 export default LoadingCard

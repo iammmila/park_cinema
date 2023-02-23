@@ -4,7 +4,7 @@ import React, { useContext } from 'react'
 import { MainContext } from '../../../../context/ContextProvider'
 
 //button's scss
-import "./style.scss"
+import "./ButtonSoon.scss"
 
 function ButtonSoon() {
     const { showComponent } = useContext(MainContext)

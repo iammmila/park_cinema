@@ -1,6 +1,10 @@
 import React from 'react'
+
+// images
 import imaxHall from "../../../../../assets/images/formats/imax/imax3.jpg"
-import "./style.scss"
+
+//general scss
+import "./Information.scss"
 
 function Information() {
     return (
@@ -15,7 +19,6 @@ function Information() {
                     <p>We are waiting for you in IMAX hall, where fiction invades into reality.</p>
                 </div>
             </div>
-
         </div>
     )
 }

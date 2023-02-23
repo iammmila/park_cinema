@@ -1,7 +1,7 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
 
-function TechRoot() {
+function CampaignRoute() {
     return (
         <>
             <Outlet />
@@ -9,4 +9,4 @@ function TechRoot() {
     )
 }
 
-export default TechRoot
+export default CampaignRoute

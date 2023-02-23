@@ -1,6 +1,9 @@
 import React from 'react'
-import "./style.scss"
 import { Link } from 'react-router-dom';
+
+//general scss
+import "./BuyTicketButton.scss"
+
 function BuyTicketButton() {
     return (
         <>
@@ -13,7 +16,6 @@ function BuyTicketButton() {
                     </span>
                 </button>
             </Link>
-
         </>
     )
 }

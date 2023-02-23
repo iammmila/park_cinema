@@ -1,5 +1,7 @@
 import React from 'react'
-import "./style.scss"
+
+//general scss
+import "./HeroSection.scss"
 
 function HeroSection() {
     return (
@@ -9,7 +11,6 @@ function HeroSection() {
                     <div className='wrapper-laser-section'>
                         <div className='content'>
                             <h2>Laser solutions from Park Cinema</h2>
-                            {/* <p>learn how you can benefit from leading laser projection technology</p> */}
                         </div>
                     </div>
                 </div>

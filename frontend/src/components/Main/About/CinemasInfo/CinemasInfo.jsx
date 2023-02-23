@@ -1,5 +1,9 @@
 import React from 'react'
-import "./style.scss"
+
+//general scss
+import "./CinemasInfo.scss"
+
+//components
 import Accordion from "./../Accordion/Accordion"
 
 function CinemasInfo() {

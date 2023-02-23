@@ -1,9 +1,11 @@
 import React from 'react'
-import "./style.scss"
+
+//general scss
+import "./BuyTicket.scss"
+
+//components
 import buyTicket from "../../../../assets/images/img.png"
 import BuyTicketButton from './Button/BuyTicketButton'
-
-
 
 function BuyTicket() {
   return (

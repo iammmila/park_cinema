@@ -4,8 +4,8 @@ import { Outlet } from 'react-router-dom'
 function AboutRoot() {
   return (
     <>
-    <Outlet />
-</>
+      <Outlet />
+    </>
   )
 }
 

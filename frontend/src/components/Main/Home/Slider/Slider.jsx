@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react'
 
 //general scss
-import "./style.scss"
+import "./Slider.scss"
 
 // Import Swiper styles
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -36,7 +36,7 @@ function Slider() {
         <div className="bg"></div>
         <Swiper
           slidesPerView={4}
-          centeredSlides={true}
+          centeredSlides={false}
           freeMode={true}
           navigation={true}
           modules={[Pagination, FreeMode, Navigation]}

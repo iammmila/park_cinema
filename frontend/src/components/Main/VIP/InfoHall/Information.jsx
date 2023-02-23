@@ -1,6 +1,10 @@
 import React from 'react'
+
+//components
 import SliderHall from '../SliderHall/SliderHall'
-import "./style.scss"
+
+//general scss
+import "./Information.scss"
 
 function Information() {
     return (
@@ -10,7 +14,7 @@ function Information() {
                     <div style={{ width: "18%" }} className='line' ></div>
                     <h1>Azal Club VİP Hall</h1>
                     <div className='information-brief'>
-                        <div style={{ width: "50%",padding:"0 50px" }}>
+                        <div style={{ width: "50%", padding: "0 50px" }}>
                             <span>Park Cinema VIP Lounge - for the real movie gourmets.</span>
                             <p>VIP Lounge is the newest premium of the standard hall, equipped with a silver screen, with state-of-the-art film projection and audio equipment (three-way DOLBY Surround 5.1 sound), which allows you to watch movies in both 2D and 3D formats. Perfectly executed comfortable interior, special wall, and ceiling coverings absorb side tones, contributing to the clear sound of the film.</p>
                             <p>VIP Lounge has 23 luxurious leather armchairs of the Spanish firm “Figueras”, which have wide armrests, electric adjustment of the backrest inclination and footrest.</p>

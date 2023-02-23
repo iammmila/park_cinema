@@ -1,5 +1,9 @@
 import React from 'react'
-import "./style.scss"
+
+//general scss
+import "./Video.scss"
+
+//video
 import videoBcg from "../../../assets/videos/mppp.mp4"
 
 function Video() {

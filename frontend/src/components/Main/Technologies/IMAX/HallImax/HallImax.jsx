@@ -1,6 +1,10 @@
 import React from 'react'
+
+//components
 import Information from './../HallInfo/Information';
-import "./style.scss"
+
+//general scss
+import "./HallImax.scss"
 
 function HallImax() {
     return (

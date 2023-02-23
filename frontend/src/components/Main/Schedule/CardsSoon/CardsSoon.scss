@@ -1,16 +1,10 @@
 :root {
-    --background-dark: #2d3548;
-    --text-light: rgba(255, 255, 255, 0.6);
     --text-lighter: rgba(255, 255, 255, 0.9);
     --spacing-s: 8px;
-    --spacing-m: 16px;
     --spacing-l: 24px;
-    --spacing-xl: 32px;
-    --spacing-xxl: 64px;
-    --width-container: 1200px;
 }
 
-.today_cards_wrapper {
+.soon_cards_wrapper {
     padding: 20px;
     display: flex;
     flex-direction: row;
@@ -19,7 +13,7 @@
     align-items: center;
     justify-content: center;
 
-    .cards_today {
+    .cards_soon {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
@@ -28,11 +22,11 @@
         justify-content: center;
         gap: 50px;
 
-        .card_today {
+        .card_soon {
             background-color: white;
             width: 30%;
             padding: 20px;
-            border-radius: 15px;
+            border-radius: 20px;
             position: relative;
             margin: 20px auto;
             box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
@@ -65,8 +59,9 @@
                     top: 0;
 
                     .card__category {
-                        color: var(--text-light);
-                        font-size: 0.9rem;
+                        color: red;
+                        font-size: 15px;
+                        font-weight: 800;
                         margin-bottom: var(--spacing-s);
                         text-transform: uppercase;
                     }
@@ -108,7 +103,15 @@
     }
 }
 
-.card_today {
+.light {
+    .cards_soon {
+        .card_soon {
+            background-color: #121212;
+        }
+    }
+}
+
+.card_soon {
     position: relative;
     display: inline-block;
     margin: 40px 0;
@@ -171,15 +174,6 @@
     }
 }
 
-.light {
-    .cards_today {
-        .card_today {
-            background-color: #121212;
-        }
-    }
-
-}
-
 @keyframes animate1 {
     0% {
         left: -100%;
@@ -225,13 +219,13 @@
 }
 
 @media(min-width: 540px) {
-    .cards_today {
+    .card-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media(min-width: 960px) {
-    .cards_today {
+    .card-grid {
         grid-template-columns: repeat(4, 1fr);
     }
 }

@@ -1,9 +1,12 @@
 import React from 'react'
+
+//helmet
 import { Helmet } from 'react-helmet-async'
+
+//components
 import HeroSection from './../../components/Main/VIP/HeroSectionVip/HeroSection';
 import Information from './../../components/Main/VIP/InfoHall/Information';
 import Schedule from './../../components/Main/VIP/VIPSchedule/Schedule';
-// import SliderHall from './../../components/Main/VIP/SliderHall/SliderHall';
 
 function Vip() {
     return (
@@ -15,7 +18,6 @@ function Vip() {
             <HeroSection />
             <Schedule />
             <Information />
-            {/* <SliderHall /> */}
         </>
     )
 }

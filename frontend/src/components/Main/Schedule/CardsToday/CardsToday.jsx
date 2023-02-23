@@ -9,17 +9,17 @@ import { MainContext } from '../../../../context/ContextProvider';
 import ButtonBuy from './../ButtonBuy/ButtonBuy';
 
 //general component's scss
-import "./style.scss"
+import "./CardsToday.scss"
+
+//components
 import LoadingCard from '../LoadingCard/LoadingCard';
 
 function CardsToday() {
   const { films, setFilms, setLoading, filterTags, loading, FilmsURL } = useContext(MainContext)
 
-
   const getData = async () => {
     await axios.get(FilmsURL).then((res) => setFilms(res.data));
     setLoading(false);
-
   }
 
   useEffect(() => {
@@ -34,7 +34,6 @@ function CardsToday() {
         {
           loading ? (<><LoadingCard /> <LoadingCard /> <LoadingCard />
           </>) :
-            // eslint-disable-next-line array-callback-return
             films?.filter((film) => filterTags.length > 0 ? filterTags.every((filterTag) => film.formats.map((format) => format.name).includes(filterTag) || film.languages.map((language) => language.name).includes(filterTag)
             ) : films)
               .map((data) => (
@@ -53,111 +52,6 @@ function CardsToday() {
                 </li>
               ))
         }
-
-        {/* <li className="card_today">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <Link className="cardLink" to="/schedule">
-            <div className="card__background" style={{ backgroundImage: `url(${film1})` }} ></div>
-            <div className="card__content">
-              <h3 className="card__heading">Example Card Heading</h3>
-            </div>
-          </Link>
-          <ButtonBuy />
-        </li>
-        <li className="card_today">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <Link className="cardLink" to="/schedule">
-            <div className="card__background" style={{ backgroundImage: `url(${film2})` }} ></div>
-            <div className="card__content">
-              <h3 className="card__heading">Example Card Heading</h3>
-            </div>
-          </Link>
-          <ButtonBuy />
-        </li>
-        <li className="card_today">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <Link className="cardLink" to="/schedule">
-            <div className="card__background" style={{ backgroundImage: `url(${film3})` }} ></div>
-            <div className="card__content">
-              <h3 className="card__heading">Example Card Heading</h3>
-            </div>
-          </Link>
-          <ButtonBuy />
-        </li>
-        <li className="card_today">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <Link className="cardLink" to="/schedule">
-            <div className="card__background" style={{ backgroundImage: `url(${film2})` }}  ></div>
-            <div className="card__content">
-              <h3 className="card__heading">Example Card Heading</h3>
-            </div>
-          </Link>
-          <ButtonBuy />
-        </li>
-        <li className="card_today">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <Link className="cardLink" to="/schedule">
-            <div className="card__background" style={{ backgroundImage: `url(${film3})` }}></div>
-            <div className="card__content">
-              <h3 className="card__heading">Example Card Heading</h3>
-            </div>
-          </Link>
-          <ButtonBuy />
-        </li>
-        <li className="card_today">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <Link className="cardLink" to="/schedule">
-            <div className="card__background" style={{ backgroundImage: `url(${film3})` }} ></div>
-            <div className="card__content">
-              <h3 className="card__heading">Example Card Heading</h3>
-            </div>
-          </Link>
-          <ButtonBuy />
-        </li>
-        <li className="card_today">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <Link className="cardLink" to="/schedule">
-            <div className="card__background" style={{ backgroundImage: `url(${film2})` }}  ></div>
-            <div className="card__content">
-              <h3 className="card__heading">Example Card Heading</h3>
-            </div>
-          </Link>
-          <ButtonBuy />
-        </li>
-        <li className="card_today">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <Link className="cardLink" to="/schedule">
-            <div className="card__background" style={{ backgroundImage: `url(${film3})` }}></div>
-            <div className="card__content">
-              <h3 className="card__heading">Example Card Heading</h3>
-            </div>
-          </Link> */}
-        {/* <ButtonBuy /> */}
-        {/* </li> */}
       </ul>
     </div>
   )

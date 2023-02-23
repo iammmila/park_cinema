@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 //general component's scss
-import "./style.scss"
+import "./CardsSoon.scss"
 
 //components
 import LoadingCard from './../LoadingCard/LoadingCard';
@@ -21,6 +21,7 @@ function CardsSoon() {
 
   useEffect(() => {
     getData();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (

@@ -1,5 +1,9 @@
 import React from 'react'
+
+//helmet
 import { Helmet } from 'react-helmet-async'
+
+//components
 import PrivacyRules from '../../../components/Main/Privacy/PrivacyRules'
 
 function Privacy() {
@@ -10,7 +14,6 @@ function Privacy() {
                 <meta name='description' content='Beginner friendly page for learning React Helmet.' />
             </Helmet>
             <PrivacyRules />
-
         </>
     )
 }

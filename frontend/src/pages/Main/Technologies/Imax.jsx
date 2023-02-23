@@ -1,5 +1,9 @@
 import React from 'react'
+
+//helmet
 import { Helmet } from 'react-helmet-async'
+
+//componennts
 import Features from '../../../components/Main/Technologies/IMAX/FeaturesImax/Features'
 import HallImax from '../../../components/Main/Technologies/IMAX/HallImax/HallImax'
 import HeroSection from "../../../components/Main/Technologies/IMAX/HeroSection/HeroSection"

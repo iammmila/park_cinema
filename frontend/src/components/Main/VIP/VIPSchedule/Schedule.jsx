@@ -1,5 +1,8 @@
 import React from 'react'
-import "./style.scss"
+
+//general scss
+import "./Schedule.scss"
+
 function Schedule() {
   return (
     <div>Schedule</div>

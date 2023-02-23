@@ -1,5 +1,9 @@
 import React from 'react'
+
+//helmet
 import { Helmet } from 'react-helmet-async';
+
+//compnonents
 import HeroSection from '../../components/Main/Schedule/HeroSection/HeroSection';
 
 function Schedule() {

@@ -19,7 +19,7 @@ function ContextProvider({ children }) {
     const [filterName, setFilterName] = useState("");
     const [filterTags, setFilterTags] = useState([])
 
-    //URL
+    //!URL
     const FilmsURL = 'http://localhost:8080/films';
     const CinemasURL = 'http://localhost:8080/cinemas';
     const CampaignsURL = 'http://localhost:8080/campaigns'
@@ -34,6 +34,11 @@ function ContextProvider({ children }) {
         console.log(isActive)
     }, [isActive])
 
+
+    // ! theme==dark/light
+    const changeTheme = () => {
+        setMode(mode === "dark" ? "light" : "dark")
+    }
     //! filter checkbox
     const filterHandler = (e) => {
         if (e.target.checked) {
@@ -79,6 +84,7 @@ function ContextProvider({ children }) {
         filterTags, setFilterTags,
         filterName, setFilterName,
         FilmsURL, CampaignsURL, CinemasURL,
+        changeTheme
     }
     //! DARK AND LIGHT MODE
     useEffect(() => {

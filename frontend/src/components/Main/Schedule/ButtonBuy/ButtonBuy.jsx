@@ -1,8 +1,8 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 //general scss
-import "./style.scss"
-import { Link } from 'react-router-dom';
+import "./ButtonBuy.scss"
 
 function ButtonBuy() {
     return (

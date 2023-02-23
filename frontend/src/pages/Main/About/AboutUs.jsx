@@ -1,5 +1,9 @@
 import React from 'react'
+
+//helmet
 import { Helmet } from 'react-helmet-async'
+
+//components
 import CinemasInfo from "../../../components/Main/About/CinemasInfo/CinemasInfo"
 import HeroSection from '../../../components/Main/About/HeroSection/HeroSection'
 

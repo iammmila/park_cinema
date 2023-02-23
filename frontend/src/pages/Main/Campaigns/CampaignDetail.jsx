@@ -1,17 +1,17 @@
 import React from 'react'
 
 //helmet
-import { Helmet } from 'react-helmet-async'
+import { Helmet } from 'react-helmet-async';
 
-function FilmDetail() {
+function CampaignDetail() {
     return (
-        <div>
+        <>
             <Helmet>
-                <title>Film detail | Park Cinema</title>
+                <title>Campaign's Detail | Park Cinema</title>
                 <meta name='description' content='Beginner friendly page for learning React Helmet.' />
             </Helmet>
-            FilmDetail</div>
+            CampaignDetail</>
     )
 }
 
-export default FilmDetail
+export default CampaignDetail

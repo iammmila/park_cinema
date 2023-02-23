@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -10,7 +11,9 @@ import "swiper/css/thumbs";
 
 // import required modules
 import { FreeMode, Navigation, Thumbs } from "swiper";
-import "./style.scss"
+
+//general scss
+import "./SliderHall.scss"
 
 //images
 import img1 from "../../../../assets/images/VIP/img1.jpg"

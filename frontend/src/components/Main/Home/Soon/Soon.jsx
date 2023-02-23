@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from 'react'
 import axios from 'axios';
 
 //general scss
-import "./style.scss"
+import "./Soon.scss"
 
 //soon poster
 import soon from "../../../../assets/images/soon2.png"
@@ -14,7 +14,7 @@ import { MainContext } from './../../../../context/ContextProvider';
 import LoadingCard from './../../Cinemas/LoadingCard/LoadingCard';
 
 function Soon() {
-  const { soonFilms, setSoonFilms, loading, setLoading, FilmsURL} = useContext(MainContext)
+  const { soonFilms, setSoonFilms, loading, setLoading, FilmsURL } = useContext(MainContext)
 
 
   const getData = async () => {
@@ -24,6 +24,7 @@ function Soon() {
 
   useEffect(() => {
     getData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (

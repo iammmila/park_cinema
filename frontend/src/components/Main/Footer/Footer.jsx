@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 //general scss
-import "./style.scss"
+import "./Footer.scss"
 
 //logo
 import logo from "../../../assets/logo/download.svg"
@@ -25,6 +25,7 @@ function Footer() {
 
   useEffect(() => {
     getData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (

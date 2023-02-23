@@ -1,11 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 //general component's scss
-import "./style.scss"
+import "./ButtonTicketBuy.scss"
 
-//react icon
+//icons
 import { GrTicket } from "react-icons/gr"
-import { Link } from 'react-router-dom';
 
 function ButtonTicketBuy() {
     return (

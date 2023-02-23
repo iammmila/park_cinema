@@ -1,6 +1,10 @@
 import React from 'react'
+
+//components
 import InfoImage from '../InfoImage/InfoImage'
-import "./style.scss"
+
+//general scss
+import "./InformationImax.scss"
 
 function InformationImax() {
   return (
