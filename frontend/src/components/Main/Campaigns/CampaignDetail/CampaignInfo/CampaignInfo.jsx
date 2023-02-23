@@ -22,10 +22,10 @@ function CampaignInfo() {
     return (
         <div className='info_wrapper'>
             <div>
-                <img src={campaignDetail.image} alt="campaign_image" />
+                <img src={campaignDetail.campaignImage} alt="campaign_image" />
             </div>
             <div className='neon_red'>
-                <p>{campaignDetail.description}</p>
+                <p>{campaignDetail.campaignDescription}</p>
             </div>
         </div>
     )

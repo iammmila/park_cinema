@@ -4,6 +4,10 @@ const { Schema } = mongoose
 
 const campaignScheme = new Schema(
     {
+        campaignName: {
+            type: String,
+            required: true,
+        },
         campaignDescription: {
             type: String,
             required: true

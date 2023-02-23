@@ -36,11 +36,11 @@ function CampaignsGeneral() {
                                     <li className="card_campaign" key={data._id}>
                                         <Link to={`/campaigns/${data._id}`}>
                                             <div className="card-img">
-                                                <img src={data.image} alt="campaign" className="img-responsive" />
+                                                <img src={data.campaignImage} alt="campaign" className="img-responsive" />
                                             </div>
                                             <div className="card-text">
                                                 <div className="card-footer">
-                                                    <div className="card-right"> {data.description.slice(0, 200)}{`...`}</div>
+                                                    <div className="card-right"> {data.campaignDescription.slice(0, 200)}{`...`}</div>
                                                 </div>
                                             </div>
                                         </Link>

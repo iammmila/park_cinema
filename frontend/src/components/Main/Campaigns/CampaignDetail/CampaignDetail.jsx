@@ -24,7 +24,7 @@ function CampaignDetail() {
             <div className="container">
                 <div className="campaigns_id_wrapper">
                     <div style={{ width: "18%" }} className='line' ></div>
-                    <h1>{campaignDetail.name}</h1>
+                    <h1>{campaignDetail.campaignName}</h1>
                     <CampaignInfo />
                 </div>
             </div>
