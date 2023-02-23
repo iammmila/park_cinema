@@ -16,6 +16,7 @@ import CheckBox from './CheckBoxSlider/CheckBox';
 import { MainContext } from '../../../../context/ContextProvider';
 import axios from 'axios';
 import LoadingCard from '../../Cinemas/LoadingCard/LoadingCard';
+import { Link } from 'react-router-dom';
 
 function Slider() {
   const { films, setFilms, setLoading, loading, filterTags, FilmsURL } = useContext(MainContext)
@@ -27,7 +28,7 @@ function Slider() {
 
   useEffect(() => {
     getData();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (
@@ -52,8 +53,10 @@ function Slider() {
                 : films)
                 .map((film) => (
                   <SwiperSlide className='slide' key={film._id}>
-                    <img className='films' width={"400px"} height={"600px"} src={film.poster} alt="film1" />
-                    <span>{film.name}</span>
+                    <Link to={`/film/${film._id}`}>
+                      <img className='films' width={"400px"} height={"600px"} src={film.poster} alt="film1" />
+                      <span>{film.name}</span>
+                    </Link>
                   </SwiperSlide>
                 ))
           }

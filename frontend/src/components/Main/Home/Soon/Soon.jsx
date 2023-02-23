@@ -12,6 +12,7 @@ import { MainContext } from './../../../../context/ContextProvider';
 
 //components
 import LoadingCard from './../../Cinemas/LoadingCard/LoadingCard';
+import { Link } from 'react-router-dom';
 
 function Soon() {
   const { soonFilms, setSoonFilms, loading, setLoading, FilmsURL } = useContext(MainContext)
@@ -40,20 +41,22 @@ function Soon() {
               </>) :
                 soonFilms?.slice(0, 3).map((data) => (
                   <li className="card" key={data._id}>
-                    <img className='soon-poster' src={soon} alt="soon" />
-                    <div className="card-img">
-                      <img src={data.poster} alt="film" className="img-responsive" />
-                    </div>
-                    <div className="card-text">
-                      <div className="category">
+                    <Link to={`/film/${data._id}`}>
+                      <img className='soon-poster' src={soon} alt="soon" />
+                      <div className="card-img">
+                        <img src={data.poster} alt="film" className="img-responsive" />
                       </div>
-                      <div className="title-film">
-                        <h3>{data.name}</h3>
-                        <span>{data.date}</span>
+                      <div className="card-text">
+                        <div className="category">
+                        </div>
+                        <div className="title-film">
+                          <h3>{data.name}</h3>
+                          <span>{data.date}</span>
+                        </div>
+                        <div className="description-film">
+                        </div>
                       </div>
-                      <div className="description-film">
-                      </div>
-                    </div>
+                    </Link>
                   </li>
                 ))
             }

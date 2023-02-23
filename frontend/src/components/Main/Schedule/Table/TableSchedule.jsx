@@ -8,22 +8,23 @@ import ButtonTicketBuy from './../ButtonTicketBuy/ButtonTicketBuy';
 import axios from 'axios';
 import { MainContext } from '../../../../context/ContextProvider';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function TableSchedule() {
-    const { films, setFilms, cinemas, setCinemas } = useContext(MainContext)
-    const CinemasURL = "http://localhost:8080/cinemas"
-    const FilmsURL = 'http://localhost:8080/films';
+    // eslint-disable-next-line no-unused-vars
+    const { films, setFilms, cinemas, setCinemas, CinemasURL, FilmsURL } = useContext(MainContext)
     const [general, setGeneral] = useState([])
     const getFilmData = async () => {
-        await axios.get(FilmsURL).then((res) => setFilms(res.data));
+        await axios.get(FilmsURL).then((res) => setGeneral(res.data));
     }
     const getCinemaData = async () => {
-        await axios.get(CinemasURL).then((res) => setCinemas(res.data));
+        await axios.get(CinemasURL).then((res) => setGeneral(res.data));
     }
 
     useEffect(() => {
         getFilmData();
         getCinemaData();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     return (
@@ -39,14 +40,15 @@ function TableSchedule() {
                 </tr>
             </thead>
             <tbody>
-                {/* {
+                {
                     general?.map((data) => (
                         <tr key={data._id}>
-                            <td>{data.name}</td>
+                            <td><Link to={`/film/${data._id}`}>{data.name} </Link></td>
                             <td>{data.date}</td>
-                            <td>{data.name}</td>
-                            {/* <td>{za}</td> */}
-                {/* <td>
+                            <td><Link to={`/cinemas/${data._id}`}>{data.name} </Link></td>
+                            {/* <td>{data.name}</td> */}
+                            <td><Link to={`/cinemas/${data._id}`}>{data.name} </Link></td>
+                            <td>
                                 <div className='wrapper_format'>
                                     3d
                                 </div>
@@ -57,11 +59,11 @@ function TableSchedule() {
                             <td>
                                 <ButtonTicketBuy />
                             </td>
-                        </tr> */}
-                {/* )) */}
-                {/* } */}
-                <tr>
-                    <td>film name</td>
+                        </tr>
+                    ))
+                }
+                {/* <tr>
+                    <td><Link to={`/film/${data._id}`}></Link></td>
                     <td>time</td>
                     <td>cinema</td>
                     <td>cinema hall</td>
@@ -212,7 +214,7 @@ function TableSchedule() {
                     <td>
                         <ButtonTicketBuy />
                     </td>
-                </tr>
+                </tr> */}
 
             </tbody>
         </table>

@@ -66,7 +66,7 @@ export const ROUTES = [
       },
       //!film's detail
       {
-        path: "film/:id",
+        path: "film/:_id",
         element: <FilmDetail />
       },
 

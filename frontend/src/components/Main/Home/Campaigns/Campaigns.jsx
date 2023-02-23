@@ -7,6 +7,7 @@ import LoadingSoonCard from '../Soon/LoadingSoonCard/LoadingSoonCard';
 
 //general scss
 import "./Campaigns.scss"
+import { Link } from 'react-router-dom';
 
 function Campaigns() {
   const { campaings, setCampaigns, loading, setLoading, CampaignsURL } = useContext(MainContext)
@@ -35,9 +36,11 @@ function Campaigns() {
               </>) :
                 campaings?.slice(0, 3).map((data) => (
                   <li className="card" key={data._id}>
-                    <div className="card-img">
-                      <img src={data.image} alt="film" className="img-responsive" />
-                    </div>
+                    <Link to={`/campaigns/${data._id}`}>
+                      <div className="card-img">
+                        <img src={data.image} alt="film" className="img-responsive" />
+                      </div>
+                    </Link>
                   </li>
                 ))
             }

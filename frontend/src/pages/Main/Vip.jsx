@@ -6,7 +6,7 @@ import { Helmet } from 'react-helmet-async'
 //components
 import HeroSection from './../../components/Main/VIP/HeroSectionVip/HeroSection';
 import Information from './../../components/Main/VIP/InfoHall/Information';
-import Schedule from './../../components/Main/VIP/VIPSchedule/Schedule';
+// import Schedule from './../../components/Main/VIP/VIPSchedule/Schedule';
 
 function Vip() {
     return (
@@ -16,7 +16,7 @@ function Vip() {
                 <meta name='description' content='Beginner friendly page for learning React Helmet.' />
             </Helmet>
             <HeroSection />
-            <Schedule />
+            {/* <Schedule /> */}
             <Information />
         </>
     )
