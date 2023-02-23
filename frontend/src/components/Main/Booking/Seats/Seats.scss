@@ -1,0 +1,29 @@
+.seats_wrapper {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 67%;
+    height: 100%;
+
+    border: 1px solid hsl(0, 97%, 62%);
+    box-shadow: inset 0px 0px 0.5em 0px hsl(0, 97%, 62%), 0px 0px 0.5em 0px hsl(0, 97%, 62%);
+    border-radius: 20px;
+
+    .container_screen {
+        width: 400px;
+        perspective: 1000px;
+
+        .screen {
+            background-color: #fff;
+            height: 140px;
+            width: 100%;
+            margin: 15px 0;
+            transform: rotateX(-30deg);
+            box-shadow: 0 3px 10px rgb(255 255 255 / 70%);
+        }
+        
+    }
+}

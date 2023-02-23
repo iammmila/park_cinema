@@ -68,8 +68,7 @@ exports.cinemas_put = async (req, res) => {
         await Cinemas.findByIdAndUpdate( id, data, { new: true });
         if (!data) {
             return res.status(404).json({ message: 'Cinema is not found' });
-        }
-
+        }Movie-Seat-Booking-master/ 
         res.status(200).json(data);
     } catch (err) {
         res.status(500).json({ message: err.message });

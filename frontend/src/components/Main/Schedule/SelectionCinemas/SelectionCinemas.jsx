@@ -6,12 +6,14 @@ function SelectionCinemas() {
         <>
             <div className="select-box">
                 <div className="select-box__current" tabIndex="1">
-                    <div className="select-box__value">
+                    
+                    
+                    {/* <div className="select-box__value">
                         <input className="select-box__input" type="radio" id="0" value="1" name="Ben" defaultChecked="checked" />
-                        <p className="select-box__input-text">Cream</p>
+                        <p className="select-box__input-text">Park Cinema</p>
                     </div>
                     <div className="select-box__value">
-                        <input className="select-box__input" type="radio" id="1" value="2" name="Ben" />
+                        <input className="select-box__input" type="radio" id="1" value="park bulvar" name="Ben" />
                         <p className="select-box__input-text">Cheese</p>
                     </div>
                     <div className="select-box__value">
@@ -25,12 +27,12 @@ function SelectionCinemas() {
                     <div className="select-box__value">
                         <input className="select-box__input" type="radio" id="4" value="5" name="Ben" />
                         <p className="select-box__input-text">Toast</p>
-                    </div>
+                    </div> */}
                     <img className="select-box__icon" src="http://cdn.onlinewebfonts.com/svg/img_295694.svg" alt="Arrow Icon" aria-hidden="true" />
                 </div>
                 <ul className="select-box__list">
                     <li>
-                        <label className="select-box__option" htmlFor="0" aria-hidden="true">Cream</label>
+                        <label className="select-box__option" htmlFor="0" aria-hidden="true">Park Cinema</label>
                     </li>
                     <li>
                         <label className="select-box__option" htmlFor="1" aria-hidden="true">Cheese</label>

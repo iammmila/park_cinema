@@ -22,7 +22,7 @@ function ContextProvider({ children }) {
     //URL
     const FilmsURL = 'http://localhost:8080/films';
     const CinemasURL = 'http://localhost:8080/cinemas';
-    const CampaignsURL = 'http://localhost:8080/campaigns';
+    const CampaignsURL = 'http://localhost:8080/campaigns'
 
     //!schedule part
     const showComponent = (e) => {

@@ -14,7 +14,7 @@ function BookingPart() {
       <div className="container">
         <div className="wrapper_booking">
           <Seats />
-          <div>
+          <div className='booking_section'>
             <Ticket />
             <Submit />
           </div>
