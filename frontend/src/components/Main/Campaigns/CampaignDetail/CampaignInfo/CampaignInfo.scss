@@ -1,0 +1,19 @@
+.info_wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+
+    img {
+        width: 700px;
+        border-radius: 20px;
+    }
+
+    .neon_red {
+        padding: 30px;
+        border-radius: 20px;
+        border: 0.15em solid hsl(0, 97%, 62%);
+        box-shadow: inset 0px 0px 0.5em 0px hsl(0, 97%, 62%), 0px 0px 0.5em 0px hsl(0, 97%, 62%);
+    }
+}

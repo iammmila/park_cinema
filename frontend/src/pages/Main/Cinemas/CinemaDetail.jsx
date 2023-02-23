@@ -4,7 +4,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet-async'
 
 //components
-import CinemasGeneral from '../../../components/Main/CinemasGeneral/CinemasGeneral';
+import CinemaDetailPart from './../../../components/Main/CinemasDetail/CinemaDetail';
 
 function CinemaDetail() {
 
@@ -14,7 +14,7 @@ function CinemaDetail() {
                 <title> Cinema | Park Cinema</title>
                 <meta name='description' content='Beginner friendly page for learning React Helmet.' />
             </Helmet>
-            <CinemasGeneral />
+            <CinemaDetailPart />
         </>
     )
 }

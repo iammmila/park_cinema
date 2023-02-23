@@ -4,9 +4,9 @@ import axios from 'axios'
 import { MainContext } from '../../../context/ContextProvider';
 
 //general scss
-import "./CinemasGeneral.scss"
+import "./CinemaDetail.scss"
 
-function CinemasGeneral() {
+function CinemaDetail() {
     const { cinemaDetail, setCinemaDetail, CinemasURL } = useContext(MainContext)
     const { _id } = useParams()
 
@@ -46,4 +46,4 @@ function CinemasGeneral() {
     )
 }
 
-export default CinemasGeneral
+export default CinemaDetail
