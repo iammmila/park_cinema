@@ -4,11 +4,28 @@ import React from 'react'
 import "./SelectionCinemas.scss"
 
 function SelectionCinemas() {
+
     return (
         <>
-            <div className="select-box">
-                <div className="select-box__current" tabIndex="1">
-                    {/* <div className="select-box__value">
+            {/* <div className="Movies">
+                <label htmlFor="movie">Pick a movie</label>
+                <select
+                    id="movie"
+                    value={movie.name}
+                    onChange={e => {
+                        onChange(movies.find(movie => movie.name === e.target.value))
+                    }}
+                >
+                    {movies.map(movie => (
+                        <option key={movie.name} value={movie.name}>
+                            {movie.name} (${movie.price})
+                        </option>
+                    ))}
+                </select>
+            </div> */}
+            {/* <div className="select-box"> */}
+            {/* <div className="select-box__current" tabIndex="1"> */}
+            {/* <div className="select-box__value">
                         <input className="select-box__input" type="radio" id="0" value="1" name="Ben" defaultChecked="checked" />
                         <p className="select-box__input-text">Park Cinema</p>
                     </div>
@@ -28,7 +45,7 @@ function SelectionCinemas() {
                         <input className="select-box__input" type="radio" id="4" value="5" name="Ben" />
                         <p className="select-box__input-text">Toast</p>
                     </div> */}
-                    <img className="select-box__icon" src="http://cdn.onlinewebfonts.com/svg/img_295694.svg" alt="Arrow Icon" aria-hidden="true" />
+            {/* <img className="select-box__icon" src="http://cdn.onlinewebfonts.com/svg/img_295694.svg" alt="Arrow Icon" aria-hidden="true" />
                 </div>
                 <ul className="select-box__list">
                     <li>
@@ -47,7 +64,7 @@ function SelectionCinemas() {
                         <label className="select-box__option" htmlFor="4" aria-hidden="true">Toast</label>
                     </li>
                 </ul>
-            </div>
+            </div> */}
         </>
     )
 }

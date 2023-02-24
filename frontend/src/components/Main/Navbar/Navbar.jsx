@@ -63,9 +63,10 @@ function Navbar() {
                   return (
                     <li className="dropdown-item" key={data._id}>
                       <Link
-                        to={`/cinemas/${data._id}`} target="_blank"
+                        to={`/cinemas/${data._id}`} 
+                        // target="_blank"
                       >
-                        {data.name}
+                        {data.cinemaName}
                       </Link>
                     </li>
                   )

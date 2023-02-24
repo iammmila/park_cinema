@@ -42,7 +42,7 @@ function CinemasInfo() {
                       </div>
                       <div className="card-text">
                         <div className="title-cinema">
-                          <h3>{data.name}</h3>
+                          <h3>{data.cinemaName}</h3>
                         </div>
                         <div className="card-footer">
                           <div className="card-left"><span className="address">Address:</span></div>

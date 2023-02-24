@@ -80,7 +80,8 @@ function Footer() {
                     <Link
                       className='link link--dia'
                       to={`/cinemas/${data._id}`}
-                    >{data.name}
+                    >
+                      {data.cinemaName}
                     </Link>
                   </li>
                 ))

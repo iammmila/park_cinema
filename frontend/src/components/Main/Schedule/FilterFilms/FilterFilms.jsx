@@ -16,7 +16,7 @@ function FilterFilms() {
                 <SelectionCinemas />
             </div>
             <ul className='filtering_formats'>
-                <li>
+                {/* <li>
                     <div className="checkbox-wrapper-3">
                         <input type="checkbox" className="check" onChange={filterHandler} id="all" value="all" />
                         <label htmlFor="all" className="label">
@@ -29,7 +29,7 @@ function FilterFilms() {
                             <span>All</span>
                         </label>
                     </div>
-                </li>
+                </li> */}
                 <li>
                     <div className="checkbox-wrapper-3">
                         <input type="checkbox" className="check" onChange={filterHandler} id="2D" value="2D" />
