@@ -13,17 +13,24 @@ function ContextProvider({ children }) {
     const [films, setFilms] = useState([])
     const [cinemas, setCinemas] = useState([])
     const [campaings, setCampaigns] = useState([])
-    const [campaignDetail, setCampaignDetail]=useState([])
+    const [campaignDetail, setCampaignDetail] = useState([])
     const [soonFilms, setSoonFilms] = useState([])
     const [cinemaDetail, setCinemaDetail] = useState({})
     const [loading, setLoading] = useState(true);
     const [filterName, setFilterName] = useState("");
     const [filterTags, setFilterTags] = useState([])
+    const [toggleState, setToggleState] = useState();
+
 
     //!URLs
     const FilmsURL = 'http://localhost:8080/films';
     const CinemasURL = 'http://localhost:8080/cinemas';
     const CampaignsURL = 'http://localhost:8080/campaigns'
+
+    //!accordion in "about page"
+    const toggleTab = (index) => {
+        setToggleState(index);
+    };
 
     //!schedule part
     const showComponent = (e) => {
@@ -86,7 +93,9 @@ function ContextProvider({ children }) {
         filterName, setFilterName,
         FilmsURL, CampaignsURL, CinemasURL,
         changeTheme,
-        campaignDetail, setCampaignDetail
+        campaignDetail, setCampaignDetail,
+        toggleState, setToggleState,
+        toggleTab
     }
     //! DARK AND LIGHT MODE
     useEffect(() => {
