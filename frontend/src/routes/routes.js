@@ -4,8 +4,8 @@ import NotFoundMain from "../pages/Main/NotFound";
 import Home from "../pages/Main/Home";
 import Schedule from "../pages/Main/Schedule";
 import Vip from "../pages/Main/Vip";
-import Booking from './../pages/Main/Booking';
-import FilmDetail from './../pages/Main/FilmDetail';
+import Booking from '../pages/Main/Booking';
+import FilmDetail from '../pages/Main/FilmDetail';
 
 //! CINEMAS PART
 import CinemasRoot from "../pages/Main/Cinemas/CinemasRoot"
@@ -13,13 +13,12 @@ import Cinemas from "../pages/Main/Cinemas/Cinemas"
 import CinemaDetail from "../pages/Main/Cinemas/CinemaDetail"
 
 //!CAMPAIGNS PART
-import CampaignRoute from './../pages/Main/Campaigns/CampaignRoute';
+import CampaignRoute from '../pages/Main/Campaigns/CampaignRoute';
 import Campaign from "../pages/Main/Campaigns/Campaign";
 import CampaignDetail from "../pages/Main/Campaigns/CampaignDetail";
 
 //! TECHNOLOGIES PART
 import TechRoot from "../pages/Main/Technologies/TechRoot";
-import Technologies from "../pages/Main/Technologies/Technologies";
 import Imax from "../pages/Main/Technologies/Imax";
 import LaseR from "../pages/Main/Technologies/LaseR";
 
@@ -90,16 +89,11 @@ export const ROUTES = [
           }
         ]
       },
-
       //! TECHNOLOGIES
       {
         path: "technologies/",
         element: <TechRoot />,
         children: [
-          // {
-          //   path: "",
-          //   element: <Technologies />
-          // },
           {
             path: "imax",
             element: <Imax />,
