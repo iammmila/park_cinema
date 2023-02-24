@@ -19,7 +19,7 @@ const campaignsRoute = require("./routes/campaignsRoute")
 const genresRoute = require("./routes/genresRoute")
 const subtitlesRoute = require("./routes/subtitlesRoute")
 const formatsRoute = require("./routes/formatsRoute")
-
+const subscriberRoute = require("./routes/subscriberRoute")
 //!endpoints
 
 app.use("/films", filmsRoute)
@@ -28,7 +28,7 @@ app.use("/campaigns", campaignsRoute)
 app.use("/genres", genresRoute)
 app.use("/subtitles", subtitlesRoute)
 app.use("/formats", formatsRoute)
-
+app.use("/subscriber", subscriberRoute)
 
 
 const PORT = process.env.PORT
