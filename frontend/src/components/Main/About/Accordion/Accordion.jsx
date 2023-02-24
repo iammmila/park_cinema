@@ -27,7 +27,7 @@ function Accordion() {
 
                 {
                     cinemas?.map((data) => (
-                        <button
+                        <button key={data._id}
                             className={toggleState === data._id ? "tabs active-tabs" : "tabs"}
                             onClick={() => toggleTab(data._id)}
                         >
@@ -40,6 +40,7 @@ function Accordion() {
                 {
                     cinemas?.map((data) => (
                         <div
+                            key={data._id}
                             className={toggleState === data._id ? "brief-content  active-content" : "brief-content"}
                         >
                             <h2>{data.cinemaName}</h2>
