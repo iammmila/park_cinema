@@ -96,10 +96,10 @@ export const ROUTES = [
         path: "technologies/",
         element: <TechRoot />,
         children: [
-          {
-            path: "",
-            element: <Technologies />
-          },
+          // {
+          //   path: "",
+          //   element: <Technologies />
+          // },
           {
             path: "imax",
             element: <Imax />,

@@ -89,14 +89,11 @@ function Navbar() {
               </NavLink>
             </li>
             <li className="has-dropdown">
-              <NavLink
-                to="/technologies
-                "
-                style={({ isActive }) => (isActive ? activeStyle : null)}
+              <span
               >
                 Technologies
                 <RiArrowDropDownLine style={{ fontSize: "25px" }} />
-              </NavLink>
+              </span>
 
               {/*//! DROPDOWN MENU technologies */}
 
@@ -119,13 +116,11 @@ function Navbar() {
               </ul>
             </li>
             <li className="has-dropdown">
-              <Link
-                to="/"
+              <span
               >
                 More
                 <RiArrowDropDownLine style={{ fontSize: "25px" }} />
-
-              </Link>
+              </span>
 
               {/*//! DROPDOWN MENU about */}
 
