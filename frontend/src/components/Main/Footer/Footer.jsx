@@ -135,9 +135,9 @@ function Footer() {
               </li>
               <li className='content__item'>
                 <Link className='link link--dia'
-                  to="/about/cookies"
+                  to="/about/advertising"
                 >
-                  Cookies
+                  Advertising Offer
                 </Link>
               </li>
             </ul>

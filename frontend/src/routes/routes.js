@@ -27,7 +27,7 @@ import AboutRoot from "../pages/Main/About/AboutRoot";
 import AboutUs from "../pages/Main/About/AboutUs";
 import Privacy from "../pages/Main/About/Privacy";
 import Contact from "../pages/Main/About/Contact";
-import Cookies from "../pages/Main/About/Cookies";
+import AdvertisingOffer from "../pages/Main/About/AdvertisingOffer";
 
 //!ADMIN PART
 import AdminRoot from "../pages/Admin/AdminRoot";
@@ -123,8 +123,8 @@ export const ROUTES = [
             element: <Contact />,
           },
           {
-            path: "cookies",
-            element: <Cookies />,
+            path: "advertising",
+            element: <AdvertisingOffer />,
           },
         ],
       }

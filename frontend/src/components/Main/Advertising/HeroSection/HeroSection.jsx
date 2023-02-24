@@ -12,7 +12,7 @@ function HeroSection() {
             <div className="container">
                 <div className="wrapper_advertising">
                     <div style={{ width: "18%" }} className='line' ></div>
-                    <h1>Advertisements in cinemas as one of the most effective advertisement types.</h1>
+                    <h1>Advertisements in cinemas as one of the most effective advertisement types</h1>
                     <Information />
                 </div>
             </div>

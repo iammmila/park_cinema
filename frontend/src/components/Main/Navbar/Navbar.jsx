@@ -148,9 +148,9 @@ function Navbar() {
                 </li>
                 <li className="dropdown-item">
                   <Link
-                    to="/about/cookies"
+                    to="/about/advertising"
                   >
-                    Cookies
+                    Advertising Offer
                   </Link>
                 </li>
               </ul>

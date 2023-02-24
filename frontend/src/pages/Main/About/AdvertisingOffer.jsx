@@ -2,14 +2,14 @@ import React from 'react'
 
 //helmet
 import { Helmet } from 'react-helmet-async'
-import HeroSection from './../../../components/Main/Cookies/HeroSection/HeroSection';
-import Advantages from './../../../components/Main/Cookies/Advantages/Advantages';
+import HeroSection from '../../../components/Main/Advertising/HeroSection/HeroSection';
+import Advantages from '../../../components/Main/Advertising/Advantages/Advantages';
 
-function Cookies() {
+function AdvertisingOffer() {
     return (
         <>
             <Helmet>
-                <title>Cookies | Park Cinema</title>
+                <title>AdvertisingOffer | Park Cinema</title>
                 <meta name='description' content='Beginner friendly page for learning React Helmet.' />
             </Helmet>
             <HeroSection />
@@ -18,4 +18,4 @@ function Cookies() {
     )
 }
 
-export default Cookies
+export default AdvertisingOffer
