@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 import { subscribeSchema } from "../../../../schema/subscribe";
 import axios from 'axios';
+import { yupResolver } from '@hookform/resolvers/yup';
 
 //sweet alert
 import Swal from 'sweetalert2/dist/sweetalert2.js'
@@ -13,7 +14,6 @@ import { IoIosArrowForward } from "react-icons/io"
 
 //general scss
 import "./Subscribe.scss"
-import { yupResolver } from '@hookform/resolvers/yup';
 
 function Subscribe() {
 

@@ -54,3 +54,44 @@
         }
     }
 }
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+    .subscribe {
+
+        .subscribe_wrapper {
+            width: 100%;
+
+            h2 {
+                font-size: 45px;
+                font-weight: 500;
+            }
+
+            form {
+                width: 80%;
+            }
+        }
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .subscribe {
+
+        .subscribe_wrapper {
+            width: 100%;
+
+            h2 {
+                font-size: 30px;
+                font-weight: 500;
+            }
+
+            form {
+                width: 90%;
+            }
+            span{
+                font-size: 18px;
+            }
+        }
+    }
+}
