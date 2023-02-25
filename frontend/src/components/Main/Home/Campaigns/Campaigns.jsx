@@ -1,13 +1,13 @@
 import React, { useContext, useEffect } from 'react'
 import axios from 'axios';
 import { MainContext } from '../../../../context/ContextProvider';
+import { Link } from 'react-router-dom';
 
 //components
 import LoadingSoonCard from '../Soon/LoadingSoonCard/LoadingSoonCard';
 
 //general scss
 import "./Campaigns.scss"
-import { Link } from 'react-router-dom';
 
 function Campaigns() {
   const { campaings, setCampaigns, loading, setLoading, CampaignsURL } = useContext(MainContext)
@@ -38,7 +38,7 @@ function Campaigns() {
                   <li className="card" key={data._id}>
                     <Link to={`/campaigns/${data._id}`}>
                       <div className="card-img">
-                        <img src={data.image} alt="film" className="img-responsive" />
+                        <img src={data.campaignImage} alt="film" className="img-responsive" />
                       </div>
                     </Link>
                   </li>

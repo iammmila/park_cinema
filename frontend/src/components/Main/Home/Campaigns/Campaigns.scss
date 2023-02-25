@@ -38,5 +38,80 @@
                 }
             }
         }
+
+        hr {
+            width: 100%;
+        }
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1200px) {
+    .home-campaigns {
+        .campaigns-section {
+            .cards {
+                gap: 20px;
+
+                .card {
+                    width: 30%;
+                }
+            }
+        }
+    }
+}
+
+/* Large devices (laptops/desktops, 1030px and up) */
+@media only screen and (max-width: 1030px) {
+    .home-campaigns {
+        .campaigns-section {
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+        }
+    }
+}
+
+/* Large devices (laptops/desktops, 855px and up) */
+@media only screen and (max-width: 855px) {
+    .home-campaigns {
+
+        .campaigns-section {
+            .cards {
+                flex-wrap: wrap;
+
+                .card {
+                    width: 30%;
+                    padding: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 770px) {
+    .home-campaigns {
+
+        .campaigns-section {
+            .cards {
+                .card {
+                    width: 45%;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 470px) {
+    .home-campaigns {
+        .campaigns-section {
+            h1{
+                text-align: center;
+            }
+            .cards {
+                .card {
+                    width: 60%;
+                }
+            }
+        }
     }
 }
