@@ -1,0 +1,54 @@
+.page-chunk {
+
+    img {
+        float: none;
+        width: 800px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+    .page-chunk {
+        img {
+            width: 600px;
+        }
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 686px) {
+    .page-chunk {
+        img {
+            width: 550px;
+        }
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .page-chunk {
+        img {
+            width: 500px;
+        }
+    }
+}
+
+@media only screen and (max-width: 530px) {
+    .page-chunk {
+        img {
+            width: 400px;
+        }
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    .page-chunk {
+        p {
+            font-size: 18px;
+        }
+
+        img {
+            width: 200px;
+        }
+    }
+}
