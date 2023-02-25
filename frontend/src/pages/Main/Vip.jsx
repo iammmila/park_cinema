@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 //helmet
 import { Helmet } from 'react-helmet-async'
@@ -9,6 +9,14 @@ import Information from './../../components/Main/VIP/InfoHall/Information';
 // import Schedule from './../../components/Main/VIP/VIPSchedule/Schedule';
 
 function Vip() {
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "smooth"
+        });
+    }, [])
+
     return (
         <>
             <Helmet>
