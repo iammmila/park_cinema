@@ -13,10 +13,14 @@ import { RiArrowDropDownLine } from "react-icons/ri"
 //logo
 import logo from "../../../assets/logo/download.svg"
 
+//components
+import HamburgerMenu from './HamburgerMenu/HamburgerMenu';
+
 function Navbar() {
   const activeStyle = {
     color: "red"
   }
+
   const { mode, cinemas, setCinemas, CinemasURL, changeTheme } = useContext(MainContext)
 
   const getData = async () => {
@@ -63,8 +67,8 @@ function Navbar() {
                   return (
                     <li className="dropdown-item" key={data._id}>
                       <Link
-                        to={`/cinemas/${data._id}`} 
-                        // target="_blank"
+                        to={`/cinemas/${data._id}`}
+                      // target="_blank"
                       >
                         {data.cinemaName}
                       </Link>
@@ -159,6 +163,7 @@ function Navbar() {
           <ul>
             {mode === "light" ? <MdModeNight className='theme-button' onClick={changeTheme} /> : <MdLightMode className='theme-button' onClick={changeTheme} />}
           </ul>
+          <HamburgerMenu />
         </div>
       </div>
     </nav>
