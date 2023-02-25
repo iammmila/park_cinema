@@ -29,10 +29,112 @@
             height: 700px;
             display: flex;
             flex-direction: row;
-        }
 
-        .slider-hall-wrapper {
-            width: 50%;
+            .left_side {
+                width: 50%;
+                padding: 0 50px;
+            }
+
+            .slider-hall-wrapper {
+                width: 50%;
+            }
         }
     }
 }
+
+@media only screen and (max-width: 1200px) {
+    .hall_vip {
+        .wrapper_hall {
+            padding: 50px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            align-items: center;
+            justify-content: center;
+
+            .line,
+            h1 {
+                text-align: center;
+                position: relative;
+            }
+
+            span {
+                color: gray;
+            }
+
+            p {
+                position: relative;
+                z-index: 2;
+                margin-bottom: 15px;
+            }
+
+            .information-brief {
+                margin-top: 30px;
+                width: 100%;
+                height: 700px;
+                display: flex;
+                flex-direction: column;
+
+                .left_side {
+                    width: 90%;
+                }
+            }
+
+            // .right_side {
+
+            //     .slider-hall-wrapper {
+            //         width: 90%;
+            //     }
+            // }
+
+        }
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+    .hall_vip {
+        .wrapper_hall {
+            padding: 50px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            align-items: center;
+            justify-content: center;
+
+            .line,
+            h1 {
+                text-align: center;
+                position: relative;
+            }
+
+            span {
+                color: gray;
+            }
+
+            p {
+                position: relative;
+                z-index: 2;
+                margin-bottom: 15px;
+            }
+
+            .information-brief {
+                margin-top: 30px;
+                width: 100%;
+                height: 700px;
+                display: flex;
+                flex-direction: row;
+            }
+
+            .slider-hall-wrapper {
+                width: 50%;
+            }
+        }
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {}
