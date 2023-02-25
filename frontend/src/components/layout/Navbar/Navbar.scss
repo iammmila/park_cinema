@@ -119,6 +119,15 @@ nav {
         right: -90px;
       }
     }
+
+    .mode_section {
+      border-radius: 50%;
+      padding:10px  15px;
+
+      &:hover {
+        background-color: rgba(68, 68, 68, 0.301);
+      }
+    }
   }
 }
 
