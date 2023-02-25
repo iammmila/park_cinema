@@ -41,7 +41,24 @@ function Slider() {
           freeMode={true}
           navigation={true}
           modules={[Pagination, FreeMode, Navigation]}
-          className=" main-slider "
+          className="main-slider"
+          breakpoints={{
+            1600: {
+              slidesPerView: 4
+            },
+            1100: {
+              slidesPerView: 3
+            },
+            850: {
+              slidesPerView: 2
+            },
+            600: {
+              slidesPerView: 1
+            },
+            0: {
+              slidesPerView: 1
+            }
+          }}
         >
           {/* //!cards of Films */}
           {
