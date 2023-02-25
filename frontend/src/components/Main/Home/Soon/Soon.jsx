@@ -32,7 +32,7 @@ function Soon() {
     <section className='soon-films'>
       <div className="container">
         <div className="wrapper-films">
-          <div style={{ width: "18%" }} className='line' ></div>
+          <div style={{ width: "20%" }} className='line' ></div>
           <h1>Soon Movies</h1>
           <ul className='cards'>
             {/* //!cards of soon limited films */}
@@ -52,8 +52,6 @@ function Soon() {
                         <div className="title-film">
                           <h3>{data.name}</h3>
                           <span>{data.date}</span>
-                        </div>
-                        <div className="description-film">
                         </div>
                       </div>
                     </Link>
