@@ -22,3 +22,32 @@
         }
     }
 }
+
+@media only screen and (max-width: 1200px) {
+    .info_advertising_wrapper {
+        .neon_red {
+            img {
+                width: 490px;
+            }
+        }
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+    .info_advertising_wrapper {
+        .neon_red {
+            img {
+                width: 400px;
+            }
+        }
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+    .info_advertising_wrapper {
+        flex-direction: column;
+        gap: 50px;
+    }
+}

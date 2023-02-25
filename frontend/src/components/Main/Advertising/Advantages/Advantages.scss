@@ -4,8 +4,6 @@
     .wrapper_advantages {
         display: flex;
         flex-direction: row-reverse;
-        // justify-content: center;
-        // align-items: center;
         gap: 50px;
 
         .info_advantages {
@@ -31,7 +29,6 @@
                 border-radius: 20px;
                 border: 0.15em solid hsl(0, 97%, 62%);
                 box-shadow: inset 0px 0px 0.5em 0px hsl(0, 97%, 62%), 0px 0px 0.5em 0px hsl(0, 97%, 62%);
-                ;
             }
         }
 
@@ -53,13 +50,56 @@
 .light {
     .advantages_section {
         .wrapper_advantages {
-
             .info_advantages {
-
                 button {
                     color: black;
                     background-color: white;
                     ;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .advantages_section {
+        .wrapper_advantages {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .info_advantages {
+                width: 90%;
+            }
+        }
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 620px) {
+    .advantages_section {
+
+        .wrapper_advantages {
+            .neon_red {
+
+                img {
+                    width: 400px;
+                    height: 100%;
+                    border-radius: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .advantages_section {
+        .wrapper_advantages {
+            .neon_red {
+                img {
+                    width: 300px;
+                    height: 100%;
+                    border-radius: 20px;
                 }
             }
         }
