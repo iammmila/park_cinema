@@ -22,7 +22,6 @@ function Home() {
       <Soon />
       <Campaigns />
       <Subscribe />
-
     </>
 
   )
