@@ -15,7 +15,6 @@ import { BsFacebook, BsInstagram, BsTwitter, BsYoutube } from "react-icons/bs"
 import { MainContext } from '../../../context/ContextProvider'
 
 function Footer() {
-
   const { cinemas, setCinemas, CinemasURL } = useContext(MainContext)
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
