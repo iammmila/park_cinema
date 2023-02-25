@@ -16,7 +16,6 @@ function BuyTicket() {
             <div className='line' style={{width:"50%"}} ></div>
             <h1>Fast booking</h1>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt harum quaerat cumque ipsum pariatur vitae adipisci fugiat maxime eveniet corporis incidunt, suscipit quisquam vero illum esse voluptas molestiae dolores beatae!</p>
-            {/* <button>Buy Ticket</button> */}
             <BuyTicketButton />
           </div>
           <div>

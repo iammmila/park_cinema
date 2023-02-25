@@ -18,3 +18,98 @@
         }
     }
 }
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1200px) {
+    .buy_ticket_section {
+
+        .buy_ticket_section_wrapper {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 0;
+
+            .info_of_ticket {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                p {
+                    width: 90%;
+                }
+            }
+            img{
+                width: 600px;
+            }
+        }
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+    .buy_ticket_section {
+
+        .buy_ticket_section_wrapper {
+            flex-direction: column;
+            gap: 0;
+
+            .info_of_ticket {
+                align-items: center;
+                justify-content: center;
+                p{
+                    text-align: center;
+                }
+            }
+
+            img {
+                width: 600px;
+            }
+        }
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+    .buy_ticket_section {
+
+        .buy_ticket_section_wrapper {
+            flex-direction: column;
+            gap: 0;
+
+            .info_of_ticket {
+                align-items: center;
+                justify-content: center;
+            }
+
+            img {
+                width: 500px;
+            }
+        }
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .buy_ticket_section {
+
+        .buy_ticket_section_wrapper {
+            flex-direction: column;
+            gap: 0;
+
+            .info_of_ticket {
+                align-items: center;
+                justify-content: center;
+
+                p {
+                    text-align: center;
+                    width: 90%;
+                }
+            }
+
+            img {
+                width: 350px;
+            }
+        }
+    }
+}
