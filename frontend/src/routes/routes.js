@@ -31,7 +31,6 @@ import AdvertisingOffer from "../pages/Main/About/AdvertisingOffer";
 
 //!ADMIN PART
 import AdminRoot from "../pages/Admin/AdminRoot";
-import NotFoundAdmin from "../pages/Admin/NotFound";
 import Dashboard from "../pages/Admin/Dashboard";
 import Login from "../components/Admin/Login/Login";
 
@@ -131,17 +130,18 @@ export const ROUTES = [
     ],
   },
 
+  //! BOOKING TICKET
+  {
+    path: "/booking",
+    element: <Booking />
+  },
+
   //! 404 NOT FOUND 
   {
     path: "*",
     element: <NotFoundMain />,
   },
 
-  //! BOOKING TICKET
-  {
-    path: "/booking",
-    element: <Booking />
-  },
   //! =====================A D M I N=======================
   {
     path: "/admin/",
@@ -156,8 +156,40 @@ export const ROUTES = [
         element: <Dashboard />,
       },
       {
+        path: "users",
+        element: <Login />,
+      },
+      {
+        path: "cinemas",
+        element: <Dashboard />,
+      },
+      {
+        path: "films",
+        element: <Login />,
+      },
+      {
+        path: "languages",
+        element: <Dashboard />,
+      },
+      {
+        path: "subtitles",
+        element: <Login />,
+      },
+      {
+        path: "formats",
+        element: <Dashboard />,
+      },
+      {
+        path: "campaigns",
+        element: <Login />,
+      },
+      {
+        path: "contact",
+        element: <Dashboard />,
+      },
+      {
         path: "*",
-        element: <NotFoundAdmin />,
+        element: <NotFoundMain />,
       },
     ],
   },

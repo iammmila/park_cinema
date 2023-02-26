@@ -1,0 +1,116 @@
+.hamburger-menu {
+    display: flex;
+    align-items: center;
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 24px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 2;
+
+        &:focus {
+            outline: none;
+        }
+
+        &__box {
+            width: 30px;
+            height: 24px;
+            display: inline-block;
+            position: relative;
+
+            &::before,
+            &::after,
+            .hamburger__inner {
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background-color: #333;
+                transition-duration: 0.3s;
+                transition-timing-function: ease;
+                content: '';
+            }
+
+            &::before {
+                top: 0;
+            }
+
+            &::after {
+                bottom: 0;
+            }
+
+            .hamburger__inner {
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        &--open {
+            .hamburger__box {
+                &::before {
+                    transform: translateY(8px) rotate(45deg);
+                }
+
+                &::after {
+                    transform: translateY(-8px) rotate(-45deg);
+                }
+
+                .hamburger__inner {
+                    opacity: 0;
+                }
+            }
+        }
+    }
+
+    &__nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #fff;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s ease;
+
+        &--open {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            li {
+                margin-bottom: 20px;
+
+                a {
+                    text-decoration: none;
+                    font-size: 1.5rem;
+                    color: #333;
+                    transition: color 0.3s ease;
+
+                    &:hover {
+                        color: #777;
+                    }
+                }
+            }
+        }
+    }
+}
