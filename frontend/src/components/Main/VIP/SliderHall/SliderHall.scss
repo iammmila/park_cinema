@@ -35,3 +35,29 @@
         opacity: 1;
     }
 }
+
+@media only screen and (max-width: 1200px) {
+    .mySwiper2 {
+        height: 50%;
+        width: 100%;
+
+    }
+
+    .mySwiper3 {
+        height: 20%;
+
+        .swiper-slide {
+            width: 30% !important;
+            height: 55%;
+        }
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .mySwiper2 {
+        height: 35%;
+        width: 100%;
+
+    }
+}

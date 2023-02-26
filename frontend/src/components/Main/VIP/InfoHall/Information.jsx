@@ -22,12 +22,9 @@ function Information() {
                             <p>VIP Lounge is for connoisseurs of good cinema and comfort, for those who prefer to gain only the best!</p>
                             <p>We are waiting for you at the Park Cinema VIP Lounge, at Park Bulvar, on the 5th floor.</p>
                         </div>
-                        {/* <div className='right_side'> */}
-                            <div className='slider-hall-wrapper'>
-                                <SliderHall />
-                            </div>
-                        {/* </div> */}
-
+                        <div className='slider-hall-wrapper'>
+                            <SliderHall />
+                        </div>
                     </div>
                 </div>
             </div>
