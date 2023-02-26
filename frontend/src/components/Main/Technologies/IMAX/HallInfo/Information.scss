@@ -42,3 +42,64 @@
         }
     }
 }
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 1000px) {
+    .information-hall-section {
+        .line {
+            width: 50%;
+        }
+
+        .information-brief {
+            flex-direction: column;
+
+            .hall_imax {
+                width: 70%;
+            }
+
+            .info_paragraphs {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+
+                p {
+                    width: 70%;
+                }
+            }
+        }
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+    .information-hall-section {
+        .information-brief {
+
+            .hall_imax {
+                width: 80%;
+            }
+
+            .info_paragraphs {
+           
+
+                p {
+                    width: 85%;
+                }
+            }
+        }
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .information-hall-section {
+        .information-brief {
+
+            p {
+                width: 95%;
+            }
+        }
+    }
+}

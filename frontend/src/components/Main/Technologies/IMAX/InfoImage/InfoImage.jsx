@@ -3,9 +3,12 @@ import React from 'react'
 // images
 import imaxProject from "../../../../../assets/images/formats/imax/IMAX1.jpg";
 
+//general scss
+import "./InfoImage.scss"
+
 function InfoImage() {
     return (
-        <img style={{ zIndex: 11, width:"48%",height:"100%", borderRadius:"20px" }} src={imaxProject} alt="project" />
+        <img className='info-image'  src={imaxProject} alt="project" />
     )
 }
 

@@ -14,7 +14,7 @@ function HeroSection() {
                     <div className='wrapper-blur-section'>
                         <div className='content'>
                             <div className="blur-bg"></div>
-                            <div style={{ display: "flex", }}>
+                            <div style={{ display: "flex" }}>
                                 <InformationImax />
                             </div>
                         </div>

@@ -14,13 +14,17 @@
         z-index: 2;
     }
 
+    .line {
+        width: 18%;
+    }
+
     .information-brief {
         display: flex;
         flex-direction: row;
         align-items: center;
         gap: 30px;
 
-        p{
+        p {
             width: 50%;
             position: relative;
             z-index: 2;
@@ -33,6 +37,47 @@
             gap: 30px;
             align-items: center;
             justify-content: center;
+        }
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 1000px) {
+    .information-imax-section {
+        .line {
+            width: 50%;
+        }
+
+        .information-brief {
+            flex-direction: column;
+
+            p {
+                width: 70%;
+            }
+        }
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+    .information-imax-section {
+        .information-brief {
+
+            p {
+                width: 80%;
+            }
+        }
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .information-imax-section {
+        .information-brief {
+
+            p {
+                width: 95%;
+            }
         }
     }
 }

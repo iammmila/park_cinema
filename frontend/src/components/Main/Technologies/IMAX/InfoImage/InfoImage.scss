@@ -1,0 +1,27 @@
+.info-image {
+    z-index: 11;
+    width: 48%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 1000px) {
+    .info-image {
+        width: 70%;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+    .info-image {
+        width: 85%;
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .info-image {
+        width: 95%;
+    }
+}
