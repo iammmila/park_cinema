@@ -33,6 +33,13 @@ import AdvertisingOffer from "../pages/Main/About/AdvertisingOffer";
 import AdminRoot from "../pages/Admin/AdminRoot";
 import Dashboard from "../pages/Admin/Dashboard";
 import Login from "../components/Admin/Login/Login";
+import Users from './../pages/Admin/Users';
+import GeneralCinemas from './../pages/Admin/GeneralCinemas';
+import GeneralFilms from './../pages/Admin/GeneralFilms';
+import GeneralCampaigns from './../pages/Admin/GeneralCampaigns';
+import Languages from './../pages/Admin/Languages';
+import Subtitles from './../pages/Admin/Subtitles';
+import Formats from './../pages/Admin/Formats';
 
 export const ROUTES = [
   {
@@ -157,31 +164,31 @@ export const ROUTES = [
       },
       {
         path: "users",
-        element: <Login />,
+        element: <Users />,
       },
       {
         path: "cinemas",
-        element: <Dashboard />,
+        element: <GeneralCinemas />,
       },
       {
         path: "films",
-        element: <Login />,
-      },
-      {
-        path: "languages",
-        element: <Dashboard />,
-      },
-      {
-        path: "subtitles",
-        element: <Login />,
-      },
-      {
-        path: "formats",
-        element: <Dashboard />,
+        element: <GeneralFilms />,
       },
       {
         path: "campaigns",
-        element: <Login />,
+        element: <GeneralCampaigns />,
+      },
+      {
+        path: "languages",
+        element: <Languages />,
+      },
+      {
+        path: "subtitles",
+        element: <Subtitles />,
+      },
+      {
+        path: "formats",
+        element: <Formats />,
       },
       {
         path: "contact",
