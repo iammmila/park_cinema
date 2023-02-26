@@ -162,8 +162,8 @@ function Navbar() {
           </ul>
           <div className='mode_section'>
             {mode === "light" ? <MdModeNight className='theme-button' onClick={changeTheme} /> : <MdLightMode className='theme-button' onClick={changeTheme} />}
+            <HamburgerMenu />
           </div>
-          <HamburgerMenu />
         </div>
       </div>
     </nav>

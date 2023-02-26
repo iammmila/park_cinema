@@ -122,9 +122,13 @@ nav {
 
     .mode_section {
       border-radius: 50%;
-      padding:10px  15px;
+      padding: 10px 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 35px;
 
-      &:hover {
+      .theme-button:hover {
         background-color: rgba(68, 68, 68, 0.301);
       }
     }
@@ -134,184 +138,19 @@ nav {
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (max-width: 1200px) {
   nav {
-    z-index: 999;
-    width: 100%;
-    background: rgb(0, 0, 0);
-    background: linear-gradient(0deg,
-        rgba(108, 108, 108, 0) 0%,
-        rgba(0, 0, 0, 1) 100%);
-
-    position: fixed;
-    top: 0;
-    width: 100%;
-
     .navbar {
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
 
-      .logo {
-        width: 250px;
-        color: red;
-        filter: invert(18%) sepia(88%) saturate(6137%) hue-rotate(348deg) brightness(92%) contrast(138%);
-      }
-
-      ul {
+      .nav {
         display: none;
       }
+
+      .display {
+        display: block;
+      }
     }
   }
 }
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (max-width: 992px) {
-  .navbar {
-    .logo {
-      width: 200px;
-    }
-
-    ul {
-      position: relative;
-      top: auto;
-      left: auto;
-      width: auto;
-      flex-direction: row;
-      background-color: transparent;
-      padding: 0;
-
-      li {
-        margin: 0;
-
-        a,
-        span {
-          font-size: 18px;
-          padding: 20px;
-        }
-
-        &:hover {
-
-          a,
-          span {
-            color: red;
-            transition: all 0.3s ease;
-          }
-
-          &:after {
-            width: 100%;
-            transition: all 0.3s ease;
-          }
-        }
-      }
-
-      .has-dropdown {
-        position: relative;
-
-        &:hover ul {
-          opacity: 1;
-          visibility: visible;
-        }
-      }
-    }
-
-    .theme-button {
-      margin-left: auto;
-    }
-  }
-}
-
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-
-    .logo {
-      width: 150px;
-    }
-
-    ul {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      flex-direction: column;
-      background-color: black;
-      padding: 20px 0;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.3s ease, visibility 0s linear 0.3s;
-
-      li {
-        margin: 10px 0;
-
-        a,
-        span {
-          font-size: 20px;
-          padding: 10px 20px;
-        }
-
-        &:hover {
-
-          a,
-          span {
-            color: red;
-            transition: all 0.3s ease;
-          }
-
-          &:after {
-            width: 100%;
-            transition: all 0.3s ease;
-          }
-        }
-      }
-
-      .has-dropdown {
-        position: relative;
-
-        &:hover ul {
-          opacity: 1;
-          visibility: visible;
-          transition-delay: 0s;
-        }
-      }
-    }
-
-    ul.active {
-      opacity: 1;
-      visibility: visible;
-      transition-delay: 0s;
-    }
-
-    .theme-button {
-      position: absolute;
-      top: 0;
-      right: 0;
-      padding: 10px;
-      font-size: 30px;
-      color: white;
-      cursor: pointer;
-    }
-  }
-
-  .menu-button {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 10px;
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
-  }
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 600px) {}
-
-// /* Extra small devices (phones, 600px and down) */
-// @media only screen and (max-width: 600px) {
-//   // nav {
-//   // background: red;
-//   // }
-// }
