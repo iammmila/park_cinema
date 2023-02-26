@@ -25,7 +25,7 @@ function CampaignsGeneral() {
         <section className='campaigns_information'>
             <div className="container">
                 <div className="wrapper_campaigns">
-                    <div style={{ width: "18%" }} className='line' ></div>
+                    <div className='line' ></div>
                     <h1>Campaigns</h1>
                     <ul className='cards_campaigns'>
                         {/* //!cards of cinemas */}

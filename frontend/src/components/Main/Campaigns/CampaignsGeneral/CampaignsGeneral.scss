@@ -1,8 +1,12 @@
 .campaigns_information {
     padding: 50px 0;
 
-    .wrapper_campaigns{
+    .wrapper_campaigns {
         padding: 50px 0;
+
+        .line {
+            width: 18%;
+        }
 
         h1 {
             margin: 30px 0;
@@ -52,17 +56,7 @@
                         padding: 25px 0 5px;
                         border-top: 1px solid red;
 
-                        .card-left {
-                            display: inline;
 
-                            .hours,
-                            .address,
-                            .phone {
-                                color: gray;
-                                font-size: 17px;
-                                font-weight: 500;
-                            }
-                        }
 
                         .card-right {
                             display: inline;
@@ -99,6 +93,82 @@
     .cards_campaigns {
         .card_campaign {
             background-color: rgb(100 100 111 / 20%) !important;
+        }
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .campaigns_information {
+        .wrapper_campaigns {
+            .cards_campaigns {
+                .card_campaign {
+                    width: 40%;
+                    height: 420px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 855px) {
+    .campaigns_information {
+        .wrapper_campaigns {
+            .cards_campaigns {
+                .card_campaign {
+                    width: 41%;
+                    height: 420px;
+
+                    .card-text {
+                        padding-top: 70%;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .campaigns_information {
+        .wrapper_campaigns {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .line {
+                width: 50%;
+            }
+
+            .cards_campaigns {
+                .card_campaign {
+                    width: 45%;
+                    height: 460px;
+
+                    .card-img {
+                        img {
+                            height: 200px;
+                        }
+                    }
+
+                    .card-text {
+                        padding-top: 88%;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .campaigns_information {
+        .wrapper_campaigns {
+            .cards_campaigns {
+                .card_campaign {
+                    width: 54%;
+                }
+            }
         }
     }
 }
