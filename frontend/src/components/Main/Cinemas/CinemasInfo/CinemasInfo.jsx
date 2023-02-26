@@ -26,7 +26,7 @@ function CinemasInfo() {
     <section className='cinemas_information'>
       <div className="container">
         <div className="wrapper_cinemas">
-          <div style={{ width: "18%" }} className='line' ></div>
+          <div className='line' ></div>
           <h1>Cinemas</h1>
           <ul className='cards_cinemas'>
 
