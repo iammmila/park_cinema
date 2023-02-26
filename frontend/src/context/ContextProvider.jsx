@@ -11,6 +11,7 @@ function ContextProvider({ children }) {
         id: 'today',
     })
     const [films, setFilms] = useState([])
+    const [filmDetail, setFilmDetail] = useState([])
     const [cinemas, setCinemas] = useState([])
     const [campaings, setCampaigns] = useState([])
     const [campaignDetail, setCampaignDetail] = useState([])
@@ -20,7 +21,6 @@ function ContextProvider({ children }) {
     const [filterName, setFilterName] = useState("");
     const [filterTags, setFilterTags] = useState([])
     const [toggleState, setToggleState] = useState();
-
 
     //!URLs
     const FilmsURL = 'http://localhost:8080/films';
@@ -84,6 +84,7 @@ function ContextProvider({ children }) {
         isActive, setIsActive,
         showComponent,
         films, setFilms,
+        filmDetail, setFilmDetail,
         cinemas, setCinemas,
         campaings, setCampaigns,
         soonFilms, setSoonFilms,
