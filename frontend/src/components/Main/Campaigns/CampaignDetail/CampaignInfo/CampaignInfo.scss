@@ -17,3 +17,35 @@
         box-shadow: inset 0px 0px 0.5em 0px hsl(0, 97%, 62%), 0px 0px 0.5em 0px hsl(0, 97%, 62%);
     }
 }
+
+@media only screen and (max-width: 992px) {
+    .info_wrapper {
+        flex-direction: column;
+
+        img {
+            width: 700px;
+        }
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+    .info_wrapper {
+        img {
+            width: 570px;
+        }
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .info_wrapper {
+        img {
+            width: 400px;
+        }
+
+        .neon_red {
+            width: 70%;
+        }
+    }
+}
