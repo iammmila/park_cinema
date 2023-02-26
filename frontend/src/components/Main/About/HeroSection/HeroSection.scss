@@ -37,3 +37,30 @@
         }
     }
 }
+
+
+/* Large devices (laptops/desktops, 1400px and up) */
+@media only screen and (max-width: 1400px) {
+    .hero-about {
+        height: 150vh;
+    }
+}
+/* Large devices (laptops/desktops, 1000px and up) */
+@media only screen and (max-width: 1000px) {
+    .hero-about {
+        height: 180vh;
+    }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+    .hero-about {
+        height: 230vh;
+    }
+}
+
+/* Extra small devices (phones, 500px and down) */
+@media only screen and (max-width: 500px) {
+    .hero-about {
+        height: 260vh;
+    }
+}

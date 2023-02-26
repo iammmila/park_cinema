@@ -35,3 +35,16 @@
         }
     }
 }
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 1400px) {
+    .information-section {
+        .information-brief {
+    
+           p{
+            font-size: 16px;
+           }
+        }
+    }
+}
