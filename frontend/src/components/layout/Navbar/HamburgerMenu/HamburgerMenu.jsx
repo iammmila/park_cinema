@@ -5,27 +5,37 @@ import { Link } from 'react-router-dom';
 import "./HamburgerMenu.scss"
 
 function HamburgerMenu() {
-    // const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
 
-    // const toggleMenu = () => {
-    //     setIsOpen(!isOpen);
-    // };
+    const handleClick = () => {
+        setIsOpen(!isOpen);
+    };
+
     return (
-        <nav role="navigation">
-            <div id="menuToggle">
-                <input type="checkbox" />
-                <span></span>
-                <span></span>
-                <span></span>
-                <ul id="menu">
-                    <Link to=""><li>Home</li></Link>
-                    <Link to="/"><li>About</li></Link>
-                    <Link to="/"><li>Info</li></Link>
-                    <Link to="/"><li>Contact</li></Link>
-                    <Link to="https://erikterwan.com/" target="_blank"><li>Show me more</li></Link>
-                </ul>
+        <div className="display">
+            <div className="hamburger-menu">
+                <button className={`hamburger ${isOpen ? 'hamburger--open' : ''}`} onClick={handleClick}>
+                    <span className="hamburger__box">
+                        <span className="hamburger__inner"></span>
+                    </span>
+                </button>
+                <nav className={`hamburger-menu__nav ${isOpen ? 'hamburger-menu__nav--open' : ''}`}>
+                    <ul>
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/schedule">Schedule</Link></li>
+                        <li><Link to="/cinemas">Cinemas</Link></li>
+                        <li><Link to="/campaigns">Campaigns</Link></li>
+                        <li><Link to="/vip">VIP</Link></li>
+                        <li><Link to="/admin/languages">IMAX</Link></li>
+                        <li><Link to="/admin/subtitles">LaseR</Link></li>
+                        <li><Link to="/about">About</Link></li>
+                        <li><Link to="/about/privacy">Privacy</Link></li>
+                        <li><Link to="/about/advertising">Advertising Offer</Link></li>
+                    </ul>
+                </nav>
             </div>
-        </nav>
+        </div>
+
     )
 }
 
