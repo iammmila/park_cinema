@@ -1,0 +1,162 @@
+.film_section {
+    padding: 100px 0;
+
+    .film_wrapper_section {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+        .line {
+            width: 30%;
+        }
+
+        .wrapper_film_content {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 50px;
+
+            .film_detail {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 30px;
+
+                .neon_red {
+                    border-radius: 20px;
+                    border: 0.15em solid hsl(0, 97%, 62%);
+                    box-shadow: inset 0px 0px 0.5em 0px hsl(0deg 97% 62%), 0px 0px 0.5em 0px hsl(0deg 97% 62%);
+                    padding: 20px;
+
+                    img {
+                        border-radius: 20px;
+                        width: 350px;
+                    }
+                }
+
+                .film_formats {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    gap: 20px;
+                    align-items: center;
+                    justify-content: center;
+
+                    .tag {
+                        background: rgba(37, 37, 37, 0.61);
+                        border-radius: 20px;
+                        padding: 3px 10px;
+                        font-size: 16px;
+                        line-height: 35px;
+                        cursor: pointer;
+
+                        &:hover {
+                            background: rgba(85, 85, 85, 0.61);
+                        }
+                    }
+                }
+            }
+
+            .film_information {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                gap: 50px;
+
+
+                border-radius: 20px;
+                border: 0.15em solid hsl(0, 97%, 62%);
+                box-shadow: inset 0px 0px 0.5em 0px hsl(0deg 97% 62%), 0px 0px 0.5em 0px hsl(0deg 97% 62%);
+                padding: 50px;
+
+                .film_description {
+                    border-radius: 20px;
+                    border: 0.15em solid hsl(0, 97%, 62%);
+                    box-shadow: inset 0px 0px 0.5em 0px hsl(0deg 97% 62%), 0px 0px 0.5em 0px hsl(0deg 97% 62%);
+                    padding: 20px;
+
+                    p {
+                        font-weight: 500;
+                    }
+                }
+
+                .general_information {
+                    border-radius: 20px;
+                    border: 0.15em solid hsl(0, 97%, 62%);
+                    box-shadow: inset 0px 0px 0.5em 0px hsl(0deg 97% 62%), 0px 0px 0.5em 0px hsl(0deg 97% 62%);
+                    padding: 20px;
+
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    span {
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.light {
+    .film_section {
+        .film_wrapper_section {
+            .wrapper_film_content {
+                .film_detail {
+                    .film_formats {
+                        .tag {
+                            background: rgba(141, 141, 141, 0.61);
+
+                            &:hover {
+                                background: rgba(231, 231, 231, 0.61);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Large devices (laptops/desktops, 852px and up) */
+@media only screen and (max-width: 852px) {
+    .film_section {
+        .film_wrapper_section {
+            align-items: center;
+            justify-content: center;
+
+            .line {
+                width: 50%;
+            }
+
+            h1 {
+                text-align: center;
+            }
+
+            .wrapper_film_content {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 50px;
+
+                .film_detail {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 30px;
+                }
+
+                .film_information {
+                    width: 75%;
+                    padding: 20px;
+                }
+            }
+        }
+    }
+}

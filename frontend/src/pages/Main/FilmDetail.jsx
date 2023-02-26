@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 
 //helmet
 import { Helmet } from 'react-helmet-async'
+import FilmVideo from '../../components/Main/FilmDdetail/FilmVideo/FilmVideo';
+import InformationFilm from '../../components/Main/FilmDdetail/InformationFilm/InformationFilm';
 
 function FilmDetail() {
     useEffect(() => {
@@ -17,7 +19,9 @@ function FilmDetail() {
                 <title>Film detail | Park Cinema</title>
                 <meta name='description' content='Beginner friendly page for learning React Helmet.' />
             </Helmet>
-            FilmDetail</div>
+            <InformationFilm />
+            <FilmVideo />
+        </div>
     )
 }
 
