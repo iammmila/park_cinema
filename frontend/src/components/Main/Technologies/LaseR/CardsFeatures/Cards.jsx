@@ -9,7 +9,6 @@ import { Gi3DGlasses } from "react-icons/gi"
 import { GiSmokingFinger } from "react-icons/gi"
 import { GrResources } from "react-icons/gr"
 
-
 function Cards() {
     return (
         <>

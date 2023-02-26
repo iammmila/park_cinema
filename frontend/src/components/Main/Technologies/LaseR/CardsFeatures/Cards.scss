@@ -20,6 +20,7 @@
     h6 {
         color: rgb(73, 26, 26) !important;
         font-size: 19px;
+        text-align: center;
     }
 
     p {
@@ -66,5 +67,76 @@
     &:hover {
         top: -160px;
         box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+}
+
+/* Large devices (laptops/desktops, 1400px and up) */
+@media only screen and (max-width: 1400px) {
+    .card2 {
+        left: 300px;
+    }
+
+    .card3 {
+        left: 610px;
+    }
+}
+
+/* Large devices (laptops/desktops, 1200px and up) */
+@media only screen and (max-width: 1200px) {
+    .card2 {
+        left: 250px;
+    }
+
+    .card3 {
+        left: 520px;
+    }
+}
+
+/* Large devices (laptops/desktops, 1000px and up) */
+@media only screen and (max-width: 1000px) {
+    .feature_card {
+        width: 40%;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+
+    }
+
+    .card1 {
+        left: 0;
+    }
+
+    .card2 {
+        left: 0px;
+    }
+
+    .card3 {
+        left: 0px;
+    }
+
+    .card4 {
+        right: 0;
+    }
+}
+
+/* Extra small devices (phones, 486px and down) */
+@media only screen and (max-width: 486px) {
+    .feature_card {
+        width: 75%;
+
+    }
+    .card2 {
+        left: 0px;
+        margin-top: 80px;
+    }
+
+    .card3 {
+        top: -150px;
+        left: 0px;
+    }
+
+    .card4 {
+        right: 0;
     }
 }

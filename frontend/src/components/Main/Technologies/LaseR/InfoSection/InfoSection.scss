@@ -15,11 +15,67 @@
         justify-content: center;
         gap: 50px;
 
-        p {
-            font-size: 20px;
-            font-weight: 500;
-            margin-bottom: 30px;
-            text-align: center;
+        .laser_wrapper_info {
+            padding: 0 100px;
+
+            p {
+                font-size: 20px;
+                font-weight: 500;
+                margin-bottom: 30px;
+                text-align: center;
+            }
+        }
+    }
+}
+
+/* Medium devices (landscape tablets, 1000px and up) */
+@media only screen and (max-width: 1000px) {
+    .laser-features-section {
+        .wrapper-cards {
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .laser-info {
+            padding-top: 0;
+            gap: 40px;
+
+            .laser_wrapper_info {
+                padding: 0 50px;
+            }
+
+            .laser_image {
+                width: 80%;
+            }
+        }
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 486px) {
+    .laser-features-section {
+        .laser-features-section {
+            .wrapper-cards {
+                flex-wrap: wrap;
+                gap: 30px;
+                align-items: center;
+                justify-content: center;
+            }
+    
+            .laser-info {
+                padding-top: 0;
+                gap: 40px;
+    
+                .laser_wrapper_info {
+                    padding: 0 50px;
+                }
+    
+                .laser_image {
+                    width: 80%;
+                }
+            }
         }
     }
 }
