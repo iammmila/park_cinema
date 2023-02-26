@@ -1,4 +1,3 @@
-
 :root {
     --glow-color: hsl(0, 97%, 62%);
 }
@@ -90,6 +89,26 @@
 
     &:hover:after {
         opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .glowing-btn2 {
+        font-size: 1.5em;
+    }
+}
+
+/* Large devices (laptops/desktops, 1000px and up) */
+@media only screen and (max-width: 1000px) {
+    .glowing-btn2 {
+        font-size: 1.1em;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+    .glowing-btn2 {
+        font-size: 0.8em;
     }
 }
 

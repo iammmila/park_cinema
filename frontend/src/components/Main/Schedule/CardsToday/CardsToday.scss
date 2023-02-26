@@ -175,6 +175,39 @@
     }
 }
 
+/* Large devices (laptops/desktops, 1200px and up) */
+@media only screen and (max-width: 1200px) {
+    .today_cards_wrapper {
+        .cards_today {
+            .card_today {
+                width: 43%;
+            }
+        }
+    }
+}
+/* Medium devices (landscape tablets, 1000px and up) */
+
+@media only screen and (max-width: 1000px) {
+    .today_cards_wrapper {
+        .cards_today {
+            .card_today {
+                width: 46%;
+            }
+        }
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+    .today_cards_wrapper {
+        .cards_today {
+            .card_today {
+                width: 75%;
+            }
+        }
+    }
+}
+
 @keyframes animate1 {
     0% {
         left: -100%;

@@ -8,7 +8,8 @@ function LoadingCard() {
     <li className="card is-loading" >
       <div className="card-img">
       </div>
-    </li>)
+    </li>
+  )
 }
 
 export default LoadingCard

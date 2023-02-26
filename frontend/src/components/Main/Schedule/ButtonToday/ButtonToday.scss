@@ -11,7 +11,6 @@
     border-radius: 0.45em;
     background: none;
     perspective: 2em;
-    font-family: "Raleway", sans-serif;
     font-size: 2em;
     font-weight: 900;
     letter-spacing: 1em;
@@ -98,6 +97,26 @@
         opacity: 1;
     }
 
+}
+
+@media only screen and (max-width: 1200px) {
+    .glowing-btn1 {
+        font-size: 1.5em;
+    }
+}
+
+/* Large devices (laptops/desktops, 1000px and up) */
+@media only screen and (max-width: 1000px) {
+    .glowing-btn1 {
+        font-size: 1.1em;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+    .glowing-btn1 {
+        font-size: 0.8em;
+    }
 }
 
 @keyframes faulty-flicker {

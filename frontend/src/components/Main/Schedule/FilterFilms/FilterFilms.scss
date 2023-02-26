@@ -9,12 +9,6 @@
         display: flex;
         align-items: center;
         gap: 50px;
-
-        // label {
-        //     input {
-        //         margin-right: 10px;
-        //     }
-        // }
     }
 
     .filtering_cinemas {
@@ -72,6 +66,27 @@
     opacity: 1;
 }
 
-.checkbox-wrapper-3 g,path {
-    box-shadow: inset 0px 0px 0.5em 0px  hsl(0, 97%, 62%), 0px 0px 0.5em 0px  hsl(0, 97%, 62%)
+.checkbox-wrapper-3 g,
+path {
+    box-shadow: inset 0px 0px 0.5em 0px hsl(0, 97%, 62%), 0px 0px 0.5em 0px hsl(0, 97%, 62%)
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+    .filtering_wrapper {
+
+        .filtering_formats {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .filtering_languages {
+            gap: 20px;
+        }
+    }
+
+    .checkbox-wrapper-3 .label span {
+        font-size: 18px;
+    }
 }

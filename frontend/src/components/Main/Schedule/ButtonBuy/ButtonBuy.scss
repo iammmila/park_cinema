@@ -109,3 +109,17 @@ $hue-contrast: color.hue(color.adjust(hsl($hue, 100%, 50%), $hue: $hue-adjust));
         }
     }
 }
+
+/* Large devices (laptops/desktops, 1400px and up) */
+@media only screen and (max-width: 1400px) {
+    .btn_buy {
+        padding: 0 5em;
+    }
+}
+
+/* Large devices (laptops/desktops, 856px and up) */
+@media only screen and (max-width: 856px) {
+    .btn_buy {
+        padding: 0 4em;
+    }
+}

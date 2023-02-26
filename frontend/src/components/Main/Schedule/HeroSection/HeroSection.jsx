@@ -29,16 +29,22 @@ function HeroSection() {
                 <div className='wrapper-schedule'>
                     <div className='main_part'>
                         {/* today button */}
-                        <ButtonToday />
+                        <div className='today_button_wrapper'>
+                            <ButtonToday />
+                        </div>
 
                         {/* soon button */}
-                        <ButtonSoon />
-
+                        <div className='soon_button_wrapper'>
+                            <ButtonSoon />
+                        </div>
+                        
                         {/* schedule button */}
-                        <ButtonSchedule />
+                        <div className='schedule_button_wrapper'>
+                            <ButtonSchedule />
+                        </div>
                     </div>
                     <div className='filter_part'>
-                        <FilterFilms /> 
+                        <FilterFilms />
                     </div>
                     <div className='movies'>
                         {/* //! today cards component */}
