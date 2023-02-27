@@ -1,16 +1,17 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext } from 'react'
 import { MainContext } from './../../../context/ContextProvider';
-import axios from 'axios';
 
 //general scss
 import "./Films.scss"
 
 //components
 import TableFilms from './TableFilms/TableFilms'
+import PostModal from './PostModal/PostModal';
 
 function Films() {
 
-    const { handleFilter } = useContext(MainContext)
+
+    const { handleAdd, handleFilter } = useContext(MainContext)
 
     return (
         <section className='admin_films_section'>
@@ -22,12 +23,14 @@ function Films() {
                             placeholder="Filter Name"
                             onChange={handleFilter}
                         />
+                        <button onClick={() => handleAdd()}>Add new Film</button>
                     </div>
                     <div className="admin_films_table">
                         <TableFilms />
                     </div>
                 </div>
             </div>
+            <PostModal />
         </section>
     )
 }

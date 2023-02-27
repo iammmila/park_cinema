@@ -1,6 +1,15 @@
 .admin_films_section {
     padding: 100px 0;
-    .admin_films_wrapper{
 
+    .admin_films_wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+        input {
+            padding: 20px;
+            border-radius: 20px;
+            
+        }
     }
 }

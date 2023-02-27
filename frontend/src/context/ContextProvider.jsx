@@ -26,7 +26,7 @@ function ContextProvider({ children }) {
     const [filtered, setFiltered] = useState("");
     const [editData, setEditData] = useState({});
     const [showModal, setShowModal] = useState(false);
-
+    const [isModalOpen, setIsModalOpen] = useState(false);
     //!URLs
     const FilmsURL = 'http://localhost:8080/films';
     const CinemasURL = 'http://localhost:8080/cinemas';
@@ -48,6 +48,9 @@ function ContextProvider({ children }) {
         console.log(isActive)
     }, [isActive])
 
+    function handleAdd() {
+        setShowModal(true);
+    }
 
     // ! theme==dark/light
     const changeTheme = () => {
@@ -111,6 +114,8 @@ function ContextProvider({ children }) {
         filtered, setFiltered, handleFilter,
         editData, setEditData,
         showModal, setShowModal,
+        isModalOpen, setIsModalOpen
+        , handleAdd
     }
     //! DARK AND LIGHT MODE
     useEffect(() => {

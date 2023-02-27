@@ -44,6 +44,10 @@ const filmScheme = new Schema(
             type: Date,
             required: true
         },
+        isNew: {
+            type: Boolean,
+            required: true
+        },
         genres: [
             {
                 name: {

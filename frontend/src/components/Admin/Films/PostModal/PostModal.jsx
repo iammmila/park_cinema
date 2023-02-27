@@ -1,39 +1,63 @@
 import React, { useContext } from 'react'
-import { MainContext } from '../../../../context/ContextProvider';
 import axios from 'axios';
+import { MainContext } from './../../../../context/ContextProvider';
+import { v4 as uuidv4 } from 'uuid'
 
-//general scsss
-import "./Modal.scss"
+//general scss
+import "./PostModal.scss"
 
-function Modal() {
+function PostModal() {
     const { setShowModal, editData, setEditData, setFilms, showModal, FilmsURL } = useContext(MainContext)
 
     const getData = async () => {
         await axios.get(FilmsURL).then((res) => setFilms(res.data));
     }
 
+    //!add data
+    const addData = async (newFilmData) => {
+        try {
+            await axios.post(FilmsURL, newFilmData);
+            getData(); // reload the films data after adding a new film
+            setShowModal(false); // hide the modal
+        } catch (error) {
+            console.log(error.response);
+        }
+    };
+
+    const onSubmit = (event) => {
+        event.preventDefault();
+        addData(editData);
+    };
+
     const handleIsNewChange = (event) => {
         setEditData({ ...editData, isNew: event.target.checked });
-      };
+    };
 
     const handleSave = async (dataId) => {
         try {
-            // Update the state with the edited data
-            setFilms(prevState => {
-                const updatedFilms = prevState.map(film => {
-                    if (film._id === dataId) {
-                        return { ...film, ...editData };
-                    }
-                    return film;
+            if (dataId) {
+                // Update the state with the edited data
+                setFilms(prevState => {
+                    const updatedFilms = prevState.map(film => {
+                        if (film._id === dataId) {
+                            return { ...film, ...editData };
+                        }
+                        return film;
+                    });
+                    return updatedFilms;
                 });
-                return updatedFilms;
-            });
 
-            // Send the PUT request with the updated data
-            await axios.put(`${FilmsURL}/${dataId}`, editData);
+                await axios.put(`${FilmsURL}/${dataId}`, editData);
+            }
+            else {
+                const newFilm = { ...editData, _id: uuidv4() };
+                setFilms(prevState => [newFilm, ...prevState]);
+                await axios.post(FilmsURL, newFilm);
+            }
 
-            getData();
+            // Reset the state and close the modal
             setShowModal(false);
+            setEditData({});
         } catch (error) {
             console.log(error.response);
         }
@@ -45,8 +69,8 @@ function Modal() {
     };
 
     return (
-        <div className={showModal ? "modal show" : "modal"}>
-            <div className="modal-content">
+        <div className={showModal ? "modal2 show" : "modal2"}>
+            <form className="modal-content" onSubmit={onSubmit}>
                 <h2>Edit Film Information</h2>
                 <label>Name:</label>
                 <input
@@ -130,9 +154,9 @@ function Modal() {
                 </label>
                 <button onClick={() => handleSave(editData._id)}>Save</button>
                 <button onClick={handleCancel}>Cancel</button>
-            </div>
+            </form>
         </div>
     )
 }
 
-export default Modal
+export default PostModal

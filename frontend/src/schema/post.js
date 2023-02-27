@@ -25,4 +25,8 @@ export const contactSchema = yup.object().shape({
         .max(100, 'Director name must be less than 100 characters')
         .matches(/^[a-zA-Z\s]*$/, 'Director can only contain letters and spaces')
         .required('Director name is required'),
+    trailer: yup.required('Trailer is required'),
+    poster: yup.required('Poster is required'),
+    actors: yup.required("Actors' names are required"),
+    isNew: yup.required("Actors' names are required")
 })
