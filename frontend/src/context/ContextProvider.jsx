@@ -22,10 +22,16 @@ function ContextProvider({ children }) {
     const [filterTags, setFilterTags] = useState([])
     const [toggleState, setToggleState] = useState();
 
+    //!admin's part
+    const [filtered, setFiltered] = useState("");
+    const [editData, setEditData] = useState({});
+    const [showModal, setShowModal] = useState(false);
+
     //!URLs
     const FilmsURL = 'http://localhost:8080/films';
     const CinemasURL = 'http://localhost:8080/cinemas';
     const CampaignsURL = 'http://localhost:8080/campaigns'
+
 
     //!accordion in "about page"
     const toggleTab = (index) => {
@@ -68,6 +74,7 @@ function ContextProvider({ children }) {
             }
         });
     }, []);
+
     const goToTop = () => {
         window.scrollTo({
             top: 0,
@@ -75,6 +82,10 @@ function ContextProvider({ children }) {
         });
     };
 
+    //!admin part filter
+    function handleFilter(e) {
+        setFiltered(e.target.value);
+    }
     //?VALUES
     const values = {
         mode, setMode,
@@ -96,7 +107,10 @@ function ContextProvider({ children }) {
         changeTheme,
         campaignDetail, setCampaignDetail,
         toggleState, setToggleState,
-        toggleTab
+        toggleTab,
+        filtered, setFiltered, handleFilter,
+        editData, setEditData,
+        showModal, setShowModal,
     }
     //! DARK AND LIGHT MODE
     useEffect(() => {

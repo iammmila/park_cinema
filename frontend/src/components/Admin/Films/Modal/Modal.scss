@@ -1,0 +1,91 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+
+    &.show {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .modal-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        width: 80%;
+        max-width: 700px;
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+
+        h2 {
+            margin-top: 0;
+            font-size: 28px;
+            color: black !important;
+        }
+
+        label {
+            display: block;
+            color: black;
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        input {
+            display: block;
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            font-size: 16px;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+            box-shadow: none;
+            transition: all 0.3s ease-in-out;
+
+            &:focus {
+                outline: none;
+                border-color: red;
+                box-shadow: 0 0 5px red;
+            }
+        }
+
+        button {
+            display: inline-block;
+            padding: 8px 16px;
+            margin-top: 10px;
+            margin-right: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            color: gray;
+            background-color: rgba(172, 255, 47, 0.397);
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                background-color: #3ef8ba;
+            }
+
+            &:last-child {
+                margin-right: 0;
+                background-color: rgb(165, 55, 55);
+
+                &:hover {
+                    background-color: rgba(255, 70, 70, 0.582);
+                }
+            }
+        }
+    }
+}

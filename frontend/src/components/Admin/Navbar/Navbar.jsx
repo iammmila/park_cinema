@@ -1,15 +1,21 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom';
+import { MainContext } from './../../../context/ContextProvider';
 
 //general scss
 import "./Navbar.scss"
 
+//icons
+import { MdModeNight, MdLightMode } from 'react-icons/md';
+
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const { mode, changeTheme } = useContext(MainContext)
 
   const handleClick = () => {
     setIsOpen(!isOpen);
   };
+
   return (
     <nav className='admin_nav'>
       <div className="container">
@@ -34,79 +40,7 @@ function Navbar() {
                 <li><Link to="/admin/contact">Contact</Link></li>
               </ul>
             </nav>
-            {/* <button className="admin-navbar-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-            <i className="fa-solid fa-bars"></i>
-          </button>
-
-          <div className="offcanvas offcanvas-start" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-            <div className="offcanvas-header">
-              <h5 className="offcanvas-title" id="offcanvasExampleLabel">Restaurant</h5>
-              <button type="button" className="admin-close-btn text-reset" data-bs-dismiss="offcanvas" aria-label="Close"><i className="fa-solid fa-x"></i></button>
-            </div>
-            <div className="offcanvas-body">
-              <div>
-                <ul className='admin-list'>
-                  <li>
-                    <Link className="admin-list-link" to="/">Home</Link>
-                  </li>
-                  <li>
-                    <Link className="admin-list-link" to="adminMenu">Food</Link>
-                  </li>
-                  <li>
-                    <Link className="admin-list-link" to="adminDrink">Drink</Link>
-                  </li>
-                  <li>
-                    <Link className="admin-list-link" to="adminChef">Chef</Link>
-                  </li>
-                  <li>
-                    <Link className="admin-list-link" to="adminCocktail">Cocktail</Link>
-                  </li>
-                  <li>
-                    <Link className="admin-list-link" to="adminDinner">Dinner</Link>
-                  </li>
-                  <li>
-                    <Link className="admin-list-link" to="adminBreakfast">Breakfast</Link>
-                  </li>
-                  <li>
-                    <Link className="admin-list-link" to="adminEvent">Event</Link>
-                  </li>
-                  <li>
-                    <Link className="admin-list-link" to="adminShop">Bar Mleczny</Link>
-                  </li>
-                  <li >
-                    <Link className="admin-list-link" to="adminBakery">Bakery</Link>
-                  </li>
-                  <li>
-                    <Link className="admin-list-link" to="adminChurra">Churrascaria</Link>
-                  </li>
-                  <li>
-                    <Link className="admin-list-link" to="adminBooth">Food Booth</Link>
-                  </li>
-                  <li>
-                    <Link className="admin-list-link" to="adminCart">Food Cart</Link>
-                  </li>
-                  <li>
-                    <Link className="admin-list-link" to="adminRestaurant">Restaurant</Link>
-                  </li>
-                  <li>
-                    <Link className="admin-list-link" to="adminBlog">Blog</Link>
-                  </li>
-                  <li>
-                    <Link className="admin-list-link" to="adminRes">Restaurant G</Link>
-                  </li>
-                  <li>
-                    <Link className="admin-list-link" to="adminTable">TABLE G</Link>
-                  </li>
-                  <li>
-                    <Link className="admin-list-link" to="adminGuest">GUEST G</Link>
-                  </li>
-                  <li>
-                    <Link className="admin-list-link" to="adminInstagram">Instagram</Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div> */}
+            {mode === "light" ? <MdModeNight className='theme-button' onClick={changeTheme} /> : <MdLightMode className='theme-button' onClick={changeTheme} />}
           </div>
         </div>
       </div>

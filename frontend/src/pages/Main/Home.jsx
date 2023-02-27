@@ -22,7 +22,7 @@ function Home() {
     <>
       <Helmet>
         <title>Home | Park Cinema</title>
-        <meta name='description' content='Beginner friendly page for learning React Helmet.' />
+        <meta name='description' content='It is about Home page of Park Cinema' />
       </Helmet>
       <Slider />
       <BuyTicket />
