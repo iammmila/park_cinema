@@ -64,7 +64,7 @@ function ContextProvider({ children }) {
         })
     }
     useEffect(() => {
-        console.log(isActive)
+        // console.log(isActive)
     }, [isActive])
 
     function handleAdd() {

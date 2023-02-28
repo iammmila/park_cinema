@@ -1,0 +1,102 @@
+[
+    {
+        "id": 1,
+        "startTime": "2022-03-01T08:30:00Z",
+        "price": 10,
+        "hall_id": 1,
+        "hall": {
+            "id": 1,
+            "hallName": "Hall 1",
+            "numberOfRow": 10,
+            "numberOfColumn": 15,
+            "about": "A large hall with comfortable seating",
+            "cinemaId": 1,
+            "cinema": {
+                "id": 1,
+                "name": "Cinema City",
+                "address": "123 Main Street",
+                "phone": "555-1234",
+                "email": "info@cinemacity.com"
+            }
+        },
+        "film_id": 1,
+        "film": {
+            "id": 1,
+            "name": "Avengers: Endgame",
+            "ageLimit": 13,
+            "durationMinute": 181,
+            "country": "USA",
+            "director": "Anthony Russo, Joe Russo",
+            "actors": "Robert Downey Jr., Chris Evans, Mark Ruffalo",
+            "description": "After the devastating events of Avengers: Infinity War, the universe is in ruins...",
+            "trailer": "https://www.youtube.com/watch?v=TcMBFSGVi1c",
+            "poster": "https://www.example.com/posters/avengers-endgame.jpg"
+        },
+        "format_id": 1,
+        "format": {
+            "id": 1,
+            "name": "Digital",
+            "description": "Digital projection technology"
+        },
+        "language_id": 1,
+        "language": {
+            "id": 1,
+            "name": "English"
+        },
+        "subtitle_id": 1,
+        "subtitle": {
+            "id": 1,
+            "name": "Turkish"
+        }
+    },
+    {
+        "id": 2,
+        "startTime": "2022-03-01T08:30:00Z",
+        "price": 10,
+        "hall_id": 2,
+        "hall": {
+            "id": 2,
+            "hallName": "Hall 1",
+            "numberOfRow": 10,
+            "numberOfColumn": 15,
+            "about": "A large hall with comfortable seating",
+            "cinemaId": 1,
+            "cinema": {
+                "id": 1,
+                "name": "Cinema City",
+                "address": "123 Main Street",
+                "phone": "555-1234",
+                "email": "info@cinemacity.com"
+            }
+        },
+        "film_id": 2,
+        "film": {
+            "id": 2,
+            "name": "Avengers: Endgame",
+            "ageLimit": 13,
+            "durationMinute": 181,
+            "country": "USA",
+            "director": "Anthony Russo, Joe Russo",
+            "actors": "Robert Downey Jr., Chris Evans, Mark Ruffalo",
+            "description": "After the devastating events of Avengers: Infinity War, the universe is in ruins...",
+            "trailer": "https://www.youtube.com/watch?v=TcMBFSGVi1c",
+            "poster": "https://www.example.com/posters/avengers-endgame.jpg"
+        },
+        "format_id": 2,
+        "format": {
+            "id": 2,
+            "name": "Digital",
+            "description": "Digital projection technology"
+        },
+        "language_id": 2,
+        "language": {
+            "id": 2,
+            "name": "English"
+        },
+        "subtitle_id": 2,
+        "subtitle": {
+            "id": 2,
+            "name": "Turkish"
+        }
+    }
+]

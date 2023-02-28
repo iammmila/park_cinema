@@ -1,23 +1,25 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
+import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 //general scss
 import "./TableSchedule.scss"
 
 //components
 import ButtonTicketBuy from './../ButtonTicketBuy/ButtonTicketBuy';
-import axios from 'axios';
-import { MainContext } from '../../../../context/ContextProvider';
-import { Link } from 'react-router-dom';
+
 
 function TableSchedule() {
-    // eslint-disable-next-line no-unused-vars
-    const { films, setFilms, cinemas, setCinemas, CinemasURL, FilmsURL } = useContext(MainContext)
-    const getFilmData = async () => {
-        await axios.get(FilmsURL).then((res) => setFilms(res.data));
+    const [sessions, setSessions] = useState([])
+
+    const SessionsURL = "http://localhost:8080/sessions"
+
+    const getSessionData = async () => {
+        await axios.get(SessionsURL).then((res) => setSessions(res.data));
     }
 
     useEffect(() => {
-        getFilmData();
+        getSessionData();
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
@@ -34,28 +36,31 @@ function TableSchedule() {
                 </tr>
             </thead>
             <tbody>
-                {
-                    films?.map((data) => (
-                        <tr key={data.id}>
-                            <td><Link to={`/film/${data.id}`}>{data.name} </Link></td>
-                            <td>{data.date}</td>
-                            <td><Link to={`/cinemas/${data.id}`}>{data.name} </Link></td>
-                            {/* <td>{data.name}</td> */}
-                            <td><Link to={`/cinemas/${data.id}`}>{data.name} </Link></td>
-                            <td>
-                                <div className='wrapper_format'>
-                                    3d
-                                </div>
-                                <div className='wrapper_format'>
-                                    tr
-                                </div>
-                            </td>
-                            <td>
-                                <ButtonTicketBuy />
-                            </td>
-                        </tr>
-                    ))
-                }
+                {sessions?.map((data) => (
+                    <tr key={data.id}>
+                        <td>
+                            <Link to={`/film/${data.film[0].id}`}>{data.film[0].name}</Link>
+                        </td>
+                        <td>
+                            {new Date(data.startTime).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                        </td>
+                        <td>
+                            <Link to={`/cinemas/${data.hall[0].cinema[0].id}`}>{data.hall[0].cinema[0].name}</Link>
+                        </td>
+                        <td>
+                            <Link to={`/halls/${data.hall[0].id}`}>{data.hall[0].hallName}</Link>
+                        </td>
+                        <td>
+                            <div className='wrapper_format'>{data.format[0].name}</div>
+                            {data.subtitle[0] && (
+                                <div className='wrapper_format'>{data.subtitle[0].name}</div>
+                            )}
+                        </td>
+                        <td>
+                            <ButtonTicketBuy />
+                        </td>
+                    </tr>
+                ))}
             </tbody>
         </table>
     )
