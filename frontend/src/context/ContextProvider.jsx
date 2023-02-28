@@ -11,6 +11,7 @@ function ContextProvider({ children }) {
         id: 'today',
     })
     const [films, setFilms] = useState([])
+    const [formats, setFormats] = useState([])
     const [filmDetail, setFilmDetail] = useState([])
     const [cinemas, setCinemas] = useState([])
     const [campaings, setCampaigns] = useState([])
@@ -38,6 +39,7 @@ function ContextProvider({ children }) {
     const FilmsURL = 'http://localhost:5196/api/Films';
     const CinemasURL = 'http://localhost:8080/cinemas';
     const CampaignsURL = 'http://localhost:8080/campaigns'
+    const FormatsURL = 'http://localhost:8080/formats';
 
     function handleBuy() {
         const updatedSeats = [...seats];
@@ -123,7 +125,7 @@ function ContextProvider({ children }) {
         loading, setLoading, filterHandler,
         filterTags, setFilterTags,
         filterName, setFilterName,
-        FilmsURL, CampaignsURL, CinemasURL,
+        FilmsURL, CampaignsURL, CinemasURL, FormatsURL,
         changeTheme,
         campaignDetail, setCampaignDetail,
         toggleState, setToggleState,
@@ -138,7 +140,8 @@ function ContextProvider({ children }) {
         selectedSeats, setSelectedSeats,
         handleBuy,
         purchasedSeats, setPurchasedSeats,
-        filmName, setFilmName
+        filmName, setFilmName,
+        formats, setFormats
     }
     //! DARK AND LIGHT MODE
     useEffect(() => {

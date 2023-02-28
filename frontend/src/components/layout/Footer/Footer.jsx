@@ -17,7 +17,6 @@ import { MainContext } from '../../../context/ContextProvider'
 function Footer() {
   const { cinemas, setCinemas, CinemasURL } = useContext(MainContext)
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   const getData = async () => {
     await axios.get(CinemasURL).then((res) => setCinemas(res.data));
   }

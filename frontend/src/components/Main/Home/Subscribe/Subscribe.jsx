@@ -16,7 +16,6 @@ import { IoIosArrowForward } from "react-icons/io"
 import "./Subscribe.scss"
 
 function Subscribe() {
-
   const [state, setState] = useState({
     email: ""
   });

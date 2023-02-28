@@ -71,7 +71,7 @@ function Slider() {
                 .map((film) => (
                   <SwiperSlide className='slide' key={film.id}>
                     <Link to={`/film/${film.id}`}>
-                      <img className='films' width={"400px"} height={"600px"} src={film.uri} alt="film1" />
+                      <img className='films' width={"400px"} height={"600px"} src={film.uri} alt="film" />
                       <span>{film.name}</span>
                     </Link>
                   </SwiperSlide>
