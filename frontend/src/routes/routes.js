@@ -60,7 +60,7 @@ export const ROUTES = [
             element: <Cinemas />
           },
           {
-            path: ":id",
+            path: ":_id",
             element: <CinemaDetail />
           }
         ]

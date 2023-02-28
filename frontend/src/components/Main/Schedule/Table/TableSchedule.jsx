@@ -7,23 +7,17 @@ import "./TableSchedule.scss"
 import ButtonTicketBuy from './../ButtonTicketBuy/ButtonTicketBuy';
 import axios from 'axios';
 import { MainContext } from '../../../../context/ContextProvider';
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function TableSchedule() {
     // eslint-disable-next-line no-unused-vars
     const { films, setFilms, cinemas, setCinemas, CinemasURL, FilmsURL } = useContext(MainContext)
-    const [general, setGeneral] = useState([])
     const getFilmData = async () => {
-        await axios.get(FilmsURL).then((res) => setGeneral(res.data));
-    }
-    const getCinemaData = async () => {
-        await axios.get(CinemasURL).then((res) => setGeneral(res.data));
+        await axios.get(FilmsURL).then((res) => setFilms(res.data));
     }
 
     useEffect(() => {
         getFilmData();
-        getCinemaData();
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
@@ -41,13 +35,13 @@ function TableSchedule() {
             </thead>
             <tbody>
                 {
-                    general?.map((data) => (
-                        <tr key={data._id}>
-                            <td><Link to={`/film/${data._id}`}>{data.name} </Link></td>
+                    films?.map((data) => (
+                        <tr key={data.id}>
+                            <td><Link to={`/film/${data.id}`}>{data.name} </Link></td>
                             <td>{data.date}</td>
-                            <td><Link to={`/cinemas/${data._id}`}>{data.name} </Link></td>
+                            <td><Link to={`/cinemas/${data.id}`}>{data.name} </Link></td>
                             {/* <td>{data.name}</td> */}
-                            <td><Link to={`/cinemas/${data._id}`}>{data.name} </Link></td>
+                            <td><Link to={`/cinemas/${data.id}`}>{data.name} </Link></td>
                             <td>
                                 <div className='wrapper_format'>
                                     3d
