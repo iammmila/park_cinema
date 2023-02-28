@@ -21,6 +21,7 @@ const subtitlesRoute = require("./routes/subtitlesRoute")
 const formatsRoute = require("./routes/formatsRoute")
 const subscriberRoute = require("./routes/subscriberRoute")
 const contactRoute = require("./routes/contactRoute")
+const hallsRoute = require("./routes/hallsRoute")
 
 //!endpoints
 
@@ -32,6 +33,7 @@ app.use("/subtitles", subtitlesRoute)
 app.use("/formats", formatsRoute)
 app.use("/subscriber", subscriberRoute)
 app.use("/contact", contactRoute)
+app.use("/halls", hallsRoute)
 
 
 const PORT = process.env.PORT
