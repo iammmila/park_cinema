@@ -72,11 +72,11 @@ const sessionsScheme = new Schema(
                 ]
             }
         ],
-        Film_Id: {
+        film_id: {
             type: Number,
             required: true
         },
-        Film: [
+        film: [
             {
                 id: {
                     type: Number,
@@ -120,11 +120,11 @@ const sessionsScheme = new Schema(
                 },
             }
         ],
-        Format_Id: {
+        format_id: {
             type: Number,
             required: true
         },
-        Format: [
+        format: [
             {
                 id: {
                     type: Number,
@@ -140,11 +140,11 @@ const sessionsScheme = new Schema(
                 }
             }
         ],
-        Language_Id: {
+        language_id: {
             type: Number,
             required: true
         },
-        Language: [
+        language: [
             {
                 id: {
                     type: Number,
@@ -156,11 +156,11 @@ const sessionsScheme = new Schema(
                 }
             }
         ],
-        Subtitle_Id: {
+        subtitle_id: {
             type: Number,
             required: true
         },
-        Subtitle: [
+        subtitle: [
             {
                 id: {
                     type: Number,
