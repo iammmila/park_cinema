@@ -1,90 +1,88 @@
-import React, { useState } from 'react'
-import clsx from 'clsx';
+import React, { useEffect, useContext } from 'react'
+import clsx from "clsx"
+import { MainContext } from './../../../../context/ContextProvider';
 
 //general scss
 import "./Seat.scss"
 
 function Seat() {
-  // const movies = [
-  //   {
-  //     name: 'Avenger',
-  //     price: 10,
-  //     occupied: [20, 21, 30, 1, 2, 8],
-  //   },
-  //   {
-  //     name: 'Joker',
-  //     price: 12,
-  //     occupied: [9, 41, 35, 11, 65, 26],
-  //   },
-  //   {
-  //     name: 'Toy story',
-  //     price: 8,
-  //     occupied: [37, 25, 44, 13, 2, 3],
-  //   },
-  //   {
-  //     name: 'the lion king',
-  //     price: 9,
-  //     occupied: [10, 12, 50, 33, 28, 47],
-  //   },
-  // ]
+  const { seats, setSeats, selectedSeats, purchasedSeats, setSelectedSeats } = useContext(MainContext)
+  useEffect(() => {
+    fetch("http://localhost:8080/halls")
+      .then(response => response.json())
+      .then(data => {
+        const maxRow = Math.max(...data.map(seat => seat.row));
+        const maxColumn = Math.max(...data.map(seat => seat.column));
+        const seats = Array.from({ length: maxRow }, (_, i) => {
+          return Array.from({ length: maxColumn }, (_, j) => {
+            const seat = data.find(s => s?.row === i && s?.column === j);
+            return {
+              row: i,
+              column: j,
+              name: seat?.name,
+              selected: false,
+            };
+          });
+        });
+        setSeats(seats);
+      })
+      .catch(error => console.error(error));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-  // const [selectedSeats, setSelectedSeats] = useState([])
-  const [activeSeat, setActiveSeat] = useState(false);
+  function handleClick(row, column) {
+    const updatedSeats = [...seats];
+    updatedSeats[row][column].selected = !updatedSeats[row][column].selected;
+    setSeats(updatedSeats);
+  }
+  function handleSelectedState(seat) {
+    const seatIndex = selectedSeats.findIndex(s => s?.row === seat?.row && s?.column === seat?.column);
+    if (seat?.selected) {
+      if (seatIndex === -1) {
+        setSelectedSeats([...selectedSeats, seat]);
+      }
+    } else {
+      if (seatIndex !== -1) {
+        const updatedSelectedSeats = [...selectedSeats];
+        updatedSelectedSeats.splice(seatIndex, 1);
+        setSelectedSeats(updatedSelectedSeats);
+      }
+    }
+  }
 
-  const handleClick = () => {
-    setActiveSeat(!activeSeat);
-  };
-  const seats = Array.from({ length: 10 * 10 }, (_, i) => i)
-  // function handleSelectedState(seat) {
-  //   // const isSelected = selectedSeats.includes(seat)
-  //   if (isSelected) {
-  //     // onSelectedSeatsChange(
-  //     selectedSeats.filter(selectedSeat => selectedSeat !== seat)
-  //     // )
-  //   } else {
-  //     // onSelectedSeatsChange([...selectedSeats, seat])
-  //   }
-  // }
   return (
     <>
-      {/* <select
-        id="movie"
-        value={movie.name}
-        onChange={e => {
-          onChange(movies.find(movie => movie.name === e.target.value))
-        }}
-      >
-        {movies.map(movie => (
-          <option key={movie.name} value={movie.name}>
-            {movie.name} (${movie.price})
-          </option>
-        ))}
-      </select> */}
-      {seats.map(seat => {
-        // const isSelected = selectedSeats.includes(seat)
-        // const isOccupied = movie.occupied.includes(seat)
-        return (
-          <span
-            // tabIndex="0"
-            key={seat}
-            style={{ backgroundColor: activeSeat ? "#c1eac5" : "#626262" }}
-            className={clsx(
-              'seat',
-              activeSeat && 'selected'
-              // isSelected && 'selected',
-              // isOccupied && 'occupied',
-            )}
-            onClick={(e) => { handleClick(e) }}
-            onKeyPress={
-              (e) => {
-                if (e.key === 'Enter') {
-                  // handleSelectedState(seat)
+      {seats.map((row, rowIndex) => (
+        <div key={`row-${rowIndex}`} className="row">
+          {row.map((seat, columnIndex) => (
+            <span
+              key={`${seat.row}-${seat.column}`}
+              className={clsx(
+                'seat',
+                seat?.selected && 'selected',
+                purchasedSeats.some((purchasedSeat) => purchasedSeat.row === seat.row && purchasedSeat.column === seat.column) && 'purchased'
+              )}
+              onClick={(e) => {
+                if (!seat?.selected) {
+                  handleClick(rowIndex, columnIndex);
+                  handleSelectedState(seat);
+                }
+              }}
+              onKeyPress={
+                (e) => {
+                  if (e.key === 'Enter') {
+                    if (!seat?.selected) {
+                      handleClick(rowIndex, columnIndex);
+                      handleSelectedState(seat);
+                    }
+                  }
                 }
               }
-            }
-          />
-        )
-      })}
+              tabIndex={seat?.selected ? -1 : 0}
+            />
+          ))}
+        </div>
+      ))}
     </>
   )
 }

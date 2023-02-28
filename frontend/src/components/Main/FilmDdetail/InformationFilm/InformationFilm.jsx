@@ -11,10 +11,10 @@ import "./InformationFilm.scss"
 
 function InformationFilm() {
     const { filmDetail, setFilmDetail, FilmsURL } = useContext(MainContext)
-    const { _id } = useParams()
+    const { id } = useParams()
 
     const getData = async () => {
-        await axios.get(`${FilmsURL}/${_id}`).then((res) => setFilmDetail(res.data));
+        await axios.get(`${FilmsURL}/${id}`).then((res) => setFilmDetail(res.data));
     }
 
     useEffect(() => {
@@ -38,7 +38,7 @@ function InformationFilm() {
                                     // eslint-disable-next-line array-callback-return
                                     filmDetail.genres?.map(n => {
                                         return (
-                                            <span className='tag' key={n._id}>
+                                            <span className='tag' key={n.genreId}>
                                                 {n.name}
                                             </span>)
                                     })
@@ -47,7 +47,7 @@ function InformationFilm() {
                                     // eslint-disable-next-line array-callback-return
                                     filmDetail.formats?.map(n => {
                                         return (
-                                            <span className='tag' key={n._id}>
+                                            <span className='tag' key={n.id}>
                                                 {n.name}
                                             </span>)
                                     })

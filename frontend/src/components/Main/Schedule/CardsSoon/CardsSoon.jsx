@@ -35,13 +35,13 @@ function CardsSoon() {
               film.formats.map((format) => format.name).includes(filterTag) || film.languages.map((language) => language.name).includes(filterTag)
             ) : soonFilms)
               .map((data) => (
-                <li className="card_soon" key={data._id}>
+                <li className="card_soon" key={data.id}>
                   <span></span>
                   <span></span>
                   <span></span>
                   <span></span>
-                  <Link className="cardLink" to={`/film/${data._id}`}>
-                    <div className="card__background" style={{ backgroundImage: `url(${data.poster})` }}></div>
+                  <Link className="cardLink" to={`/film/${data.id}`}>
+                    <div className="card__background" style={{ backgroundImage: `url(${data.uri})` }}></div>
                     <div className="card__content">
                       <p className="card__category">{data.date}</p>
                       <h3 className="card__heading">{data.name}</h3>

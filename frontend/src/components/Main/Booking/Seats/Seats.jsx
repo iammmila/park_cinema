@@ -8,6 +8,7 @@ import Seat from './../Seat/Seat';
 import InformationSeat from './../InformationSeats/InformationSeat';
 
 function Seats() {
+    
     return (
         <div className='seats_wrapper'>
             <div className="container_screen">

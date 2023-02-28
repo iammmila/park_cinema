@@ -1,0 +1,46 @@
+.Movies {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    label {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    select {
+        padding: 0.5rem;
+        font-size: 1rem;
+        border: 1px solid gray;
+        border-radius: 5px;
+        margin-bottom: 1rem;
+        width: 100%;
+
+        &:focus {
+            outline: none;
+            border-color: red;
+        }
+
+        option {
+            color: white;
+            background-color: rgb(41, 39, 39);
+
+            &:focus {
+                background-color: red;
+            }
+        }
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: red;
+
+        h2 {
+            margin-top: 1rem;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+    }
+}

@@ -1,20 +1,22 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { MainContext } from './../../../../context/ContextProvider';
 
 //general scss
 import "./Ticket.scss"
 
 function Ticket() {
+    const { selectedFilmName } = useContext(MainContext)
     return (
         <div className="cardWrap">
             <div className="card cardLeft">
                 <h1>Park Cinema</h1>
                 <div className="title">
-                    <h2>How I met your Mother</h2>
+                    <h2>{selectedFilmName}</h2>
                     <span>movie</span>
                 </div>
-                <div className="name">
-                    <h2>Vladimir Kudinov</h2>
-                    <span>name</span>
+                <div className="price">
+                    <h2>Priceeee</h2>
+                    <span>price</span>
                 </div>
                 <div className="seat-info">
                     <h2>156</h2>

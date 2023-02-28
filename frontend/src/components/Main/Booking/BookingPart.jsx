@@ -7,6 +7,7 @@ import "./BookingPart.scss"
 import Ticket from './Ticket/Ticket';
 import Seats from './Seats/Seats';
 import Buttons from './Buttons/Buttons';
+import Selection from './Ticket/Selection/Selection';
 
 function BookingPart() {
   return (
@@ -16,6 +17,7 @@ function BookingPart() {
           <Seats />
           <div className='booking_section'>
             <Ticket />
+            <Selection />
             <Buttons />
           </div>
         </div>

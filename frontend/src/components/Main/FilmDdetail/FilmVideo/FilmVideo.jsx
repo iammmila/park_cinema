@@ -9,10 +9,10 @@ import "./FilmVideo.scss"
 
 function HeroSection() {
     const { filmDetail, setFilmDetail, FilmsURL } = useContext(MainContext)
-    const { _id } = useParams()
+    const { id } = useParams()
 
     const getData = async () => {
-        await axios.get(`${FilmsURL}/${_id}`).then((res) => setFilmDetail(res.data));
+        await axios.get(`${FilmsURL}/${id}`).then((res) => setFilmDetail(res.data));
     }
 
     useEffect(() => {
@@ -21,7 +21,7 @@ function HeroSection() {
     }, [])
 
     return (
-        <div className='hero_video'>
+        <div className='hero_video' key={filmDetail.id}>
             <iframe
                 height="auto"
                 src={`https://www.youtube.com/embed/${filmDetail.trailer}`}

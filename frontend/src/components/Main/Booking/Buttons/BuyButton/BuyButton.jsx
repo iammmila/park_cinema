@@ -1,16 +1,22 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { MainContext } from './../../../../../context/ContextProvider';
 
 //general scss
 import "./BuyButton.scss"
 
 function BuyButton() {
-    function handleClick(e) {
-        e.preventDefault();
-        window.history.back();
-    }
-    
+    const { handleBuy } = useContext(MainContext)
+
+    // function handleClick(e) {
+    //     e.preventDefault();
+    //     window.history.back();
+    // }
+
     return (
-        <button className='buy_button' onClick={handleClick}>
+        <button className="button-86" onClick={(e) => {
+            // handleClick(e);
+            handleBuy();
+        }}>
             <span >  Buy </span>
         </button>
     )

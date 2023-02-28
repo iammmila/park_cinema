@@ -1,53 +1,66 @@
-.buy_button {
-    background-color: #121212;
-    border: none;
-    cursor: pointer;
+.button-86 {
+  all: unset;
+  width: 100px;
+  height: 30px;
+  font-size: 16px;
+  background: transparent;
+  border: none;
+  position: relative;
+  color: #f0f0f0;
+  cursor: pointer;
+  z-index: 1;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
 
-    span {
-        display: block;
-        height: 100%;
-        font-size: 25px;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: red;
-        text-transform: uppercase;
-        text-shadow: 0 0 15px #e95454;
-        transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
-        text-align: center;
-        padding: 10px;
+.button-86::after,
+.button-86::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -99999;
+  transition: all .4s;
+}
 
-        &:after,
-        &:before {
-            content: "";
-            position: absolute;
-            display: block;
-            border: 0px solid transparent;
-        }
+.button-86::before {
+  transform: translate(0%, 0%);
+  width: 100%;
+  height: 100%;
+  background: hsl(0deg 97% 62%);
+  border-radius: 10px;
+}
 
-        &:after {
-            width: 0%;
-            height: 80%;
-            border-top: 2px solid red;
-            border-bottom: 2px solid red;
-            transition: all 0.3s ease;
-        }
+.button-86::after {
+  transform: translate(10px, 10px);
+  width: 35px;
+  height: 35px;
+  background: #ffffff15;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 50px;
+}
 
-        &:before {
-            width: 120%;
-            height: 0%;
-            border-left: 2px solid red;
-            border-right: 2px solid red;
-            transition: all 0.5s ease;
-        }
+.button-86:hover::before {
+  transform: translate(5%, 20%);
+  width: 110%;
+  height: 110%;
+}
 
-        &:hover::before {
-            height: 80%;
-        }
+.button-86:hover::after {
+  border-radius: 10px;
+  transform: translate(0, 0);
+  width: 100%;
+  height: 100%;
+}
 
-        &:hover::after {
-            width: 120%;
-        }
-    }
+.button-86:active::after {
+  transition: 0s;
+  transform: translate(0, 5%);
 }

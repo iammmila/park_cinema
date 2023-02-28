@@ -60,7 +60,7 @@ export const ROUTES = [
             element: <Cinemas />
           },
           {
-            path: ":_id",
+            path: ":id",
             element: <CinemaDetail />
           }
         ]
@@ -71,7 +71,7 @@ export const ROUTES = [
       },
       //!film's detail
       {
-        path: "film/:_id",
+        path: "film/:id",
         element: <FilmDetail />
       },
 

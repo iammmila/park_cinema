@@ -21,17 +21,34 @@ function ContextProvider({ children }) {
     const [filterName, setFilterName] = useState("");
     const [filterTags, setFilterTags] = useState([])
     const [toggleState, setToggleState] = useState();
+    const [selectedFilmName, setSelectedFilmName] = useState("");
+    const [seats, setSeats] = useState([]);
+    const [selectedSeats, setSelectedSeats] = useState([]);
+    const [purchasedSeats, setPurchasedSeats] = useState([]);
+    const [filmName, setFilmName] = useState("");
+
 
     //!admin's part
     const [filtered, setFiltered] = useState("");
     const [editData, setEditData] = useState({});
     const [showModal, setShowModal] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
+
     //!URLs
-    const FilmsURL = 'http://localhost:8080/films';
+    const FilmsURL = 'http://localhost:5196/api/Films';
     const CinemasURL = 'http://localhost:8080/cinemas';
     const CampaignsURL = 'http://localhost:8080/campaigns'
 
+    function handleBuy() {
+        const updatedSeats = [...seats];
+        const updatedSelectedSeats = [...selectedSeats];
+        updatedSelectedSeats.forEach((seat) => {
+            updatedSeats[seat.row][seat.column].selected = false;
+        });
+        setPurchasedSeats([...purchasedSeats, ...updatedSelectedSeats]);
+        setSelectedSeats([]);
+        setSeats(updatedSeats);
+    }
 
     //!accordion in "about page"
     const toggleTab = (index) => {
@@ -115,7 +132,13 @@ function ContextProvider({ children }) {
         editData, setEditData,
         showModal, setShowModal,
         isModalOpen, setIsModalOpen
-        , handleAdd
+        , handleAdd,
+        selectedFilmName, setSelectedFilmName,
+        seats, setSeats,
+        selectedSeats, setSelectedSeats,
+        handleBuy,
+        purchasedSeats, setPurchasedSeats,
+        filmName, setFilmName
     }
     //! DARK AND LIGHT MODE
     useEffect(() => {
