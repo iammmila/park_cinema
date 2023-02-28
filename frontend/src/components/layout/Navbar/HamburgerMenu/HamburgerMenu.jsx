@@ -26,8 +26,8 @@ function HamburgerMenu() {
                         <li><Link to="/cinemas">Cinemas</Link></li>
                         <li><Link to="/campaigns">Campaigns</Link></li>
                         <li><Link to="/vip">VIP</Link></li>
-                        <li><Link to="/admin/languages">IMAX</Link></li>
-                        <li><Link to="/admin/subtitles">LaseR</Link></li>
+                        <li><Link to="/technologies/imax">IMAX</Link></li>
+                        <li><Link to="/technologies/laser">LaseR</Link></li>
                         <li><Link to="/about">About</Link></li>
                         <li><Link to="/about/privacy">Privacy</Link></li>
                         <li><Link to="/about/advertising">Advertising Offer</Link></li>
