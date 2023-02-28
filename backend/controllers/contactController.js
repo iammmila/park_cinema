@@ -50,9 +50,9 @@ exports.contact_delete = (req, res) => {
 //! post element
 
 exports.contact_post = async (req, res) => {
-    const film = req.body
+    const contact = req.body
     try {
-        await Contact.create(film)
+        await Contact.create(contact)
         res.status(200).json({ message: "Contact is posted" })
     } catch (error) {
         console.log(error)

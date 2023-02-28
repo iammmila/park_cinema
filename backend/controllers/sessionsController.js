@@ -1,9 +1,9 @@
-const Cinemas = require("../models/cinemasModel")
+const Sessions = require("../models/sessionsModel")
 
 //! get element
 
-exports.cinemas_getAll = (req, res) => {
-    Cinemas.find({}, (err, docs) => {
+exports.sessions_getAll = (req, res) => {
+    Sessions.find({}, (err, docs) => {
         if (!err) {
             res.send(docs)
         }
@@ -15,16 +15,16 @@ exports.cinemas_getAll = (req, res) => {
 
 //! get element by id
 
-exports.cinemas_getAll_byId = (req, res) => {
+exports.sessions_getAll_byId = (req, res) => {
     const { id } = req.params;
-    Cinemas.findById(id, (err, docs) => {
+    Sessions.findById(id, (err, docs) => {
         if (!err) {
             if (docs) {
                 res.send(docs)
                 res.status(200)
             }
             else {
-                res.status(400).json({ message: "not found" })
+                res.status(400).json({ message: "Session is not found" })
             }
         }
         else {
@@ -35,11 +35,11 @@ exports.cinemas_getAll_byId = (req, res) => {
 
 //! delete element by id
 
-exports.cinemas_delete = (req, res) => {
+exports.sessions_delete = (req, res) => {
     const { id } = req.params;
-    Cinemas.findByIdAndDelete(id, (err) => {
+    Sessions.findByIdAndDelete(id, (err) => {
         if (!err) {
-            res.json({ message: "cinema is deleted" })
+            res.json({ message: "Session is deleted" })
         }
         else {
             res.status(500).json({ message: err })
@@ -49,11 +49,11 @@ exports.cinemas_delete = (req, res) => {
 
 //! post element
 
-exports.cinemas_post = async (req, res) => {
-    const cinema = req.body
+exports.sessions_post = async (req, res) => {
+    const session = req.body
     try {
-        await Cinemas.create(cinema)
-        res.status(200).json({ message: "cinemas is posted" })
+        await Sessions.create(session)
+        res.status(200).json({ message: "Session is posted" })
     } catch (error) {
         console.log(error)
     }
@@ -61,14 +61,15 @@ exports.cinemas_post = async (req, res) => {
 
 //! put element
 
-exports.cinemas_put = async (req, res) => {
+exports.sessions_put = async (req, res) => {
     const { id } = req.params
     const data = req.body
     try {
-        await Cinemas.findByIdAndUpdate( id, data, { new: true });
+        await Sessions.findByIdAndUpdate( id, data, { new: true });
         if (!data) {
-            return res.status(404).json({ message: 'Cinema is not found' });
-        }Movie-Seat-Booking-master/ 
+            return res.status(404).json({ message: 'Session is not found' });
+        }
+
         res.status(200).json(data);
     } catch (err) {
         res.status(500).json({ message: err.message });

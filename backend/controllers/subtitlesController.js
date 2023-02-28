@@ -50,9 +50,9 @@ exports.subtitles_delete = (req, res) => {
 //! post element
 
 exports.subtitles_post = async (req, res) => {
-    const film = req.body
+    const subtitle = req.body
     try {
-        await Subtitles.create(film)
+        await Subtitles.create(subtitle)
         res.status(200).json({ message: "Subtitle is posted" })
     } catch (error) {
         console.log(error)

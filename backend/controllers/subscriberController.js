@@ -50,9 +50,9 @@ exports.subscriber_delete = (req, res) => {
 //! post element
 
 exports.subscriber_post = async (req, res) => {
-    const film = req.body
+    const subscriber = req.body
     try {
-        await Subscriber.create(film)
+        await Subscriber.create(subscriber)
         res.status(200).json({ message: "Subscriber is posted" })
     } catch (error) {
         console.log(error)

@@ -50,9 +50,9 @@ exports.formats_delete = (req, res) => {
 //! post element
 
 exports.formats_post = async (req, res) => {
-    const film = req.body
+    const format = req.body
     try {
-        await Formats.create(film)
+        await Formats.create(format)
         res.status(200).json({ message: "Format is posted" })
     } catch (error) {
         console.log(error)

@@ -50,9 +50,9 @@ exports.genres_delete = (req, res) => {
 //! post element
 
 exports.genres_post = async (req, res) => {
-    const film = req.body
+    const genre = req.body
     try {
-        await Genres.create(film)
+        await Genres.create(genre)
         res.status(200).json({ message: "Genre is posted" })
     } catch (error) {
         console.log(error)
