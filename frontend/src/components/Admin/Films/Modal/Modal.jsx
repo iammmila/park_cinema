@@ -14,24 +14,25 @@ function Modal() {
 
     const handleIsNewChange = (event) => {
         setEditData({ ...editData, isNew: event.target.checked });
-      };
+    };
 
     const handleSave = async (dataId) => {
         try {
             // Update the state with the edited data
             setFilms(prevState => {
                 const updatedFilms = prevState.map(film => {
-                    if (film._id === dataId) {
+                    if (film.id === dataId) {
                         return { ...film, ...editData };
                     }
                     return film;
                 });
                 return updatedFilms;
+
             });
 
             // Send the PUT request with the updated data
             await axios.put(`${FilmsURL}/${dataId}`, editData);
-
+            console.log(editData)
             getData();
             setShowModal(false);
         } catch (error) {
@@ -64,6 +65,15 @@ function Modal() {
                         setEditData({ ...editData, ageLimit: e.target.value })
                     }
                 />
+                <label>durationMinute:</label>
+                <input
+                    type="text"
+                    value={editData.durationMinute || ""}
+                    onChange={(e) =>
+                        setEditData({ ...editData, durationMinute: e.target.value })
+                    }
+                />
+                input
                 <label>country:</label>
                 <input
                     type="text"
@@ -115,9 +125,9 @@ function Modal() {
                 <label>poster:</label>
                 <input
                     type="text"
-                    value={editData.poster || ''}
+                    value={editData.uri || ''}
                     onChange={(e) =>
-                        setEditData({ ...editData, poster: e.target.value })
+                        setEditData({ ...editData, uri: e.target.value })
                     }
                 />
                 <label>
@@ -128,7 +138,7 @@ function Modal() {
                     />
                     Is new
                 </label>
-                <button onClick={() => handleSave(editData._id)}>Save</button>
+                <button onClick={() => handleSave(editData.id)}>Save</button>
                 <button onClick={handleCancel}>Cancel</button>
             </div>
         </div>

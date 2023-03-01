@@ -10,7 +10,7 @@ function PostModal() {
     const { setShowModal, editData, setEditData, setFilms, showModal, FilmsURL } = useContext(MainContext)
 
     const getData = async () => {
-        await axios.get(FilmsURL).then((res) => setFilms(res.data));
+        await axios.get('http://localhost:5196/api/Films').then((res) => setFilms(res.data));
     }
 
     //!add data
@@ -30,7 +30,10 @@ function PostModal() {
     };
 
     const handleIsNewChange = (event) => {
-        setEditData({ ...editData, isNew: event.target.checked });
+        setEditData({
+            ...editData,
+            isNew: event.target.checked
+        });
     };
 
     const handleSave = async (dataId) => {
@@ -39,7 +42,7 @@ function PostModal() {
                 // Update the state with the edited data
                 setFilms(prevState => {
                     const updatedFilms = prevState.map(film => {
-                        if (film._id === dataId) {
+                        if (film.id === dataId) {
                             return { ...film, ...editData };
                         }
                         return film;
@@ -50,7 +53,8 @@ function PostModal() {
                 await axios.put(`${FilmsURL}/${dataId}`, editData);
             }
             else {
-                const newFilm = { ...editData, _id: uuidv4() };
+                const newFilm = { ...editData, id: uuidv4() };
+                console.log(newFilm)
                 setFilms(prevState => [newFilm, ...prevState]);
                 await axios.post(FilmsURL, newFilm);
             }
@@ -139,11 +143,55 @@ function PostModal() {
                 <label>poster:</label>
                 <input
                     type="text"
-                    value={editData.poster || ''}
+                    value={editData.image || ''}
                     onChange={(e) =>
-                        setEditData({ ...editData, poster: e.target.value })
+                        setEditData({ ...editData, image: e.target.value })
                     }
                 />
+                <label>Genres:</label>
+                <input
+                    type="text"
+                    value={editData.genres_Id || ""}
+                    onChange={(e) =>
+                        setEditData({ ...editData, genres_Id: e.target.value })
+                    }
+                />
+
+                <label>Languages:</label>
+                <input
+                    type="text"
+                    value={editData.languages_Id || ""}
+                    onChange={(e) =>
+                        setEditData({ ...editData, languages_Id: e.target.value })
+                    }
+                />
+
+                <label>Subtitles:</label>
+                <input
+                    type="text"
+                    value={editData.subtitles_Id || ""}
+                    onChange={(e) =>
+                        setEditData({ ...editData, subtitles_Id: e.target.value })
+                    }
+                />
+
+                <label>Formats:</label>
+                <input
+                    type="text"
+                    value={editData.formats_Id || ""}
+                    onChange={(e) =>
+                        setEditData({ ...editData, formats_Id: e.target.value })
+                    }
+                />
+                <label>durationMinute:</label>
+                <input
+                    type="number"
+                    value={editData.durationMinute || ''}
+                    onChange={(e) =>
+                        setEditData({ ...editData, durationMinute: parseInt(e.target.value) })
+                    }
+                />
+
                 <label>
                     <input
                         type="checkbox"
@@ -152,7 +200,7 @@ function PostModal() {
                     />
                     Is new
                 </label>
-                <button onClick={() => handleSave(editData._id)}>Save</button>
+                <button onClick={() => handleSave(editData.id)}>Save</button>
                 <button onClick={handleCancel}>Cancel</button>
             </form>
         </div>

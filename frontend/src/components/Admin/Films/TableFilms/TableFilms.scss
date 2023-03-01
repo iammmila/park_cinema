@@ -1,4 +1,11 @@
 .admin_table_part {
-    .admin_icons {
+   tbody{
+    tr{
+        td{
+            img{
+                width: 200px;
+            }
+        }
     }
+   }
 }

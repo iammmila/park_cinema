@@ -9,8 +9,6 @@ import TableFilms from './TableFilms/TableFilms'
 import PostModal from './PostModal/PostModal';
 
 function Films() {
-
-
     const { handleAdd, handleFilter } = useContext(MainContext)
 
     return (

@@ -12,6 +12,7 @@ import { CgMoreO } from "react-icons/cg"
 
 //components
 import Modal from './../Modal/Modal';
+import { Link } from 'react-router-dom';
 
 function TableFilms() {
     const { filtered, films, setFilms, setEditData, setShowModal, FilmsURL } = useContext(MainContext)
@@ -35,7 +36,7 @@ function TableFilms() {
         console.log(`the film is deleted: ${id}`)
         setFilms(
             films.filter((post) => {
-                return post._id !== id;
+                return post.id !== id;
             })
         );
         getData();
@@ -68,9 +69,9 @@ function TableFilms() {
                                 : data.name.toLowerCase().includes(filtered.toLowerCase());
                         })
                             .map((data) => (
-                                <tr key={data._id}>
+                                <tr key={data.id}>
                                     <td>
-                                        <img src={data.poster} alt="poster" /></td>
+                                        <img src={data.uri} alt="poster" /></td>
                                     <td>{data.name}</td>
                                     <td>{data.date}</td>
                                     <td>
@@ -80,7 +81,7 @@ function TableFilms() {
                                         <FiEdit className='admin_icons' onClick={() => handleEdit(data)} />
                                     </td>
                                     <td>
-                                        <CgMoreO className='admin_icons' />
+                                        <Link to="http://localhost:5196/swagger/index.html"><CgMoreO className='admin_icons' /></Link>
                                     </td>
                                 </tr>
                             ))

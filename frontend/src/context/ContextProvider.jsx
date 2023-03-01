@@ -31,7 +31,24 @@ function ContextProvider({ children }) {
 
     //!admin's part
     const [filtered, setFiltered] = useState("");
-    const [editData, setEditData] = useState({});
+    // const [editData, setEditData] = useState({});
+    const [editData, setEditData] = useState({
+        name: '',
+        ageLimit: '',
+        country: '',
+        director: '',
+        actors: '',
+        description: '',
+        trailer: '',
+        date: '',
+        poster: '',
+        durationMinute: '',
+        isNew: false,
+        genres_Id: '',
+        languages_Id: '',
+        subtitles_Id: '',
+        formats_Id: '',
+    });
     const [showModal, setShowModal] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
 
