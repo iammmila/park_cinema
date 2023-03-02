@@ -17,10 +17,6 @@ import { Link } from 'react-router-dom';
 function TableFilms() {
     const { filtered, films, setFilms, setEditData, setShowModal, FilmsURL } = useContext(MainContext)
 
-    const axiosInstance = axios.create({
-        baseURL: FilmsURL
-    });
-
     const getData = async () => {
         await axios.get(FilmsURL).then((res) => setFilms(res.data));
     }
@@ -30,15 +26,16 @@ function TableFilms() {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
-    //! DELETE FILM
+    // //! DELETE FILM
     const deleteFilm = async (id) => {
-        await axiosInstance.delete(`/${id}`);
+        await axios.delete(`http://localhost:5196/api/Films/${id}`);
         console.log(`the film is deleted: ${id}`)
         setFilms(
             films.filter((post) => {
                 return post.id !== id;
             })
         );
+
         getData();
     };
 
@@ -75,13 +72,13 @@ function TableFilms() {
                                     <td>{data.name}</td>
                                     <td>{data.date}</td>
                                     <td>
-                                        <MdDelete className='admin_icons' onClick={() => deleteFilm(data._id)} />
+                                        <MdDelete className='admin_icons' onClick={() => deleteFilm(data.id)} />
                                     </td>
                                     <td>
                                         <FiEdit className='admin_icons' onClick={() => handleEdit(data)} />
                                     </td>
                                     <td>
-                                        <Link to="http://localhost:5196/swagger/index.html"><CgMoreO className='admin_icons' /></Link>
+                                        <Link target={`_blank`} to="http://localhost:5196/swagger/index.html"><CgMoreO className='admin_icons' /></Link>
                                     </td>
                                 </tr>
                             ))

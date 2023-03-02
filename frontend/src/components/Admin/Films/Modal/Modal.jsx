@@ -12,10 +12,6 @@ function Modal() {
         await axios.get(FilmsURL).then((res) => setFilms(res.data));
     }
 
-    const handleIsNewChange = (event) => {
-        setEditData({ ...editData, isNew: event.target.checked });
-    };
-
     const handleSave = async (dataId) => {
         try {
             // Update the state with the edited data
@@ -41,7 +37,7 @@ function Modal() {
     };
 
     const handleCancel = () => {
-        setEditData({});
+        // setEditData({});
         setShowModal(false);
     };
 
@@ -59,21 +55,12 @@ function Modal() {
                 />
                 <label>ageLimit:</label>
                 <input
-                    type="text"
+                    type="number"
                     value={editData.ageLimit || ""}
                     onChange={(e) =>
                         setEditData({ ...editData, ageLimit: e.target.value })
                     }
                 />
-                <label>durationMinute:</label>
-                <input
-                    type="text"
-                    value={editData.durationMinute || ""}
-                    onChange={(e) =>
-                        setEditData({ ...editData, durationMinute: e.target.value })
-                    }
-                />
-                input
                 <label>country:</label>
                 <input
                     type="text"
@@ -124,17 +111,60 @@ function Modal() {
                 />
                 <label>poster:</label>
                 <input
-                    type="text"
-                    value={editData.uri || ''}
+                    type="file"
                     onChange={(e) =>
-                        setEditData({ ...editData, uri: e.target.value })
+                        setEditData({ ...editData, image: e.target.files[0] })
                     }
                 />
+                <label>Genres:</label>
+                <input
+                    type="number"
+                    value={editData.genres_Id || ""}
+                    onChange={(e) =>
+                        setEditData({ ...editData, genres_Id: parseInt(e.target.value) })
+                    }
+                />
+
+                <label>Languages:</label>
+                <input
+                    type="number"
+                    value={editData.languages_Id || ""}
+                    onChange={(e) =>
+                        setEditData({ ...editData, languages_Id: parseInt(e.target.value) })
+                    }
+                />
+
+                <label>Subtitles:</label>
+                <input
+                    type="number"
+                    value={editData.subtitles_Id || ""}
+                    onChange={(e) =>
+                        setEditData({ ...editData, subtitles_Id: parseInt(e.target.value) })
+                    }
+                />
+
+                <label>Formats:</label>
+                <input
+                    type="number"
+                    value={editData.formats_Id || ""}
+                    onChange={(e) =>
+                        setEditData({ ...editData, formats_Id: parseInt(e.target.value) })
+                    }
+                />
+                <label>durationMinute:</label>
+                <input
+                    type="number"
+                    value={editData.durationMinute || ''}
+                    onChange={(e) =>
+                        setEditData({ ...editData, durationMinute: parseInt(e.target.value) })
+                    }
+                />
+
                 <label>
                     <input
                         type="checkbox"
                         checked={editData.isNew}
-                        onChange={handleIsNewChange}
+                        onChange={(e) => setEditData({ ...editData, isNew: e.target.checked })}
                     />
                     Is new
                 </label>

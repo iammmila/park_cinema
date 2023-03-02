@@ -28,27 +28,27 @@ function ContextProvider({ children }) {
     const [purchasedSeats, setPurchasedSeats] = useState([]);
     const [filmName, setFilmName] = useState("");
 
-
     //!admin's part
     const [filtered, setFiltered] = useState("");
     // const [editData, setEditData] = useState({});
     const [editData, setEditData] = useState({
         name: '',
-        ageLimit: '',
+        ageLimit: 0,
         country: '',
         director: '',
         actors: '',
         description: '',
         trailer: '',
-        date: '',
-        poster: '',
-        durationMinute: '',
+        date: new Date(),
+        image: null,
+        durationMinute: 0,
         isNew: false,
-        genres_Id: '',
-        languages_Id: '',
-        subtitles_Id: '',
-        formats_Id: '',
+        genres_Id: 0,
+        languages_Id: 0,
+        subtitles_Id: 0,
+        formats_Id: 0,
     });
+
     const [showModal, setShowModal] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -80,6 +80,7 @@ function ContextProvider({ children }) {
             id: e.target.id,
         })
     }
+
     useEffect(() => {
         // console.log(isActive)
     }, [isActive])

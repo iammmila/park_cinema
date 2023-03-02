@@ -1,74 +1,51 @@
 import React, { useContext } from 'react'
 import axios from 'axios';
 import { MainContext } from './../../../../context/ContextProvider';
-import { v4 as uuidv4 } from 'uuid'
 
 //general scss
 import "./PostModal.scss"
 
 function PostModal() {
-    const { setShowModal, editData, setEditData, setFilms, showModal, FilmsURL } = useContext(MainContext)
+    const { setShowModal, editData, setEditData, showModal } = useContext(MainContext)
 
-    const getData = async () => {
-        await axios.get('http://localhost:5196/api/Films').then((res) => setFilms(res.data));
+    function onSubmit(e) {
+        e.preventDefault(); // Prevent the default form submission
+
+        // Use FormData to send the file along with other form data
+        const formData = new FormData();
+        formData.append("name", editData.name);
+        formData.append("ageLimit", editData.ageLimit);
+        formData.append("country", editData.country);
+        formData.append("director", editData.director);
+        formData.append("actors", editData.actors);
+        formData.append("description", editData.description);
+        formData.append("trailer", editData.trailer);
+        formData.append("date", editData.date);
+        formData.append("genres_Id", editData.genres_Id);
+        formData.append("languages_Id", editData.languages_Id);
+        formData.append("subtitles_Id", editData.subtitles_Id);
+        formData.append("formats_Id", editData.formats_Id);
+        formData.append("durationMinute", editData.durationMinute);
+        formData.append("isNew", editData.isNew);
+        formData.append("image", editData.image);
+
+        axios
+            .post("http://localhost:5196/api/Films", formData, {
+                headers: {
+                    "Content-Type": "multipart/form-data", // Required for file upload
+                },
+            })
+            .then((response) => {
+                console.log("Data successfully posted to API");
+                // Handle success case here
+            })
+            .catch((error) => {
+                console.log("Error posting data to API:", error);
+                // Handle error case here
+            });
     }
 
-    //!add data
-    const addData = async (newFilmData) => {
-        try {
-            await axios.post(FilmsURL, newFilmData);
-            getData(); // reload the films data after adding a new film
-            setShowModal(false); // hide the modal
-        } catch (error) {
-            console.log(error.response);
-        }
-    };
-
-    const onSubmit = (event) => {
-        event.preventDefault();
-        addData(editData);
-    };
-
-    const handleIsNewChange = (event) => {
-        setEditData({
-            ...editData,
-            isNew: event.target.checked
-        });
-    };
-
-    const handleSave = async (dataId) => {
-        try {
-            if (dataId) {
-                // Update the state with the edited data
-                setFilms(prevState => {
-                    const updatedFilms = prevState.map(film => {
-                        if (film.id === dataId) {
-                            return { ...film, ...editData };
-                        }
-                        return film;
-                    });
-                    return updatedFilms;
-                });
-
-                await axios.put(`${FilmsURL}/${dataId}`, editData);
-            }
-            else {
-                const newFilm = { ...editData, id: uuidv4() };
-                console.log(newFilm)
-                setFilms(prevState => [newFilm, ...prevState]);
-                await axios.post(FilmsURL, newFilm);
-            }
-
-            // Reset the state and close the modal
-            setShowModal(false);
-            setEditData({});
-        } catch (error) {
-            console.log(error.response);
-        }
-    };
-
     const handleCancel = () => {
-        setEditData({});
         setShowModal(false);
     };
 
@@ -86,7 +63,7 @@ function PostModal() {
                 />
                 <label>ageLimit:</label>
                 <input
-                    type="text"
+                    type="number"
                     value={editData.ageLimit || ""}
                     onChange={(e) =>
                         setEditData({ ...editData, ageLimit: e.target.value })
@@ -142,45 +119,44 @@ function PostModal() {
                 />
                 <label>poster:</label>
                 <input
-                    type="text"
-                    value={editData.image || ''}
+                    type="file"
                     onChange={(e) =>
-                        setEditData({ ...editData, image: e.target.value })
+                        setEditData({ ...editData, image: e.target.files[0] })
                     }
                 />
                 <label>Genres:</label>
                 <input
-                    type="text"
+                    type="number"
                     value={editData.genres_Id || ""}
                     onChange={(e) =>
-                        setEditData({ ...editData, genres_Id: e.target.value })
+                        setEditData({ ...editData, genres_Id: parseInt(e.target.value) })
                     }
                 />
 
                 <label>Languages:</label>
                 <input
-                    type="text"
+                    type="number"
                     value={editData.languages_Id || ""}
                     onChange={(e) =>
-                        setEditData({ ...editData, languages_Id: e.target.value })
+                        setEditData({ ...editData, languages_Id: parseInt(e.target.value) })
                     }
                 />
 
                 <label>Subtitles:</label>
                 <input
-                    type="text"
+                    type="number"
                     value={editData.subtitles_Id || ""}
                     onChange={(e) =>
-                        setEditData({ ...editData, subtitles_Id: e.target.value })
+                        setEditData({ ...editData, subtitles_Id: parseInt(e.target.value) })
                     }
                 />
 
                 <label>Formats:</label>
                 <input
-                    type="text"
+                    type="number"
                     value={editData.formats_Id || ""}
                     onChange={(e) =>
-                        setEditData({ ...editData, formats_Id: e.target.value })
+                        setEditData({ ...editData, formats_Id: parseInt(e.target.value) })
                     }
                 />
                 <label>durationMinute:</label>
@@ -196,11 +172,12 @@ function PostModal() {
                     <input
                         type="checkbox"
                         checked={editData.isNew}
-                        onChange={handleIsNewChange}
+                        onChange={(e) => setEditData({ ...editData, isNew: e.target.checked })}
                     />
                     Is new
                 </label>
-                <button onClick={() => handleSave(editData.id)}>Save</button>
+                <button
+                >Save</button>
                 <button onClick={handleCancel}>Cancel</button>
             </form>
         </div>
