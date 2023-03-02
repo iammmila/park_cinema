@@ -23,7 +23,7 @@ const subscriberRoute = require("./routes/subscriberRoute")
 const contactRoute = require("./routes/contactRoute")
 const hallsRoute = require("./routes/hallsRoute")
 const sessionsRoute = require("./routes/sessionsRoute")
-
+const languagesRoute =require("./routes/languagesRoute")
 
 //!endpoints
 
@@ -37,6 +37,7 @@ app.use("/subscriber", subscriberRoute)
 app.use("/contact", contactRoute)
 app.use("/halls", hallsRoute)
 app.use("/sessions", sessionsRoute)
+app.use("/languages", languagesRoute)
 
 
 const PORT = process.env.PORT
