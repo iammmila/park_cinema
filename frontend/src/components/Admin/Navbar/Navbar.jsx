@@ -29,15 +29,15 @@ function Navbar() {
             <nav className={`hamburger-menu__nav ${isOpen ? 'hamburger-menu__nav--open' : ''}`}>
               <ul>
                 <li><Link to="/">Home</Link></li>
-                <li><Link to="/admin/dashboard">Dashboard</Link></li>
-                <li><Link to="/admin/users">Admins</Link></li>
-                <li><Link to="/admin/cinemas">Cinemas</Link></li>
-                <li><Link to="/admin/films">Films</Link></li>
-                <li><Link to="/admin/languages">Languages</Link></li>
-                <li><Link to="/admin/subtitles">Subtitles</Link></li>
-                <li><Link to="/admin/formats">Formats</Link></li>
-                <li><Link to="/admin/campaigns">Campaigns</Link></li>
-                <li><Link to="/admin/contact">Contact</Link></li>
+                <li><Link to="/admin/dashboard" onClick={handleClick}>Dashboard</Link></li>
+                <li><Link to="/admin/users" onClick={handleClick}>Admins</Link></li>
+                <li><Link to="/admin/cinemas" onClick={handleClick}>Cinemas</Link></li>
+                <li><Link to="/admin/films" onClick={handleClick}>Films</Link></li>
+                <li><Link to="/admin/languages" onClick={handleClick}>Languages</Link></li>
+                <li><Link to="/admin/subtitles" onClick={handleClick}>Subtitles</Link></li>
+                <li><Link to="/admin/formats" onClick={handleClick}>Formats</Link></li>
+                <li><Link to="/admin/campaigns" onClick={handleClick}>Campaigns</Link></li>
+                <li><Link to="/admin/contact" onClick={handleClick}>Contact</Link></li>
               </ul>
             </nav>
             {mode === "light" ? <MdModeNight className='theme-button' onClick={changeTheme} /> : <MdLightMode className='theme-button' onClick={changeTheme} />}

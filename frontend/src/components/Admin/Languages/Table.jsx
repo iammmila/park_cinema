@@ -2,19 +2,19 @@ import React, { useContext } from 'react'
 import { MainContext } from './../../../context/ContextProvider';
 
 //general scss
-import "./Films.scss"
+import "./Table.scss"
 
 //components
-import TableFilms from './TableFilms/TableFilms'
-import PostModal from './PostModal/PostModal';
+import TableLanguages from './TableLanguages/TableLanguages';
+import PostModal from './Post/PostModal';
 
-function Films() {
-    const { handleAdd, handleFilter } = useContext(MainContext)
+function Table() {
+    const { handleFilter, handleAdd } = useContext(MainContext)
 
     return (
-        <section className='admin_films_section'>
+        <section className='admin_languages_section'>
             <div className="container">
-                <div className="admin_films_wrapper">
+                <div className="admin_languages_wrapper">
                     <div className='searching'>
                         <input
                             type="text"
@@ -24,7 +24,7 @@ function Films() {
                         <button onClick={() => handleAdd()}>Add new Film</button>
                     </div>
                     <div className="admin_films_table">
-                        <TableFilms />
+                        <TableLanguages />
                     </div>
                 </div>
             </div>
@@ -33,4 +33,4 @@ function Films() {
     )
 }
 
-export default Films
+export default Table

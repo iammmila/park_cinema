@@ -1,0 +1,15 @@
+.admin_languages_section {
+    padding: 100px 0;
+
+    .admin_languages_wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+        input {
+            padding: 20px;
+            border-radius: 20px;
+
+        }
+    }
+}

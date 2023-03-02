@@ -51,12 +51,13 @@ function ContextProvider({ children }) {
 
     const [showModal, setShowModal] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
-
+    const [languages, setLanguages] = useState([])
     //!URLs
     const FilmsURL = 'http://localhost:5196/api/Films';
     const CinemasURL = 'http://localhost:8080/cinemas';
     const CampaignsURL = 'http://localhost:8080/campaigns'
     const FormatsURL = 'http://localhost:8080/formats';
+    const LanguagesURL = 'http://localhost:8080/languages';
 
     function handleBuy() {
         const updatedSeats = [...seats];
@@ -159,7 +160,8 @@ function ContextProvider({ children }) {
         handleBuy,
         purchasedSeats, setPurchasedSeats,
         filmName, setFilmName,
-        formats, setFormats
+        formats, setFormats,
+        LanguagesURL, languages, setLanguages,
     }
     //! DARK AND LIGHT MODE
     useEffect(() => {

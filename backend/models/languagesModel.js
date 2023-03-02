@@ -4,7 +4,7 @@ const { Schema } = mongoose
 
 const languagesScheme = new Schema(
     {
-        email: {
+        name: {
             type: String,
             required: true
         }
