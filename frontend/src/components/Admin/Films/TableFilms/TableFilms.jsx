@@ -1,6 +1,7 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import axios from 'axios';
 import { MainContext } from './../../../../context/ContextProvider';
+import { Link } from 'react-router-dom';
 
 //general scss 
 import "./TableFilms.scss"
@@ -12,8 +13,6 @@ import { CgMoreO } from "react-icons/cg"
 
 //components
 import Modal from './../Modal/Modal';
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
 
 function TableFilms() {
     const { filtered, films, setFilms, setEditData, setShowModal, FilmsURL } = useContext(MainContext)

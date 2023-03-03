@@ -1,11 +1,11 @@
 import React, { useContext, useEffect } from 'react'
-import 'video-react/dist/video-react.css';
 import { MainContext } from '../../../../context/ContextProvider';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
 //general scss
 import "./FilmVideo.scss"
+import 'video-react/dist/video-react.css';
 
 function HeroSection() {
     const { filmDetail, setFilmDetail, FilmsURL } = useContext(MainContext)
@@ -25,7 +25,6 @@ function HeroSection() {
             <iframe
                 height="auto"
                 src={`https://www.youtube.com/embed/${filmDetail.trailer}`}
-                // src="https://www.youtube.com/embed/8bFuNvSEEYw" 
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
