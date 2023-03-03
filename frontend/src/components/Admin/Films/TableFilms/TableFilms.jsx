@@ -15,7 +15,7 @@ import { CgMoreO } from "react-icons/cg"
 import Modal from './../Modal/Modal';
 
 function TableFilms() {
-    const { filtered, films, setFilms, setEditData, setShowModal, FilmsURL } = useContext(MainContext)
+    const { filtered, films, setFilms, setEditData, setShowModal4, FilmsURL } = useContext(MainContext)
     const [soonFilms, setSoonFilms] = useState([])
 
     //url
@@ -50,7 +50,7 @@ function TableFilms() {
     //! UPDATE FILM
     const handleEdit = async (data) => {
         setEditData(data);
-        setShowModal(true);
+        setShowModal4(true);
     };
 
     return (

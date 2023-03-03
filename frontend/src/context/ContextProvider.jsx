@@ -52,6 +52,7 @@ function ContextProvider({ children }) {
     const [showModal, setShowModal] = useState(false);
     const [showModal2, setShowModal2] = useState(false);
     const [showModal3, setShowModal3] = useState(false);
+    const [showModal4, setShowModal4] = useState(false);
 
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [languages, setLanguages] = useState([])
@@ -94,6 +95,7 @@ function ContextProvider({ children }) {
     function handleAdd() {
         setShowModal(true);
     }
+    
     function handleAdd2() {
         setShowModal2(true);
     }
@@ -170,7 +172,8 @@ function ContextProvider({ children }) {
         formats, setFormats,
         LanguagesURL, languages, setLanguages,
         showModal2, setShowModal2,
-        showModal3, setShowModal3
+        showModal3, setShowModal3,
+        showModal4, setShowModal4
     }
     //! DARK AND LIGHT MODE
     useEffect(() => {

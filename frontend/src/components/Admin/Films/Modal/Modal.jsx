@@ -6,7 +6,7 @@ import axios from 'axios';
 import "./Modal.scss"
 
 function Modal() {
-    const { setShowModal, editData, setEditData, setFilms, showModal, FilmsURL } = useContext(MainContext)
+    const { setShowModal4, editData, setEditData, setFilms, showModal4, FilmsURL } = useContext(MainContext)
 
     const getData = async () => {
         await axios.get(FilmsURL).then((res) => setFilms(res.data));
@@ -30,7 +30,7 @@ function Modal() {
             await axios.put(`${FilmsURL}/${dataId}`, editData);
             console.log(editData)
             getData();
-            setShowModal(false);
+            setShowModal4(false);
         } catch (error) {
             console.log(error.response);
         }
@@ -38,11 +38,11 @@ function Modal() {
 
     const handleCancel = () => {
         // setEditData({});
-        setShowModal(false);
+        setShowModal4(false);
     };
 
     return (
-        <div className={showModal ? "modal show" : "modal"}>
+        <div className={showModal4 ? "modal show" : "modal"}>
             <div className="modal-content">
                 <h2>Edit Film Information</h2>
                 <label>Name:</label>

@@ -6,10 +6,25 @@
         flex-direction: column;
         gap: 50px;
 
-        input {
-            padding: 20px;
-            border-radius: 20px;
-            
+        .searching {
+            input {
+                padding: 20px;
+                border-radius: 20px;
+                margin-right: 30px;
+            }
+
+            button {
+                border-radius: 20px;
+                border-radius: 1px solid gray;
+                background-color: rgba(211, 211, 211, 0.301);
+                padding: 10px 30px;
+                font-weight: 700;
+                font-size: 20px;
+
+                &:hover {
+                    background-color: lightgray;
+                }
+            }
         }
     }
 }

@@ -27,6 +27,15 @@
         border-radius: 20px;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 
+        .wrapper_sectionsss {
+            display: flex;
+            gap: 50px;
+
+            div {
+                width: 50%;
+            }
+        }
+
         h2 {
             margin-top: 0;
             font-size: 28px;

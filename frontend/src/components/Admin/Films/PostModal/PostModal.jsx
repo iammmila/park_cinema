@@ -2,16 +2,24 @@ import React, { useContext } from 'react'
 import axios from 'axios';
 import { MainContext } from './../../../../context/ContextProvider';
 
+//yup
+import { useForm } from "react-hook-form";
+import { postSchema } from './../../../../schema/post';
+import { yupResolver } from "@hookform/resolvers/yup";
+
 //general scss
 import "./PostModal.scss"
 
 function PostModal() {
     const { setShowModal, editData, setEditData, showModal } = useContext(MainContext)
 
-    function onSubmit(e) {
-        e.preventDefault(); // Prevent the default form submission
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+    } = useForm({ resolver: yupResolver(postSchema) });
 
-        // Use FormData to send the file along with other form data
+    function onSubmit(e) {
         const formData = new FormData();
         formData.append("name", editData.name);
         formData.append("ageLimit", editData.ageLimit);
@@ -51,133 +59,267 @@ function PostModal() {
 
     return (
         <div className={showModal ? "modal2 show" : "modal2"}>
-            <form className="modal-content" onSubmit={onSubmit}>
-                <h2>Edit Film Information</h2>
-                <label>Name:</label>
-                <input
-                    type="text"
-                    value={editData.name || ""}
-                    onChange={(e) =>
-                        setEditData({ ...editData, name: e.target.value })
-                    }
-                />
-                <label>ageLimit:</label>
-                <input
-                    type="number"
-                    value={editData.ageLimit || ""}
-                    onChange={(e) =>
-                        setEditData({ ...editData, ageLimit: e.target.value })
-                    }
-                />
-                <label>country:</label>
-                <input
-                    type="text"
-                    value={editData.country || ""}
-                    onChange={(e) =>
-                        setEditData({ ...editData, country: e.target.value })
-                    }
-                />
-                <label>director:</label>
-                <input
-                    type="text"
-                    value={editData.director || ""}
-                    onChange={(e) =>
-                        setEditData({ ...editData, director: e.target.value })
-                    }
-                />
-                <label>actors:</label>
-                <input
-                    type="text"
-                    value={editData.actors || ""}
-                    onChange={(e) =>
-                        setEditData({ ...editData, actors: e.target.value })
-                    }
-                />
-                <label>description:</label>
-                <input
-                    type="text"
-                    value={editData.description || ""}
-                    onChange={(e) =>
-                        setEditData({ ...editData, description: e.target.value })
-                    }
-                />
-                <label>trailer:</label>
-                <input
-                    type="text"
-                    value={editData.trailer || ""}
-                    onChange={(e) =>
-                        setEditData({ ...editData, trailer: e.target.value })
-                    }
-                />
-                <label>date:</label>
-                <input
-                    type="date"
-                    value={editData.date || ""}
-                    onChange={(e) =>
-                        setEditData({ ...editData, date: e.target.value })
-                    }
-                />
-                <label>poster:</label>
-                <input
-                    type="file"
-                    onChange={(e) =>
-                        setEditData({ ...editData, image: e.target.files[0] })
-                    }
-                />
-                <label>Genres:</label>
-                <input
-                    type="number"
-                    value={editData.genres_Id || ""}
-                    onChange={(e) =>
-                        setEditData({ ...editData, genres_Id: parseInt(e.target.value) })
-                    }
-                />
-
-                <label>Languages:</label>
-                <input
-                    type="number"
-                    value={editData.languages_Id || ""}
-                    onChange={(e) =>
-                        setEditData({ ...editData, languages_Id: parseInt(e.target.value) })
-                    }
-                />
-
-                <label>Subtitles:</label>
-                <input
-                    type="number"
-                    value={editData.subtitles_Id || ""}
-                    onChange={(e) =>
-                        setEditData({ ...editData, subtitles_Id: parseInt(e.target.value) })
-                    }
-                />
-
-                <label>Formats:</label>
-                <input
-                    type="number"
-                    value={editData.formats_Id || ""}
-                    onChange={(e) =>
-                        setEditData({ ...editData, formats_Id: parseInt(e.target.value) })
-                    }
-                />
-                <label>durationMinute:</label>
-                <input
-                    type="number"
-                    value={editData.durationMinute || ''}
-                    onChange={(e) =>
-                        setEditData({ ...editData, durationMinute: parseInt(e.target.value) })
-                    }
-                />
-
-                <label>
-                    <input
-                        type="checkbox"
-                        checked={editData.isNew}
-                        onChange={(e) => setEditData({ ...editData, isNew: e.target.checked })}
-                    />
-                    Is new
-                </label>
-                <button
-                >Save</button>
+            <form className="modal-content" onSubmit={handleSubmit(onSubmit)}>
+                <h2>Create Film Information</h2>
+                <div className='wrapper_sectionsss'>
+                    <div >
+                        <label>Name:</label>
+                        <input
+                            {...register("name")}
+                            value={editData.name || ""}
+                            type="text"
+                            onChange={(e) =>
+                                setEditData({ ...editData, name: e.target.value })
+                            }
+                            name="name"
+                            placeholder="Name of Film"
+                            id="name"
+                        />
+                        {errors.name ? (
+                            <span style={{ color: "red" }}>{errors.name.message}</span>
+                        ) : (
+                            <></>
+                        )}
+                        <label>Age Limit:</label>
+                        <input
+                            {...register("ageLimit")}
+                            value={editData.ageLimit || ""}
+                            type="number"
+                            onChange={(e) =>
+                                setEditData({ ...editData, ageLimit: e.target.value })
+                            }
+                            name="ageLimit"
+                            placeholder="Age Limit"
+                            id="ageLimit"
+                        />
+                        {errors.ageLimit ? (
+                            <span style={{ color: "red" }}>{errors.ageLimit.message}</span>
+                        ) : (
+                            <></>
+                        )}
+                        <label>Country:</label>
+                        <input
+                            {...register("country")}
+                            value={editData.country || ""}
+                            type="text"
+                            onChange={(e) =>
+                                setEditData({ ...editData, country: e.target.value })
+                            }
+                            name="country"
+                            placeholder="country"
+                            id="country"
+                        />
+                        {errors.country ? (
+                            <span style={{ color: "red" }}>{errors.country.message}</span>
+                        ) : (
+                            <></>
+                        )}
+                        <label>Director:</label>
+                        <input
+                            {...register("director")}
+                            value={editData.director || ""}
+                            type="text"
+                            onChange={(e) =>
+                                setEditData({ ...editData, director: e.target.value })
+                            }
+                            name="director"
+                            placeholder="director"
+                            id="director"
+                        />
+                        {errors.director ? (
+                            <span style={{ color: "red" }}>{errors.director.message}</span>
+                        ) : (
+                            <></>
+                        )}
+                        <label>Actors:</label>
+                        <input
+                            {...register("actors")}
+                            value={editData.actors || ""}
+                            type="text"
+                            onChange={(e) =>
+                                setEditData({ ...editData, actors: e.target.value })
+                            }
+                            name="actors"
+                            placeholder="Names of Actors"
+                            id="actors"
+                        />
+                        {errors.actors ? (
+                            <span style={{ color: "red" }}>{errors.actors.message}</span>
+                        ) : (
+                            <></>
+                        )}
+                        <label>Description:</label>
+                        <input
+                            {...register("description")}
+                            value={editData.description || ""}
+                            type="text"
+                            onChange={(e) =>
+                                setEditData({ ...editData, description: e.target.value })
+                            }
+                            name="description"
+                            placeholder="description"
+                            id="description"
+                        />
+                        {errors.description ? (
+                            <span style={{ color: "red" }}>{errors.description.message}</span>
+                        ) : (
+                            <></>
+                        )}
+                        <label>Trailer( Id of youtube video):</label>
+                        <input
+                            {...register("trailer")}
+                            value={editData.trailer || ""}
+                            type="text"
+                            onChange={(e) =>
+                                setEditData({ ...editData, trailer: e.target.value })
+                            }
+                            name="trailer"
+                            placeholder="id of youtube trailer"
+                            id="trailer"
+                        />
+                        {errors.trailer ? (
+                            <span style={{ color: "red" }}>{errors.trailer.message}</span>
+                        ) : (
+                            <></>
+                        )}
+                    </div>
+                    <div>
+                        <label>Date:</label>
+                        <input
+                            {...register("date")}
+                            value={editData.date || ""}
+                            type="date"
+                            onChange={(e) =>
+                                setEditData({ ...editData, date: e.target.value })
+                            }
+                            name="date"
+                            placeholder="Date of Film"
+                            id="date"
+                        />
+                        {errors.date ? (
+                            <span style={{ color: "red" }}>{errors.date.message}</span>
+                        ) : (
+                            <></>
+                        )}
+                        <label>Poster:</label>
+                        <input
+                            {...register("image")}
+                            type="file"
+                            style={{ color: "gray" }}
+                            onChange={(e) =>
+                                setEditData({ ...editData, image: e.target.files[0] })
+                            }
+                            name="image"
+                            placeholder="Load image"
+                            id="image"
+                        />
+                        {errors.image ? (
+                            <span style={{ color: "red" }}>{errors.image.message}</span>
+                        ) : (
+                            <></>
+                        )}
+                        <label>Genres of Film:</label>
+                        <input
+                            {...register("genres_Id")}
+                            value={editData.genres_Id || ""}
+                            type="number"
+                            onChange={(e) =>
+                                setEditData({ ...editData, genres_Id: parseInt(e.target.value) })
+                            }
+                            name="genres_Id"
+                            placeholder="please write id of Genres"
+                            id="genres_Id"
+                        />
+                        {errors.genres_Id ? (
+                            <span style={{ color: "red" }}>{errors.genres_Id.message}</span>
+                        ) : (
+                            <></>
+                        )}
+                        <label>Languages of Film:</label>
+                        <input
+                            {...register("languages_Id")}
+                            value={editData.languages_Id || ""}
+                            type="number"
+                            onChange={(e) =>
+                                setEditData({ ...editData, languages_Id: parseInt(e.target.value) })
+                            }
+                            name="languages_Id"
+                            placeholder="please write id of Language"
+                            id="languages_Id"
+                        />
+                        {errors.languages_Id ? (
+                            <span style={{ color: "red" }}>{errors.languages_Id.message}</span>
+                        ) : (
+                            <></>
+                        )}
+                        <label>Subtitle of Film:</label>
+                        <input
+                            {...register("subtitles_Id")}
+                            value={editData.subtitles_Id || ""}
+                            type="number"
+                            onChange={(e) =>
+                                setEditData({ ...editData, subtitles_Id: parseInt(e.target.value) })
+                            }
+                            name="subtitles_Id"
+                            placeholder="please write id of Subtitle"
+                            id="subtitles_Id"
+                        />
+                        {errors.subtitles_Id ? (
+                            <span style={{ color: "red" }}>{errors.subtitles_Id.message}</span>
+                        ) : (
+                            <></>
+                        )}
+                        <label>Format of Film:</label>
+                        <input
+                            {...register("formats_Id")}
+                            value={editData.formats_Id || ""}
+                            type="number"
+                            onChange={(e) =>
+                                setEditData({ ...editData, formats_Id: parseInt(e.target.value) })
+                            }
+                            name="formats_Id"
+                            placeholder="please write id of format"
+                            id="formats_Id"
+                        />
+                        {errors.formats_Id ? (
+                            <span style={{ color: "red" }}>{errors.formats_Id.message}</span>
+                        ) : (
+                            <></>
+                        )}
+                        <label>Duration minute:</label>
+                        <input
+                            {...register("durationMinute")}
+                            value={editData.durationMinute || ''}
+                            type="number"
+                            onChange={(e) =>
+                                setEditData({ ...editData, durationMinute: parseInt(e.target.value) })
+                            }
+                            name="durationMinute"
+                            placeholder="please write minutes"
+                            id="durationMinute"
+                        />
+                        {errors.durationMinute ? (
+                            <span style={{ color: "red" }}>{errors.durationMinute.message}</span>
+                        ) : (
+                            <></>
+                        )}
+                        <label>Is it new?  </label>
+                        <input
+                            {...register("isNew")}
+                            checked={editData.isNew}
+                            type="checkbox"
+                            onChange={(e) => setEditData({ ...editData, isNew: e.target.checked })}
+                            name="isNew"
+                            id="isNew"
+                        />
+                        {errors.isNew ? (
+                            <span style={{ color: "red" }}>{errors.isNew.message}</span>
+                        ) : (
+                            <></>
+                        )}
+                    </div>
+                </div>
+                <button >Save</button>
                 <button onClick={handleCancel}>Cancel</button>
             </form>
         </div>
