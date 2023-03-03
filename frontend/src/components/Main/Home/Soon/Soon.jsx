@@ -15,10 +15,12 @@ import LoadingCard from './../../Cinemas/LoadingCard/LoadingCard';
 import { Link } from 'react-router-dom';
 
 function Soon() {
-  const { soonFilms, setSoonFilms, loading, setLoading, FilmsURL } = useContext(MainContext)
+  const { soonFilms, setSoonFilms, loading, setLoading } = useContext(MainContext)
+
+  const SoonFilms = "http://localhost:5196/api/Films?isNew=true"
 
   const getData = async () => {
-    await axios.get(FilmsURL).then((res) => setSoonFilms(res.data));
+    await axios.get(SoonFilms).then((res) => setSoonFilms(res.data));
     setLoading(false);
   }
 

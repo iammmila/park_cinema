@@ -6,7 +6,7 @@ import axios from 'axios';
 import "./PutModal.scss"
 
 function PutModal() {
-    const { setShowModal, setFilms, showModal, LanguagesURL, setLanguages, languages } = useContext(MainContext)
+    const { setShowModal3, setFilms, showModal3, LanguagesURL, setLanguages, languages } = useContext(MainContext)
 
     const [editLanguages, setEditLanguages] = useState({
         name: ""
@@ -53,13 +53,13 @@ function PutModal() {
     }
 
     const handleCancel = () => {
-        setShowModal(false);
+        setShowModal3(false);
     };
 
     return (
-        <div className={showModal ? "modal4 show" : "modal4"}>
+        <div className={showModal3 ? "modal4 show" : "modal4"}>
             <div className="modal-content">
-                <h2>Edit Film Information</h2>
+                <h2>Edit Lnaguage Information</h2>
                 <label>Name:</label>
                 <input
                     type="text"

@@ -65,23 +65,28 @@ function TableFilms() {
                                 ? data
                                 : data.name.toLowerCase().includes(filtered.toLowerCase());
                         })
-                            .map((data) => (
-                                <tr key={data.id}>
-                                    <td>
-                                        <img src={data.uri} alt="poster" /></td>
-                                    <td>{data.name}</td>
-                                    <td>{data.date}</td>
-                                    <td>
-                                        <MdDelete className='admin_icons' onClick={() => deleteFilm(data.id)} />
-                                    </td>
-                                    <td>
-                                        <FiEdit className='admin_icons' onClick={() => handleEdit(data)} />
-                                    </td>
-                                    <td>
-                                        <Link target={`_blank`} to="http://localhost:5196/swagger/index.html"><CgMoreO className='admin_icons' /></Link>
-                                    </td>
-                                </tr>
-                            ))
+                            .map((data) => {
+                                const date = new Date(data.date);
+                                const options = { year: 'numeric', month: 'long', day: 'numeric' };
+                                const formattedDate = date.toLocaleDateString('en-US', options);
+                                return (
+                                    <tr key={data.id}>
+                                        <td>
+                                            <img src={data.uri} alt="poster" /></td>
+                                        <td>{data.name}</td>
+                                        <td> {formattedDate}</td>
+                                        <td>
+                                            <MdDelete className='admin_icons' onClick={() => deleteFilm(data.id)} />
+                                        </td>
+                                        <td>
+                                            <FiEdit className='admin_icons' onClick={() => handleEdit(data)} />
+                                        </td>
+                                        <td>
+                                            <Link target={`_blank`} to="http://localhost:5196/swagger/index.html"><CgMoreO className='admin_icons' /></Link>
+                                        </td>
+                                    </tr>
+                                )
+                            })
                     }
                 </tbody>
             </table>

@@ -12,7 +12,7 @@ import { MdDelete } from 'react-icons/md';
 import PutModal from './../Put/PutModal';
 
 function TableLanguages() {
-    const { filtered, setEditData, setShowModal, LanguagesURL, languages, setLanguages } = useContext(MainContext)
+    const { filtered, setEditData, setShowModal3, LanguagesURL, languages, setLanguages } = useContext(MainContext)
 
     const getData = async () => {
         await axios.get(LanguagesURL).then((res) => setLanguages(res.data));
@@ -39,7 +39,7 @@ function TableLanguages() {
     //! UPDATE FILM
     const handleEdit = async (data) => {
         setEditData(data);
-        setShowModal(true);
+        setShowModal3(true);
     };
 
     return (

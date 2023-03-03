@@ -9,7 +9,7 @@ import TableLanguages from './TableLanguages/TableLanguages';
 import PostModal from './Post/PostModal';
 
 function Table() {
-    const { handleFilter, handleAdd } = useContext(MainContext)
+    const { handleFilter, handleAdd2 } = useContext(MainContext)
 
     return (
         <section className='admin_languages_section'>
@@ -21,7 +21,7 @@ function Table() {
                             placeholder="Filter Name"
                             onChange={handleFilter}
                         />
-                        <button onClick={() => handleAdd()}>Add new Film</button>
+                        <button onClick={() => handleAdd2()}>Add new Lnaguage</button>
                     </div>
                     <div className="admin_films_table">
                         <TableLanguages />

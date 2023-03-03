@@ -1,44 +1,43 @@
 import React, { useContext, useEffect, useState } from 'react'
 import axios from 'axios';
 import { MainContext } from './../../../../context/ContextProvider';
-import { v4 as uuidv4 } from 'uuid';
+// import { v4 as uuidv4 } from 'uuid';
 
 //general scss
 import "./PostModal.scss"
 
 function PostModal() {
-    const { setShowModal, showModal, LanguagesURL, setLanguages } = useContext(MainContext)
+    const { setShowModal2, setLanguages, languages, showModal2, LanguagesURL } = useContext(MainContext)
     const [languageEdit, setLanguageEdit] = useState({
-        _id: uuidv4(),
         name: ""
     })
+
     const getData = async () => {
-        await axios.get(LanguagesURL).then((res) => setLanguages(res.data));
-    }
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    useEffect(() => getData, [])
-
-    function onSubmitData(e) {
-        e.preventDefault();
-
-        axios.post(`${LanguagesURL}`, languageEdit)
+        await axios.post(LanguagesURL, languageEdit)
             .then(response => {
-                console.log("success")
-                // Handle successful response
+                // Update the component's state with the new data
+                setLanguageEdit({ name: "" })
+                setShowModal2(false)
+                const createdData = response.data;
+                setLanguages([...languages, createdData]);
             })
             .catch(error => {
-                console.log(error)
-                // Handle error
+                console.log(error);
             });
     }
+    
+  const onSubmitData = (e) => {
+    e.preventDefault();
+    getData();
+  };
 
-    const handleCancel = () => {
-        setShowModal(false);
+    const handleCancel = (e) => {
+        e.preventDefault();
+        setShowModal2(false);
     };
 
     return (
-        <div className={showModal ? "modal3 show" : "modal3"}>
+        <div className={showModal2 ? "modal3 show" : "modal3"}>
             <form className="modal-content" onSubmit={onSubmitData}>
                 <h2>Create Languages Information</h2>
                 <label>Name:</label>
@@ -49,8 +48,7 @@ function PostModal() {
                         setLanguageEdit({ ...languageEdit, name: e.target.value })
                     }
                 />
-                <button
-                >Save</button>
+                <button type="button" onClick={getData}>Save</button>
                 <button onClick={handleCancel}>Cancel</button>
             </form>
         </div>

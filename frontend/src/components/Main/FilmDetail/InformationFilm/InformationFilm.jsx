@@ -17,6 +17,21 @@ function InformationFilm() {
         await axios.get(`${FilmsURL}/${id}`).then((res) => setFilmDetail(res.data));
     }
 
+    //! changing minute
+    function formatDuration(minutes) {
+        const hours = Math.floor(minutes / 60);
+        const remainingMinutes = minutes % 60;
+        const paddedHours = hours.toString().padStart(2, '0');
+        const paddedMinutes = remainingMinutes.toString().padStart(2, '0');
+        return `${paddedHours}:${paddedMinutes}:00`;
+    }
+    //!date
+    function formatDate(dateStr) {
+        const date = new Date(dateStr);
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        return date.toLocaleDateString('en-US', options);
+    }
+
     useEffect(() => {
         getData();
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -63,10 +78,10 @@ function InformationFilm() {
                             </div>
                             <div className='general_information'>
                                 <h3><span>Country:</span> {filmDetail.country}</h3>
-                                <h3><span>Date:</span> {filmDetail.date}</h3>
+                                <h3><span>Date:</span>  {formatDate(filmDetail.date)}</h3>
                                 <h3><span>Director:</span> {filmDetail.director}</h3>
                                 <h3><span>Actors:</span> {filmDetail.actors}</h3>
-                                <h3><span>Duration:</span> {filmDetail.durationMinute}</h3>
+                                <h3><span>Duration:</span> {formatDuration(filmDetail.durationMinute)}</h3>
                                 <h3><span>Age Limit:</span>{filmDetail.ageLimit}+</h3>
                             </div>
                         </div>

@@ -15,10 +15,10 @@ import "./CardsToday.scss"
 import LoadingCard from '../LoadingCard/LoadingCard';
 
 function CardsToday() {
-  const { films, setFilms, setLoading, filterTags, loading, FilmsURL, setFilmName } = useContext(MainContext)
-
+  const { films, setFilms, setLoading, filterTags, loading, setFilmName } = useContext(MainContext)
+  const FilmsToday = 'http://localhost:5196/api/Films?isNew=false'
   const getData = async () => {
-    await axios.get(FilmsURL).then((res) => setFilms(res.data));
+    await axios.get(FilmsToday).then((res) => setFilms(res.data));
     setLoading(false);
   }
   function handleCardClick(filmName) {

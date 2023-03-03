@@ -50,8 +50,13 @@ function ContextProvider({ children }) {
     });
 
     const [showModal, setShowModal] = useState(false);
+    const [showModal2, setShowModal2] = useState(false);
+    const [showModal3, setShowModal3] = useState(false);
+
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [languages, setLanguages] = useState([])
+
+
     //!URLs
     const FilmsURL = 'http://localhost:5196/api/Films';
     const CinemasURL = 'http://localhost:8080/cinemas';
@@ -89,7 +94,9 @@ function ContextProvider({ children }) {
     function handleAdd() {
         setShowModal(true);
     }
-
+    function handleAdd2() {
+        setShowModal2(true);
+    }
     // ! theme==dark/light
     const changeTheme = () => {
         setMode(mode === "dark" ? "light" : "dark")
@@ -157,11 +164,13 @@ function ContextProvider({ children }) {
         selectedFilmName, setSelectedFilmName,
         seats, setSeats,
         selectedSeats, setSelectedSeats,
-        handleBuy,
+        handleBuy,handleAdd2,
         purchasedSeats, setPurchasedSeats,
         filmName, setFilmName,
         formats, setFormats,
         LanguagesURL, languages, setLanguages,
+        showModal2, setShowModal2,
+        showModal3, setShowModal3
     }
     //! DARK AND LIGHT MODE
     useEffect(() => {
