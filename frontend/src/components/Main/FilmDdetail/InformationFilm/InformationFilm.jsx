@@ -31,7 +31,7 @@ function InformationFilm() {
                     <div className='wrapper_film_content'>
                         <div className='film_detail'>
                             <div className='neon_red'>
-                                <img src={filmDetail.poster} alt="film_poster" />
+                                <img src={filmDetail.uri} alt="film_poster" />
                             </div>
                             <div className='film_formats'>
                                 {

@@ -41,7 +41,6 @@ function Soon() {
                 soonFilms?.slice(0, 3).map((data) => {
                   
                   const date = new Date(data.date);
-                  const year = date.getFullYear();
                   const options = { year: 'numeric', month: 'long', day: 'numeric' };
                   const formattedDate = date.toLocaleDateString('en-US', options);
 
@@ -57,7 +56,7 @@ function Soon() {
                           </div>
                           <div className="title-film">
                             <h3>{data.name}</h3>
-                            <span>{year} {formattedDate}</span>
+                            <span> {formattedDate}</span>
                           </div>
                         </div>
                       </Link>
