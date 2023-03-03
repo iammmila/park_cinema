@@ -41,6 +41,9 @@ import Languages from './../pages/Admin/Languages';
 import Subtitles from './../pages/Admin/Subtitles';
 import Formats from './../pages/Admin/Formats';
 
+//!
+import { Navigate } from "react-router-dom"
+
 export const ROUTES = [
   {
     path: "/",
@@ -158,7 +161,19 @@ export const ROUTES = [
         path: "login",
         element: <Login />,
       },
+      // {
+      //   exact: true,
+      //   path: "dashboard",
+      //   element: <Dashboard />,
+      //   render: () => <Navigate to="/admin/login" />
+      // },
       {
+        exact: true,
+        path: "",
+        element: <Navigate to="/admin/login" />,
+      },
+      {
+        exact: true,
         path: "dashboard",
         element: <Dashboard />,
       },
