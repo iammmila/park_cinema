@@ -2,8 +2,8 @@ import React, { useEffect } from 'react'
 
 //helmet
 import { Helmet } from 'react-helmet-async'
-import FilmVideo from '../../components/Main/FilmDdetail/FilmVideo/FilmVideo';
-import InformationFilm from '../../components/Main/FilmDdetail/InformationFilm/InformationFilm';
+import FilmVideo from '../../components/Main/FilmDetail/FilmVideo/FilmVideo';
+import InformationFilm from '../../components/Main/FilmDetail/InformationFilm/InformationFilm';
 
 function FilmDetail() {
     useEffect(() => {
