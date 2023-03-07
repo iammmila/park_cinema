@@ -23,7 +23,8 @@ const subscriberRoute = require("./routes/subscriberRoute")
 const contactRoute = require("./routes/contactRoute")
 const hallsRoute = require("./routes/hallsRoute")
 const sessionsRoute = require("./routes/sessionsRoute")
-const languagesRoute =require("./routes/languagesRoute")
+const languagesRoute = require("./routes/languagesRoute")
+const paymentRoute = require("./routes/paymentRoute")
 
 //!endpoints
 
@@ -38,7 +39,7 @@ app.use("/contact", contactRoute)
 app.use("/halls", hallsRoute)
 app.use("/sessions", sessionsRoute)
 app.use("/languages", languagesRoute)
-
+app.use("/payment", paymentRoute)
 
 const PORT = process.env.PORT
 const DB = process.env.DB_URL.replace("<password>", process.env.DB_PASSWORD)
