@@ -15,7 +15,7 @@ function Ticket() {
                     <span>movie</span>
                 </div>
                 <div className="price">
-                    <h2>Priceeee</h2>
+                    <h2>3$</h2>
                     <span>price</span>
                 </div>
                 <div className="seat-info">
