@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "4SMk28Q2MIGHLAXtqTaX5AvyHb/2Kvl4O/wRhGMVFsM=",
+  "Source": "ParkCinema.API",
+  "BasePath": "_content/ParkCinema.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "ParkCinema.API\\wwwroot",
+      "Source": "ParkCinema.API",
+      "ContentRoot": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.API\\wwwroot\\",
+      "BasePath": "_content/ParkCinema.API",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.API\\wwwroot\\assets\\ticket.html",
+      "SourceId": "ParkCinema.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.API\\wwwroot\\",
+      "BasePath": "_content/ParkCinema.API",
+      "RelativePath": "assets/ticket.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\ticket.html"
+    }
+  ]
+}
