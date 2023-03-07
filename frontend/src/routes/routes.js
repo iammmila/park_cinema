@@ -6,6 +6,7 @@ import Schedule from "../pages/Main/Schedule";
 import Vip from "../pages/Main/Vip";
 import Booking from '../pages/Main/Booking';
 import FilmDetail from '../pages/Main/FilmDetail';
+import Payment from './../pages/Main/Payment';
 
 //! CINEMAS PART
 import CinemasRoot from "../pages/Main/Cinemas/CinemasRoot"
@@ -40,9 +41,6 @@ import GeneralCampaigns from './../pages/Admin/GeneralCampaigns';
 import Languages from './../pages/Admin/Languages';
 import Subtitles from './../pages/Admin/Subtitles';
 import Formats from './../pages/Admin/Formats';
-
-//!
-import { Navigate } from "react-router-dom"
 
 export const ROUTES = [
   {
@@ -145,6 +143,10 @@ export const ROUTES = [
     path: "/booking",
     element: <Booking />
   },
+  {
+    path: "/payment",
+    element: <Payment />
+  },
 
   //! 404 NOT FOUND 
   {
@@ -158,24 +160,12 @@ export const ROUTES = [
     element: <AdminRoot />,
     children: [
       {
+        path: "",
+        element: <Dashboard />,
+      },
+      {
         path: "login",
         element: <Login />,
-      },
-      // {
-      //   exact: true,
-      //   path: "dashboard",
-      //   element: <Dashboard />,
-      //   render: () => <Navigate to="/admin/login" />
-      // },
-      {
-        exact: true,
-        path: "",
-        element: <Navigate to="/admin/login" />,
-      },
-      {
-        exact: true,
-        path: "dashboard",
-        element: <Dashboard />,
       },
       {
         path: "users",
