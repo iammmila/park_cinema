@@ -1,7 +1,6 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useState } from 'react'
 import axios from 'axios';
 import { MainContext } from './../../../../context/ContextProvider';
-// import { v4 as uuidv4 } from 'uuid';
 
 //general scss
 import "./PostModal.scss"

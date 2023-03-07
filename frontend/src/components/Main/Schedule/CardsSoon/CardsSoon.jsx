@@ -11,7 +11,6 @@ import LoadingCard from './../LoadingCard/LoadingCard';
 //context
 import { MainContext } from '../../../../context/ContextProvider';
 
-import datas from "../../../../assets/images/films/img1.png"
 function CardsSoon() {
   const { soonFilms, setSoonFilms, setLoading, filterTags, loading } = useContext(MainContext)
 

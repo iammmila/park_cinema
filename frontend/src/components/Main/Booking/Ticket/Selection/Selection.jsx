@@ -7,6 +7,7 @@ import "./Selection.scss"
 
 function Selection() {
     const { films, setFilms, FilmsURL, setSelectedFilmName, filmName} = useContext(MainContext)
+    // eslint-disable-next-line no-unused-vars
     const [movie, setMovie] = useState(null);
 
 

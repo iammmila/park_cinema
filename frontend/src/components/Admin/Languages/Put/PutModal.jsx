@@ -6,39 +6,12 @@ import axios from 'axios';
 import "./PutModal.scss"
 
 function PutModal() {
-    const { setShowModal3, setFilms, showModal3, LanguagesURL, setLanguages, languages } = useContext(MainContext)
+    const { setShowModal3, showModal3, LanguagesURL} = useContext(MainContext)
 
     const [editLanguages, setEditLanguages] = useState({
         name: ""
     })
 
-    const getData = async () => {
-        await axios.get(LanguagesURL).then((res) => setLanguages(res.data));
-    }
-
-    // const handleSave = async (dataId) => {
-    //     try {
-    //         // Update the state with the edited data
-    //         setFilms(prevState => {
-    //             const updatedLanguages = prevState.map(language => {
-    //                 if (language._id === dataId) {
-    //                     return { ...languages, ...editLanguages };
-    //                 }
-    //                 return language;
-    //             });
-    //             return updatedLanguages;
-
-    //         });
-
-    //         // Send the PUT request with the updated data
-    //         await axios.put(`${LanguagesURL}/${dataId}`, editLanguages);
-    //         console.log(editLanguages)
-    //         getData();
-    //         setShowModal(false);
-    //     } catch (error) {
-    //         console.log(error.response);
-    //     }
-    // };
 
     function handleSave(id) {
         axios.put(`${LanguagesURL}/${id}`, editLanguages)

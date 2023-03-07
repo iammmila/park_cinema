@@ -52,7 +52,6 @@ function Subscribe() {
     })
     console.log(data);
     addState();
-
   };
 
   return (

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import axios from 'axios';
 import { MainContext } from './../../../../context/ContextProvider';
 
@@ -46,6 +46,7 @@ function PostModal() {
             .then((response) => {
                 console.log("Data successfully posted to API");
                 // Handle success case here
+                setShowModal(false);
             })
             .catch((error) => {
                 console.log("Error posting data to API:", error);
