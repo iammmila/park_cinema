@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AK1t2TH3Yq+cJs+j2VkUUIVwWRc4f/IDUFQJukYlIuLWChDbaKdvz1IHe/Zbu4gc1f9H7dNn97VsBma4R7Um/Q==",
+  "dgSpecHash": "5AD0ewmnxvp1FWRSJYtleCNXrDKQ+jYFDJ6ShgNgyWY2DGXoHfhJ9oMSALc4Vj/T8qtELTVHnLxpgklOY8qsuA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Business\\ParkCinema.Business.csproj",
+  "projectFilePath": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\park_cinema\\FULLBACK\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Business\\ParkCinema.Business.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HP\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

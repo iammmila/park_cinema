@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RhmEE7OGAdAIhbQ+PFP7lN8v2h/MfVJAtQNZeVrPKytQZgaCC6ZhATl7KO6lYveeIAwinE1eshCwp1E8UKoAfw==",
+  "dgSpecHash": "ixTk2uWv21DJ/kDogjYrWVztnaBO8OvkpRhrDlDeUUmXVQ2aS3KfQR8N6a535Lu7ccZCdnlR9tMe1R1aLYFGTg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Core\\ParkCinema.Core.csproj",
+  "projectFilePath": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\park_cinema\\FULLBACK\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Core\\ParkCinema.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.13\\microsoft.aspnetcore.cryptography.internal.6.0.13.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.13\\microsoft.aspnetcore.cryptography.keyderivation.6.0.13.nupkg.sha512",

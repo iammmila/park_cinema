@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+ibI95uZYohaTb34s1qzVXZ1ErOo8lCed6ZrQrwn7bMkzWtHbYrImRwS1tyaQRV7d3rDBF8M4239GqHh1MIXsQ==",
+  "dgSpecHash": "whN6L/h1xCm7+WRVn78E33uUomIXNsP81KkI09bwiBjYrRAkOCcFy5TXd+FgbxjhKsgdIbIkALf0G1df79LRDw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Application\\ParkCinema.Application.csproj",
+  "projectFilePath": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\park_cinema\\FULLBACK\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Application\\ParkCinema.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",

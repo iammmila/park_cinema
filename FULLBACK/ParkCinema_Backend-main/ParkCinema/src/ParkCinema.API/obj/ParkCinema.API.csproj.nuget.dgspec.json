@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HP\\Desktop\\PARKCINEMA\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.API\\ParkCinema.API.csproj": {}
+    "C:\\Users\\HP\\Desktop\\PARKCINEMA\\park_cinema\\FULLBACK\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.API\\ParkCinema.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HP\\Desktop\\PARKCINEMA\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.API\\ParkCinema.API.csproj": {
+    "C:\\Users\\HP\\Desktop\\PARKCINEMA\\park_cinema\\FULLBACK\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.API\\ParkCinema.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.API\\ParkCinema.API.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\park_cinema\\FULLBACK\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.API\\ParkCinema.API.csproj",
         "projectName": "ParkCinema.API",
-        "projectPath": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.API\\ParkCinema.API.csproj",
+        "projectPath": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\park_cinema\\FULLBACK\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.API\\ParkCinema.API.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.API\\obj\\",
+        "outputPath": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\park_cinema\\FULLBACK\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,11 +28,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\HP\\Desktop\\PARKCINEMA\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Business\\ParkCinema.Business.csproj": {
-                "projectPath": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Business\\ParkCinema.Business.csproj"
+              "C:\\Users\\HP\\Desktop\\PARKCINEMA\\park_cinema\\FULLBACK\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Business\\ParkCinema.Business.csproj": {
+                "projectPath": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\park_cinema\\FULLBACK\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Business\\ParkCinema.Business.csproj"
               },
-              "C:\\Users\\HP\\Desktop\\PARKCINEMA\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Infrastructure\\ParkCinema.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Infrastructure\\ParkCinema.Infrastructure.csproj"
+              "C:\\Users\\HP\\Desktop\\PARKCINEMA\\park_cinema\\FULLBACK\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Infrastructure\\ParkCinema.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\park_cinema\\FULLBACK\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Infrastructure\\ParkCinema.Infrastructure.csproj"
               }
             }
           }
@@ -89,14 +89,14 @@
         }
       }
     },
-    "C:\\Users\\HP\\Desktop\\PARKCINEMA\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Application\\ParkCinema.Application.csproj": {
+    "C:\\Users\\HP\\Desktop\\PARKCINEMA\\park_cinema\\FULLBACK\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Application\\ParkCinema.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Application\\ParkCinema.Application.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\park_cinema\\FULLBACK\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Application\\ParkCinema.Application.csproj",
         "projectName": "ParkCinema.Application",
-        "projectPath": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Application\\ParkCinema.Application.csproj",
+        "projectPath": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\park_cinema\\FULLBACK\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Application\\ParkCinema.Application.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Application\\obj\\",
+        "outputPath": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\park_cinema\\FULLBACK\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -150,14 +150,14 @@
         }
       }
     },
-    "C:\\Users\\HP\\Desktop\\PARKCINEMA\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Business\\ParkCinema.Business.csproj": {
+    "C:\\Users\\HP\\Desktop\\PARKCINEMA\\park_cinema\\FULLBACK\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Business\\ParkCinema.Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Business\\ParkCinema.Business.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\park_cinema\\FULLBACK\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Business\\ParkCinema.Business.csproj",
         "projectName": "ParkCinema.Business",
-        "projectPath": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Business\\ParkCinema.Business.csproj",
+        "projectPath": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\park_cinema\\FULLBACK\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Business\\ParkCinema.Business.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Business\\obj\\",
+        "outputPath": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\park_cinema\\FULLBACK\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Business\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -174,11 +174,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\HP\\Desktop\\PARKCINEMA\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Application\\ParkCinema.Application.csproj": {
-                "projectPath": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Application\\ParkCinema.Application.csproj"
+              "C:\\Users\\HP\\Desktop\\PARKCINEMA\\park_cinema\\FULLBACK\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Application\\ParkCinema.Application.csproj": {
+                "projectPath": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\park_cinema\\FULLBACK\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Application\\ParkCinema.Application.csproj"
               },
-              "C:\\Users\\HP\\Desktop\\PARKCINEMA\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.DataAccess\\ParkCinema.DataAccess.csproj": {
-                "projectPath": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.DataAccess\\ParkCinema.DataAccess.csproj"
+              "C:\\Users\\HP\\Desktop\\PARKCINEMA\\park_cinema\\FULLBACK\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.DataAccess\\ParkCinema.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\park_cinema\\FULLBACK\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.DataAccess\\ParkCinema.DataAccess.csproj"
               }
             }
           }
@@ -234,14 +234,14 @@
         }
       }
     },
-    "C:\\Users\\HP\\Desktop\\PARKCINEMA\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Core\\ParkCinema.Core.csproj": {
+    "C:\\Users\\HP\\Desktop\\PARKCINEMA\\park_cinema\\FULLBACK\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Core\\ParkCinema.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Core\\ParkCinema.Core.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\park_cinema\\FULLBACK\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Core\\ParkCinema.Core.csproj",
         "projectName": "ParkCinema.Core",
-        "projectPath": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Core\\ParkCinema.Core.csproj",
+        "projectPath": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\park_cinema\\FULLBACK\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Core\\ParkCinema.Core.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Core\\obj\\",
+        "outputPath": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\park_cinema\\FULLBACK\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -295,14 +295,14 @@
         }
       }
     },
-    "C:\\Users\\HP\\Desktop\\PARKCINEMA\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.DataAccess\\ParkCinema.DataAccess.csproj": {
+    "C:\\Users\\HP\\Desktop\\PARKCINEMA\\park_cinema\\FULLBACK\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.DataAccess\\ParkCinema.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.DataAccess\\ParkCinema.DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\park_cinema\\FULLBACK\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.DataAccess\\ParkCinema.DataAccess.csproj",
         "projectName": "ParkCinema.DataAccess",
-        "projectPath": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.DataAccess\\ParkCinema.DataAccess.csproj",
+        "projectPath": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\park_cinema\\FULLBACK\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.DataAccess\\ParkCinema.DataAccess.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.DataAccess\\obj\\",
+        "outputPath": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\park_cinema\\FULLBACK\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -319,8 +319,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\HP\\Desktop\\PARKCINEMA\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Core\\ParkCinema.Core.csproj": {
-                "projectPath": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Core\\ParkCinema.Core.csproj"
+              "C:\\Users\\HP\\Desktop\\PARKCINEMA\\park_cinema\\FULLBACK\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Core\\ParkCinema.Core.csproj": {
+                "projectPath": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\park_cinema\\FULLBACK\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Core\\ParkCinema.Core.csproj"
               }
             }
           }
@@ -370,14 +370,14 @@
         }
       }
     },
-    "C:\\Users\\HP\\Desktop\\PARKCINEMA\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Infrastructure\\ParkCinema.Infrastructure.csproj": {
+    "C:\\Users\\HP\\Desktop\\PARKCINEMA\\park_cinema\\FULLBACK\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Infrastructure\\ParkCinema.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Infrastructure\\ParkCinema.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\park_cinema\\FULLBACK\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Infrastructure\\ParkCinema.Infrastructure.csproj",
         "projectName": "ParkCinema.Infrastructure",
-        "projectPath": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Infrastructure\\ParkCinema.Infrastructure.csproj",
+        "projectPath": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\park_cinema\\FULLBACK\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Infrastructure\\ParkCinema.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\park_cinema\\FULLBACK\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -394,8 +394,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\HP\\Desktop\\PARKCINEMA\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Application\\ParkCinema.Application.csproj": {
-                "projectPath": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Application\\ParkCinema.Application.csproj"
+              "C:\\Users\\HP\\Desktop\\PARKCINEMA\\park_cinema\\FULLBACK\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Application\\ParkCinema.Application.csproj": {
+                "projectPath": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\park_cinema\\FULLBACK\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Application\\ParkCinema.Application.csproj"
               }
             }
           }

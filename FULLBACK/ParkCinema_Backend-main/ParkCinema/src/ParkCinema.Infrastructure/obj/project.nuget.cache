@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gN/R7MzNGQOt6rQ7JqF6EydGx7uUkjYEKZUyySjNHVMH8BNKtjLBTxTU/mXF+dM4uNKPsPXv6MVzgb8YVfEfdw==",
+  "dgSpecHash": "3j2Vgrz4L2c2odMEIi43cUScq/+aLXgCzl9FAGJiy3zRljdk6NYUFMvfk9A+YU6ZIi9vkEFPglnxg7skp/XRkg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Infrastructure\\ParkCinema.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\park_cinema\\FULLBACK\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.Infrastructure\\ParkCinema.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HP\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\azure.storage.blobs\\12.14.1\\azure.storage.blobs.12.14.1.nupkg.sha512",

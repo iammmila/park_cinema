@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ParkCinema.Application
-build_property.ProjectDir = C:\Users\HP\Desktop\PARKCINEMA\ParkCinema_Backend-main\ParkCinema\src\ParkCinema.Application\
+build_property.ProjectDir = C:\Users\HP\Desktop\PARKCINEMA\park_cinema\FULLBACK\ParkCinema_Backend-main\ParkCinema\src\ParkCinema.Application\
