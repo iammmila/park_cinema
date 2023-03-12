@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "4SMk28Q2MIGHLAXtqTaX5AvyHb/2Kvl4O/wRhGMVFsM=",
+  "Hash": "D8BMZ/KuF6v63IOAjqKE+uLs2sHfyySE/S53+6aVSm0=",
   "Source": "ParkCinema.API",
   "BasePath": "_content/ParkCinema.API",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "ParkCinema.API\\wwwroot",
       "Source": "ParkCinema.API",
-      "ContentRoot": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\park_cinema\\FULLBACK\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.API\\wwwroot\\",
       "BasePath": "_content/ParkCinema.API",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.API\\wwwroot\\assets\\ticket.html",
+      "Identity": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\park_cinema\\FULLBACK\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.API\\wwwroot\\assets\\ticket.html",
       "SourceId": "ParkCinema.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\HP\\Desktop\\PARKCINEMA\\park_cinema\\FULLBACK\\ParkCinema_Backend-main\\ParkCinema\\src\\ParkCinema.API\\wwwroot\\",
       "BasePath": "_content/ParkCinema.API",
       "RelativePath": "assets/ticket.html",
       "AssetKind": "All",

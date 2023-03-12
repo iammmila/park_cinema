@@ -46,3 +46,15 @@ C:\Users\HP\Desktop\PARKCINEMA\ParkCinema_Backend-main\ParkCinema\src\ParkCinema
 C:\Users\HP\Desktop\PARKCINEMA\ParkCinema_Backend-main\ParkCinema\src\ParkCinema.Core\obj\Debug\net6.0\refint\ParkCinema.Core.dll
 C:\Users\HP\Desktop\PARKCINEMA\ParkCinema_Backend-main\ParkCinema\src\ParkCinema.Core\obj\Debug\net6.0\ParkCinema.Core.pdb
 C:\Users\HP\Desktop\PARKCINEMA\ParkCinema_Backend-main\ParkCinema\src\ParkCinema.Core\obj\Debug\net6.0\ref\ParkCinema.Core.dll
+C:\Users\HP\Desktop\PARKCINEMA\park_cinema\FULLBACK\ParkCinema_Backend-main\ParkCinema\src\ParkCinema.Core\bin\Debug\net6.0\ParkCinema.Core.deps.json
+C:\Users\HP\Desktop\PARKCINEMA\park_cinema\FULLBACK\ParkCinema_Backend-main\ParkCinema\src\ParkCinema.Core\bin\Debug\net6.0\ParkCinema.Core.dll
+C:\Users\HP\Desktop\PARKCINEMA\park_cinema\FULLBACK\ParkCinema_Backend-main\ParkCinema\src\ParkCinema.Core\bin\Debug\net6.0\ParkCinema.Core.pdb
+C:\Users\HP\Desktop\PARKCINEMA\park_cinema\FULLBACK\ParkCinema_Backend-main\ParkCinema\src\ParkCinema.Core\obj\Debug\net6.0\ParkCinema.Core.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\PARKCINEMA\park_cinema\FULLBACK\ParkCinema_Backend-main\ParkCinema\src\ParkCinema.Core\obj\Debug\net6.0\ParkCinema.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Desktop\PARKCINEMA\park_cinema\FULLBACK\ParkCinema_Backend-main\ParkCinema\src\ParkCinema.Core\obj\Debug\net6.0\ParkCinema.Core.AssemblyInfoInputs.cache
+C:\Users\HP\Desktop\PARKCINEMA\park_cinema\FULLBACK\ParkCinema_Backend-main\ParkCinema\src\ParkCinema.Core\obj\Debug\net6.0\ParkCinema.Core.AssemblyInfo.cs
+C:\Users\HP\Desktop\PARKCINEMA\park_cinema\FULLBACK\ParkCinema_Backend-main\ParkCinema\src\ParkCinema.Core\obj\Debug\net6.0\ParkCinema.Core.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\PARKCINEMA\park_cinema\FULLBACK\ParkCinema_Backend-main\ParkCinema\src\ParkCinema.Core\obj\Debug\net6.0\ParkCinema.Core.dll
+C:\Users\HP\Desktop\PARKCINEMA\park_cinema\FULLBACK\ParkCinema_Backend-main\ParkCinema\src\ParkCinema.Core\obj\Debug\net6.0\refint\ParkCinema.Core.dll
+C:\Users\HP\Desktop\PARKCINEMA\park_cinema\FULLBACK\ParkCinema_Backend-main\ParkCinema\src\ParkCinema.Core\obj\Debug\net6.0\ParkCinema.Core.pdb
+C:\Users\HP\Desktop\PARKCINEMA\park_cinema\FULLBACK\ParkCinema_Backend-main\ParkCinema\src\ParkCinema.Core\obj\Debug\net6.0\ref\ParkCinema.Core.dll
